@@ -39,10 +39,10 @@ const imgVariants = {
 const WhatWeDoSection = ({ node }) => {
   const [scrollYPos, setScrollYPos] = useState(window.pageYOffset);
 
-  const onScroll = () => {
-    // console.log("scrolling", node.current.scrollTop);
-    setScrollYPos(node.current.scrollTop);
-  };
+  // const onScroll = () => {
+  //   // console.log("scrolling", node.current.scrollTop);
+  //   setScrollYPos(node.current.scrollTop);
+  // };
   useEffect(() => {
     if (node.current != null) {
       node.current.addEventListener("scroll", onScroll, true);
