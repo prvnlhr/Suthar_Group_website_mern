@@ -20,7 +20,7 @@ const textVariants = {
   },
 };
 const lineVariants = {
-  hidden: {opacity: 0, translateX: -200 },
+  hidden: { opacity: 0, translateX: -200 },
   visible: {
     opacity: [0, 0.3, 0.5, 1],
     translateX: 0,
@@ -30,21 +30,21 @@ const lineVariants = {
     },
   },
 };
-const PrimaryTitle = ({title}) => {
+const PrimaryTitle = ({ title }) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.3,
   });
   const controls = useAnimation();
 
-  // useEffect(() => {
-  //   if (inView) {
-  //     controls.start("visible");
-  //   }
-  //   if (!inView) {
-  //     controls.start("hidden");
-  //   }
-  // }, [controls, inView]);
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
   return (
     <div ref={ref} className={styles.titleDivPrimary}>
       <motion.div
