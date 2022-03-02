@@ -54,7 +54,7 @@ const ContextDiv = ({ context1, context2 }) => {
       animate={controls}
       className={styles.contextDiv}
     >
-      {/* <motion.p variants={textVariants} className={styles.contextText}>
+      <motion.p variants={textVariants} className={styles.contextText}>
         {/* We are pioneer in manufacturing complex mechanical parts using highly
         advance machinery and technologies. */}
         {context1}
@@ -64,7 +64,7 @@ const ContextDiv = ({ context1, context2 }) => {
         , Printer parts. We accept all types of CNC, Milling, Wire-cut, Sheet
         metal job work */}
         {context2}
-      </motion.p> */}
+      </motion.p>
     </motion.div>
   );
 };
