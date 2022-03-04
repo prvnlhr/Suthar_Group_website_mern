@@ -19,11 +19,11 @@ const textVariants = {
   },
 };
 
-const ContextMiddle = () => {
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.3,
-  });
+// const ContextMiddle = () => {
+//   const { ref, inView } = useInView({
+//     triggerOnce: true,
+//     threshold: 0.3,
+//   });
   const controls = useAnimation();
 
   useEffect(() => {
