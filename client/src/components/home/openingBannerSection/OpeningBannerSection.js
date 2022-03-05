@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "../../../css/openingBannerSection/openingBannerSection.module.css";
 import bannerImg from "../../../img/bannerImg2.jpg";
 import { Link } from "react-router-dom";
-import { Icon } from "@iconify/react";
+// import { Icon } from "@iconify/react";
 import {
   motion,
   useAnimation,
