@@ -68,6 +68,7 @@ const OpeningBannerSection = () => {
 
   const { ref, inView } = useInView({
     triggerOnce: true,
+    // rootMargin: "300px",
   });
 
   useEffect(() => {
