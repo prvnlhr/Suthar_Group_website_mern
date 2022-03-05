@@ -66,9 +66,9 @@ const OpeningBannerSection = () => {
   const y1 = useTransform(scrollY, [0, 300], [0, 200]);
   const y2 = useTransform(scrollY, [0, 300], [0, -100]);
 
-  // const { ref, inView } = useInView({
-  //   triggerOnce: true,
-  // });
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+  });
 
   useEffect(() => {
     if (inView) {
