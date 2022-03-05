@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import styles from "../../../css/openingBannerSection/openingBannerSection.module.css";
 import bannerImg from "../../../img/bannerImg2.jpg";
 import { Link } from "react-router-dom";
-// import { Icon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import {
   motion,
   useAnimation,
@@ -81,42 +81,42 @@ const OpeningBannerSection = () => {
 
   return (
     <motion.div
-    //   variants={boxVariants}
-    //   initial="hidden"
-    //   animate="visible"
-    //   className={styles.landingBannerWrapper}
-    // >
-    //   <motion.div className={styles.bannerImgContainer}>
-    //     <motion.img
-    //       className={styles.bannerImage}
-    //       src={bannerImg}
-    //       alt="bannerImg"
-    //       variants={imageVariants}
-    //       // initial="initial"
-    //       // animate="animate"
-    //     />
-    //     <motion.div
-    //       variants={overlayVariants}
-    //       // initial="initial"
-    //       // animate="animate"
-    //       className={styles.overlayDiv}
-    //     ></motion.div>
-    //     <div className={styles.textDiv}>
-    //       <motion.p variants={textVariants} className={styles.bannerText}>
-    //         WE ARE <span className={styles.spanText}>LEADER</span> IN
-    //         ENGINEERING & TECHNOLOGY
-    //       </motion.p>
-    //       <div className={styles.scrollDownTextDiv}>
-    //         <p className={styles.scrollDownText}>scroll down</p>
-    //         <Icon
-    //           icon="bi:arrow-right"
-    //           color="white"
-    //           rotate={1}
-    //           className={styles.scrollDownIcon}
-    //         />
-    //       </div>
-    //     </div>
-    //   </motion.div>
+      variants={boxVariants}
+      initial="hidden"
+      animate="visible"
+      className={styles.landingBannerWrapper}
+    >
+      <motion.div className={styles.bannerImgContainer}>
+        <motion.img
+          className={styles.bannerImage}
+          src={bannerImg}
+          alt="bannerImg"
+          variants={imageVariants}
+          // initial="initial"
+          // animate="animate"
+        />
+        <motion.div
+          variants={overlayVariants}
+          // initial="initial"
+          // animate="animate"
+          className={styles.overlayDiv}
+        ></motion.div>
+        <div className={styles.textDiv}>
+          <motion.p variants={textVariants} className={styles.bannerText}>
+            WE ARE <span className={styles.spanText}>LEADER</span> IN
+            ENGINEERING & TECHNOLOGY
+          </motion.p>
+          <div className={styles.scrollDownTextDiv}>
+            <p className={styles.scrollDownText}>scroll down</p>
+            <Icon
+              icon="bi:arrow-right"
+              color="white"
+              rotate={1}
+              className={styles.scrollDownIcon}
+            />
+          </div>
+        </div>
+      </motion.div>
     </motion.div>
   );
 };
