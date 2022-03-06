@@ -13,16 +13,16 @@ const StyleElementSection = ({ node, aboutUsSectionRef }) => {
   };
 
 
-  // useEffect(() => {
-  //   if (node.current != null) {
-  //     node.current.addEventListener("scroll", onScroll, true);
-  //   }
-  //   return () => {
-  //     if (node.current != null) {
-  //       node.current.removeEventListener("scroll", onScroll);
-  //     }
-  //   };
-  // }, []);
+  useEffect(() => {
+    if (node.current != null) {
+      node.current.addEventListener("scroll", onScroll, true);
+    }
+    return () => {
+      if (node.current != null) {
+        node.current.removeEventListener("scroll", onScroll);
+      }
+    };
+  }, []);
 
   return (
     <div className={styles.styleElementWrapper}>
