@@ -47,10 +47,10 @@ const StyleElementSection = ({ node, aboutUsSectionRef }) => {
       <PrimaryTitle />
 
 
-      {/* <div className={styles.imgWrapper}>
+      <div className={styles.imgWrapper}>
         <img className={styles.imgBg} src={developingBg} />
         <div className={styles.overlayDiv}></div>
-      </div> */}
+      </div>
       <h1
         className={styles.secondaryText}
         style={{
