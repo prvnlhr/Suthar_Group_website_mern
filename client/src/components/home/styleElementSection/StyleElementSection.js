@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useRef } from "react";
 import styles from "../../../css/styleElementSection/styleElementSection.module.css";
-// import developingBg from "../../../img/developingBg.jpg";
+import developingBg from "../../../img/developingBg.jpg";
 import PrimaryTitle from "./PrimaryTitle";
 
 
