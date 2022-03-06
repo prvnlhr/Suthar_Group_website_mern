@@ -7,10 +7,10 @@ import PrimaryTitle from "./PrimaryTitle";
 const StyleElementSection = ({ node, aboutUsSectionRef }) => {
   const [scrollYPos, setScrollYPos] = useState(window.pageYOffset);
 
-  // const onScroll = () => {
+  const onScroll = () => {
 
-  //   setScrollYPos(node.current.scrollTop);
-  // };
+    setScrollYPos(node.current.scrollTop);
+  };
 
 
   // useEffect(() => {
