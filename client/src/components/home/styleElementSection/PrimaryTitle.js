@@ -3,24 +3,24 @@
 
 import { useInView } from "react-intersection-observer";
 
-// import { motion, useAnimation } from "framer-motion";
-// const boxVariants = {
-//   hidden: {
-//     // x: -1000,
-//     opacity: 1,
-//   },
-//   visible: {
-//     opacity: 1,
-//     // x: 0,
-//     transition: {
-//       // delay: 0.5,
-//       //   staggerChildren: 0.5,
-//       duration: 1,
-//       //   delayChildren: 0.5,
-//       // ease: [0.6, 0.05, -0.01, 0.9],
-//     },
-//   },
-// };
+import { motion, useAnimation } from "framer-motion";
+const boxVariants = {
+  hidden: {
+    // x: -1000,
+    opacity: 1,
+  },
+  visible: {
+    opacity: 1,
+    // x: 0,
+    transition: {
+      // delay: 0.5,
+      //   staggerChildren: 0.5,
+      duration: 1,
+      //   delayChildren: 0.5,
+      // ease: [0.6, 0.05, -0.01, 0.9],
+    },
+  },
+};
 // const textVariants = {
 //   hidden: { translateX: 80, opacity: 0 },
 //   visible: {
