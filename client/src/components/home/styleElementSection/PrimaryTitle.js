@@ -21,29 +21,29 @@ const boxVariants = {
     },
   },
 };
-// const textVariants = {
-//   hidden: { translateX: 80, opacity: 0 },
-//   visible: {
-//     translateX: 0,
-//     opacity: 1,
-//     transition: {
-//       // delay: 0.5,
-//       duration: 0.8,
-//       // ease: [0.6, 0.05, -0.01, 0.9],
-//     },
-//   },
-// };
-// const lineVariants = {
-//   hidden: {opacity: 0, translateX: -200 },
-//   visible: {
-//     opacity: [0, 0.3, 0.5, 1],
-//     translateX: 0,
-//     transition: {
-//       delay: 0.3,
-//       duration: 0.8,
-//     },
-//   },
-// };
+const textVariants = {
+  hidden: { translateX: 80, opacity: 0 },
+  visible: {
+    translateX: 0,
+    opacity: 1,
+    transition: {
+      // delay: 0.5,
+      duration: 0.8,
+      // ease: [0.6, 0.05, -0.01, 0.9],
+    },
+  },
+};
+const lineVariants = {
+  hidden: {opacity: 0, translateX: -200 },
+  visible: {
+    opacity: [0, 0.3, 0.5, 1],
+    translateX: 0,
+    transition: {
+      delay: 0.3,
+      duration: 0.8,
+    },
+  },
+};
 // const PrimaryTitle = () => {
 //   const { ref, inView } = useInView({
 //     triggerOnce: true,
