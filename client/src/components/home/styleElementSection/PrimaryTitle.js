@@ -1,7 +1,7 @@
 // import React, { useEffect } from "react";
 // import styles from "../../../css/styleElementSection/styleElementSection.module.css";
 
-// import { useInView } from "react-intersection-observer";
+import { useInView } from "react-intersection-observer";
 
 // import { motion, useAnimation } from "framer-motion";
 // const boxVariants = {
