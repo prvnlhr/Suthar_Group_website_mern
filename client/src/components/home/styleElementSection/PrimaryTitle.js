@@ -1,5 +1,5 @@
-// import React, { useEffect } from "react";
-// import styles from "../../../css/styleElementSection/styleElementSection.module.css";
+import React, { useEffect } from "react";
+import styles from "../../../css/styleElementSection/styleElementSection.module.css";
 
 import { useInView } from "react-intersection-observer";
 
