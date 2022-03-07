@@ -44,21 +44,21 @@ const lineVariants = {
     },
   },
 };
-// const PrimaryTitle = () => {
-//   const { ref, inView } = useInView({
-//     triggerOnce: true,
-//     threshold: 0.3,
-//   });
-//   const controls = useAnimation();
+const PrimaryTitle = () => {
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.3,
+  });
+  const controls = useAnimation();
 
-//   useEffect(() => {
-//     if (inView) {
-//       controls.start("visible");
-//     }
-//     if (!inView) {
-//       controls.start("hidden");
-//     }
-//   }, [controls, inView]);
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
 //   return (
 //     <motion.div
 //       ref={ref}
