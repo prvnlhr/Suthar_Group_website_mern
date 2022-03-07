@@ -59,25 +59,25 @@ const PrimaryTitle = () => {
       controls.start("hidden");
     }
   }, [controls, inView]);
-//   return (
-//     <motion.div
-//       ref={ref}
-//       variants={boxVariants}
-//       initial="hidden"
-//       animate={controls}
-//       className={styles.titleDiv}
-//     >
-//       <motion.div
-//         variants={lineVariants}
-//         initial="hidden"
-//         animate={controls}
-//         className={styles.titleLine}
-//       ></motion.div>
-//       <motion.p variants={textVariants} className={styles.titleText}>
-//         WE ARE ALWAYS
-//       </motion.p>
-//     </motion.div>
-//   );
-// };
+  return (
+    <motion.div
+      ref={ref}
+      variants={boxVariants}
+      initial="hidden"
+      animate={controls}
+      className={styles.titleDiv}
+    >
+      <motion.div
+        variants={lineVariants}
+        initial="hidden"
+        animate={controls}
+        className={styles.titleLine}
+      ></motion.div>
+      <motion.p variants={textVariants} className={styles.titleText}>
+        WE ARE ALWAYS
+      </motion.p>
+    </motion.div>
+  );
+};
 
-// export default PrimaryTitle;
+export default PrimaryTitle;
