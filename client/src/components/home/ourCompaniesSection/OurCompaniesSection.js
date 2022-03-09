@@ -6,7 +6,7 @@
 // import ourCompaniesBg from "../../../img/ourCompaniesBg3.jpg";
 // import { Icon } from "@iconify/react";
 
-// import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "framer-motion";
 // import PrimaryTitle from "./PrimaryTitle";
 // import SecondaryTitle from "./SecondaryTitle";
 // const OurCompaniesSection = ({ ourCompaniesSectionRef }) => {
