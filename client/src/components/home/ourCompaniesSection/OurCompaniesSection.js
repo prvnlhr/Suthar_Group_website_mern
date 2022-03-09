@@ -1,8 +1,8 @@
-// import React, { useEffect } from "react";
-// import { Route, NavLink, useHistory, Switch } from "react-router-dom";
+import React, { useEffect } from "react";
+import { Route, NavLink, useHistory, Switch } from "react-router-dom";
 
-// import styles from "../../../css/ourCompaniesSection/ourCompanies.module.css";
-// import { useInView } from "react-intersection-observer";
+import styles from "../../../css/ourCompaniesSection/ourCompanies.module.css";
+import { useInView } from "react-intersection-observer";
 import ourCompaniesBg from "../../../img/ourCompaniesBg3.jpg";
 // import { Icon } from "@iconify/react";
 
