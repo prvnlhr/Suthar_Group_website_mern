@@ -3,7 +3,7 @@
 
 // import styles from "../../../css/ourCompaniesSection/ourCompanies.module.css";
 // import { useInView } from "react-intersection-observer";
-// import ourCompaniesBg from "../../../img/ourCompaniesBg3.jpg";
+import ourCompaniesBg from "../../../img/ourCompaniesBg3.jpg";
 // import { Icon } from "@iconify/react";
 
 import { motion, useAnimation } from "framer-motion";
