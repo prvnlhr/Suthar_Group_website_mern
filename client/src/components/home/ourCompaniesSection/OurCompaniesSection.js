@@ -7,36 +7,36 @@
 // import { Icon } from "@iconify/react";
 
 import { motion, useAnimation } from "framer-motion";
-// import PrimaryTitle from "./PrimaryTitle";
-// import SecondaryTitle from "./SecondaryTitle";
-// const OurCompaniesSection = ({ ourCompaniesSectionRef }) => {
-//   const imgVariants = {
-//     hidden: { scale: 0.5 },
-//     visible: {
-//       scale: 1,
-//       transition: {
-//         staggerChildren: 0.5,
-//         delayChildren: 0.5,
-//         duration: 1,
-//         delay: 0.1,
-//         // ease: [0.6, 0.05, -0.01, 0.9],
-//       },
-//     },
-//   };
+import PrimaryTitle from "./PrimaryTitle";
+import SecondaryTitle from "./SecondaryTitle";
+const OurCompaniesSection = ({ ourCompaniesSectionRef }) => {
+  const imgVariants = {
+    hidden: { scale: 0.5 },
+    visible: {
+      scale: 1,
+      transition: {
+        staggerChildren: 0.5,
+        delayChildren: 0.5,
+        duration: 1,
+        delay: 0.1,
+        // ease: [0.6, 0.05, -0.01, 0.9],
+      },
+    },
+  };
 
-//   const controls = useAnimation();
-//   const { ref, inView } = useInView({
-//     triggerOnce: true,
-//     threshold: 0.4,
-//   });
-//   useEffect(() => {
-//     if (inView) {
-//       controls.start("visible");
-//     }
-//     if (!inView) {
-//       controls.start("hidden");
-//     }
-//   }, [controls, inView]);
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.4,
+  });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
 
 //   return (
     <div className={styles.ourCompaniesWrapper} ref={ourCompaniesSectionRef}>
