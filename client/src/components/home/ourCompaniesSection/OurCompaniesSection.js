@@ -4,7 +4,7 @@ import { Route, NavLink, useHistory, Switch } from "react-router-dom";
 import styles from "../../../css/ourCompaniesSection/ourCompanies.module.css";
 import { useInView } from "react-intersection-observer";
 import ourCompaniesBg from "../../../img/ourCompaniesBg3.jpg";
-// import { Icon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 
 import { motion, useAnimation } from "framer-motion";
 import PrimaryTitle from "./PrimaryTitle";
@@ -38,7 +38,7 @@ const OurCompaniesSection = ({ ourCompaniesSectionRef }) => {
     }
   }, [controls, inView]);
 
-//   return (
+  return (
     <div className={styles.ourCompaniesWrapper} ref={ourCompaniesSectionRef}>
       <motion.div
         variants={imgVariants}
@@ -69,7 +69,7 @@ const OurCompaniesSection = ({ ourCompaniesSectionRef }) => {
         />
       </div>
     </div>
-//   );
-// };
+  );
+};
 
-// export default OurCompaniesSection;
+export default OurCompaniesSection;
