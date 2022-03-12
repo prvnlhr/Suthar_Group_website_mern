@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 // import styles from "../../../css/ourServicesSection/ourServicesSection.module.css";
 
-// import image1 from "../../../img/ourService1.jpg";
+import image1 from "../../../img/ourService1.jpg";
 // import image2 from "../../../img/ourService2.jpg";
 // import image3 from "../../../img/ourService3.jpg";
 
