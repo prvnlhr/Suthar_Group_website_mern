@@ -6,7 +6,7 @@ import image1 from "../../../img/ourService1.jpg";
 // import image2 from "../../../img/ourService2.jpg";
 // import image3 from "../../../img/ourService3.jpg";
 
-// import PrimaryTitle from "./PrimaryTitle";
+import PrimaryTitle from "./PrimaryTitle";
 
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -54,7 +54,7 @@ const OurServicesSection = () => {
       </div> */}
 
 
-      {/* <div className={styles.imageWrapper}>
+      <div className={styles.imageWrapper}>
         <div className={styles.imageContainer}>
           <motion.div 
           variants={imgVariants} 
@@ -82,7 +82,7 @@ const OurServicesSection = () => {
           </motion.div>
         </div>
 
-      </div> */}
+      </div>
     </motion.div>
 
 
