@@ -25,19 +25,19 @@ const imgVariants = {
 const OurServicesSection = () => {
 
 
-  // const controls = useAnimation();
-  // const { ref, inView } = useInView({
-  //   triggerOnce: true,
-  //   threshold: 0.4,
-  // });
-  // useEffect(() => {
-  //   if (inView) {
-  //     controls.start("visible");
-  //   }
-  //   if (!inView) {
-  //     controls.start("hidden");
-  //   }
-  // }, [controls, inView]);
+  const controls = useAnimation();
+  const { ref, inView } = useInView({
+    triggerOnce: true,
+    threshold: 0.4,
+  });
+  useEffect(() => {
+    if (inView) {
+      controls.start("visible");
+    }
+    if (!inView) {
+      controls.start("hidden");
+    }
+  }, [controls, inView]);
 
 
   return (
