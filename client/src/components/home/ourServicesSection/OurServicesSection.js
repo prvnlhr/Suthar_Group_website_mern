@@ -45,7 +45,7 @@ const OurServicesSection = () => {
     <motion.div
       initial="hidden"
       animate={controls}
-      ref={ref}
+      // ref={ref}
       className={styles.ourServicesSectionWrapper}
     >
 
@@ -56,7 +56,9 @@ const OurServicesSection = () => {
 
       {/* <div className={styles.imageWrapper}>
         <div className={styles.imageContainer}>
-          <motion.div variants={imgVariants} className={styles.imageDiv}>
+          <motion.div 
+          variants={imgVariants} 
+          className={styles.imageDiv}>
             <img className={styles.imageELement} src={image1} />
             <div className={styles.overlayDiv1}>
               <p className={styles.serviceText}>MANUFACTURING</p>
