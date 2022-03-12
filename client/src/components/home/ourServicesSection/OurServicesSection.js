@@ -43,8 +43,8 @@ const OurServicesSection = () => {
   return (
 
     <motion.div
-      // initial="hidden"
-      // animate={controls}
+      initial="hidden"
+      animate={controls}
       ref={ref}
       className={styles.ourServicesSectionWrapper}
     >
