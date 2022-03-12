@@ -8,19 +8,19 @@ import image1 from "../../../img/ourService1.jpg";
 
 // import PrimaryTitle from "./PrimaryTitle";
 
-// import { motion, useAnimation } from "framer-motion";
-// import { useInView } from "react-intersection-observer";
-// const imgVariants = {
-//   hidden: { opacity: 0, scale: 1.3 },
-//   visible: {
-//     opacity: 1,
-//     scale: 1,
-//     transition: {
-//       duration: 0.8,
-//       delay: 0.2,
-//     },
-//   },
-// };
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
+const imgVariants = {
+  hidden: { opacity: 0, scale: 1.3 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      duration: 0.8,
+      delay: 0.2,
+    },
+  },
+};
 
 const OurServicesSection = () => {
 
