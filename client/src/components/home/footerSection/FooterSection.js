@@ -88,7 +88,7 @@ const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
 
   return (
     <div className={styles.footerSectionWrapper}>
-      {/* <div className={styles.linksSuperWrapper}>
+      <div className={styles.linksSuperWrapper}>
         <div className={styles.linksWrapper}>
           <div className={styles.linksHeaderDiv}>
             <p className={styles.headerText}>Company</p>
@@ -180,7 +180,7 @@ const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
           Copyright {year} , All Rights Reserved
         </p>
         <Icon icon="twemoji:flag-for-flag-india" />
-      </div> */}
+      </div>
     </div>
   );
 };
