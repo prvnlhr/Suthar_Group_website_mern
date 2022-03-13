@@ -68,22 +68,22 @@ const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
 
     //   history.push("/company/contact");
     // }
-    // // _______________________________________________________
-    // else if (val === 2) {
-    //   aboutUsSectionRef.current.scrollIntoView({
-    //     behavior: "smooth",
-    //     block: "center",
-    //   });
-    // }
-    // // _______________________________________________________
-    // else if (val === 3) {
-    //   history.push("productList/vishwakarma");
-    // }
-    // // _______________________________________________________
-    // else if (val === 4) {
-    //   history.push("/productList/KR/");
-    // }
     // _______________________________________________________
+    else if (val === 2) {
+      aboutUsSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+    // _______________________________________________________
+    else if (val === 3) {
+      history.push("productList/vishwakarma");
+    }
+    // _______________________________________________________
+    else if (val === 4) {
+      history.push("/productList/KR/");
+    }
+    _______________________________________________________
   };
 
   return (
