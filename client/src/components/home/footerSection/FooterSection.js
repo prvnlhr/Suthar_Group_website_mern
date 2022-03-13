@@ -9,81 +9,81 @@ const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
   var year = moment().format("YYYY");
 
   const linkedClicked = (val) => {
-    // switch (val) {
-    //   case 1:
-    //     const clickDetails1 = {
-    //       from: "footerSection",
-    //     };
-    //     sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails1));
-    //     history.push("/company/contact");
-    //     break;
+    switch (val) {
+      case 1:
+        const clickDetails1 = {
+          from: "footerSection",
+        };
+        sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails1));
+        history.push("/company/contact");
+        break;
 
-    //   case 2:
-    //     aboutUsSectionRef.current.scrollIntoView({
-    //       behavior: "smooth",
-    //       block: "center",
-    //     });
-    //     break;
+      case 2:
+        aboutUsSectionRef.current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+        break;
 
-    //   case 3:
-    //     const clickDetails2 = {
-    //       from: "footerSection",
-    //     };
+      case 3:
+        const clickDetails2 = {
+          from: "footerSection",
+        };
 
-    //     if (location.pathname === "/") {
-    //       sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails2));
-    //       history.push("/company/vishwakarma");
-    //     } else if (
-    //       location.pathname === "/company/KR" ||
-    //       location.pathname === "/company/vishwakarma"
-    //     ) {
-    //       history.push("/productList/vishwakarma");
-    //     }
-    //     break;
+        if (location.pathname === "/") {
+          sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails2));
+          history.push("/company/vishwakarma");
+        } else if (
+          location.pathname === "/company/KR" ||
+          location.pathname === "/company/vishwakarma"
+        ) {
+          history.push("/productList/vishwakarma");
+        }
+        break;
 
-    //   case 4:
-    //     const clickDetails3 = {
-    //       from: "footerSection",
-    //     };
-    //     if (location.pathname === "/") {
-    //       sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails3));
-    //       history.push("/company/KR");
-    //     } else if (
-    //       location.pathname === "/company/KR" ||
-    //       location.pathname === "/company/vishwakarma"
-    //     ) {
-    //       history.push("/productList/KR");
-    //     }
+      case 4:
+        const clickDetails3 = {
+          from: "footerSection",
+        };
+        if (location.pathname === "/") {
+          sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails3));
+          history.push("/company/KR");
+        } else if (
+          location.pathname === "/company/KR" ||
+          location.pathname === "/company/vishwakarma"
+        ) {
+          history.push("/productList/KR");
+        }
 
-    //     break;
+        break;
+    }
+
+    if (val === 1) {
+      const clickDetails = {
+        from: "footerUi",
+        link: "sendEnquiry",
+        to: "",
+      };
+      sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
+
+      history.push("/company/contact");
+    }
+    // // _______________________________________________________
+    // else if (val === 2) {
+    //   aboutUsSectionRef.current.scrollIntoView({
+    //     behavior: "smooth",
+    //     block: "center",
+    //   });
     // }
-
-    // if (val === 1) {
-    //   const clickDetails = {
-    //     from: "footerUi",
-    //     link: "sendEnquiry",
-    //     to: "",
-    //   };
-    //   sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
-
-    //   history.push("/company/contact");
+    // // _______________________________________________________
+    // else if (val === 3) {
+    //   history.push("productList/vishwakarma");
+    // }
+    // // _______________________________________________________
+    // else if (val === 4) {
+    //   history.push("/productList/KR/");
     // }
     // _______________________________________________________
-    else if (val === 2) {
-      aboutUsSectionRef.current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
-    }
-    // _______________________________________________________
-    else if (val === 3) {
-      history.push("productList/vishwakarma");
-    }
-    // _______________________________________________________
-    else if (val === 4) {
-      history.push("/productList/KR/");
-    }
-    _______________________________________________________
   };
 
   return (
