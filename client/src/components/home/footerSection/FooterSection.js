@@ -6,7 +6,7 @@ import styles from "../../../css/footerSection/footerSection.module.css";
 const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
   // const history = useHistory();
   // const location = useLocation();
-  // var year = moment().format("YYYY");
+  var year = moment().format("YYYY");
 
   const linkedClicked = (val) => {
     switch (val) {
