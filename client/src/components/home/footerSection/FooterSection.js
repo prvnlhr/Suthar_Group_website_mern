@@ -1,11 +1,11 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import moment from "moment";
-// import { useHistory, useLocation } from "react-router-dom";
+import { useHistory, useLocation } from "react-router-dom";
 import styles from "../../../css/footerSection/footerSection.module.css";
 const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
-  // const history = useHistory();
-  // const location = useLocation();
+  const history = useHistory();
+  const location = useLocation();
   var year = moment().format("YYYY");
 
   const linkedClicked = (val) => {
