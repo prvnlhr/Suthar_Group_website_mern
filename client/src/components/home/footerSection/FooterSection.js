@@ -58,16 +58,16 @@ const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
         break;
     }
 
-    if (val === 1) {
-      const clickDetails = {
-        from: "footerUi",
-        link: "sendEnquiry",
-        to: "",
-      };
-      sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
+    // if (val === 1) {
+    //   const clickDetails = {
+    //     from: "footerUi",
+    //     link: "sendEnquiry",
+    //     to: "",
+    //   };
+    //   sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
 
-      history.push("/company/contact");
-    }
+    //   history.push("/company/contact");
+    // }
     // // _______________________________________________________
     // else if (val === 2) {
     //   aboutUsSectionRef.current.scrollIntoView({
