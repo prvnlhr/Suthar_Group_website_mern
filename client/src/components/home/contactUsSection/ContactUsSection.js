@@ -30,11 +30,11 @@ const ContactUsSection = ({ contactUsSectionRef }) => {
       </div>
 
       <div className={styles.cardImgWrapper}>
-        {/* <div className={styles.contactUsCard}>
+        <div className={styles.contactUsCard}>
 
           <SecondaryTitle />
 
-        </div> */}
+        </div>
 
         {/* <ContactUsBgImg /> */}
       </div>
