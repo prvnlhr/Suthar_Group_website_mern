@@ -7,19 +7,19 @@ import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
 import ContactUsBgImg from "./ContactUsBgImg";
 
-// const imgVariants = {
-//   hidden: { opacity: 0, scale: 0.7 },
-//   visible: {
-//     opacity: 1,
-//     scale: 1,
-//     transition: {
-//       staggerChildren: 0.5,
-//       delayChildren: 0.5,
-//       duration: 0.8,
-//       delay: 0.2,
-//     },
-//   },
-// };
+const imgVariants = {
+  hidden: { opacity: 0, scale: 0.7 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      staggerChildren: 0.5,
+      delayChildren: 0.5,
+      duration: 0.8,
+      delay: 0.2,
+    },
+  },
+};
 const ContactUsSection = ({ contactUsSectionRef }) => {
   return (
     <div className={styles.contactUsSectionWrapper} ref={contactUsSectionRef}>
