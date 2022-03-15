@@ -36,7 +36,7 @@ const ContactUsSection = ({ contactUsSectionRef }) => {
 
         </div>
 
-        {/* <ContactUsBgImg /> */}
+        <ContactUsBgImg />
       </div>
     </div>
   );
