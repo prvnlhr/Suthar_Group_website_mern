@@ -23,11 +23,11 @@ const imgVariants = {
 const ContactUsSection = ({ contactUsSectionRef }) => {
   return (
     <div className={styles.contactUsSectionWrapper} ref={contactUsSectionRef}>
-      {/* <div className={styles.styleDiv}>
+      <div className={styles.styleDiv}>
 
         <PrimaryTitle />
 
-      </div> */}
+      </div>
 
       <div className={styles.cardImgWrapper}>
         {/* <div className={styles.contactUsCard}>
