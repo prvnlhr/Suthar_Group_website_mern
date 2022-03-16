@@ -57,86 +57,86 @@ const DropDownMenu = ({ footerUsSectionRef, aboutUsSectionRef }) => {
 
   const subItemClicked = (value) => {
 
-    // switch (value) {
-    //   case 1:
-    //     history.push("/company/vishwakarma");
-    //     dispatch(setDropDownShow(false));
-    //     break;
-    //   case 2:
-    //     history.push("/company/KR");
-    //     dispatch(setDropDownShow(false));
-    //     break;
-    //   case 3:
-    //     history.push("/productList/vishwakarma");
-    //     dispatch(setDropDownShow(false));
-    //     break;
-    //   case 4:
-    //     history.push("/productList/KR");
-    //     dispatch(setDropDownShow(false));
-    //     break;
+    switch (value) {
+      case 1:
+        history.push("/company/vishwakarma");
+        dispatch(setDropDownShow(false));
+        break;
+      case 2:
+        history.push("/company/KR");
+        dispatch(setDropDownShow(false));
+        break;
+      case 3:
+        history.push("/productList/vishwakarma");
+        dispatch(setDropDownShow(false));
+        break;
+      case 4:
+        history.push("/productList/KR");
+        dispatch(setDropDownShow(false));
+        break;
 
-    //   case 5:
-    //     history.push("/company/contact");
-    //     dispatch(setDropDownShow(false));
-    //     break;
-    //   case 6:
-    //     dispatch(setDropDownShow(false));
-    //     let path1;
-    //     let clickDetails1;
-    //     if (location.pathname === "/") {
-    //       path1 = "home";
-    //       clickDetails1 = {
-    //         from: path1,
-    //         link: "connectSocially",
-    //       };
-    //       footerUsSectionRef.current.scrollIntoView({
-    //         behavior: "smooth",
-    //         block: "center",
-    //       });
-    //       sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails1));
-    //     } else {
-    //       path1 = "notHome";
-    //       clickDetails1 = {
-    //         from: path1,
-    //         link: "connectSocially",
-    //       };
-    //       history.push("/");
-    //     }
-    //     sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails1));
-    //     break;
-    //   case 7:
-    //     dispatch(setDropDownShow(false));
-    //     let path2;
-    //     let clickDetails2;
-    //     if (location.pathname === "/") {
-    //       path2 = "home";
-    //       clickDetails2 = {
-    //         from: path2,
-    //         link: "aboutUs",
-    //       };
-    //       aboutUsSectionRef.current.scrollIntoView({
-    //         behavior: "smooth",
-    //         block: "center",
-    //       });
-    //       sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails2));
-    //     } else {
-    //       path2 = "notHome";
-    //       clickDetails2 = {
-    //         from: path2,
-    //         link: "aboutUs",
-    //       };
-    //       history.push("/");
-    //     }
-    //     sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails2));
-    //     break;
-    //   case 8:
-    //     dispatch(setDropDownShow(false));
-    //     history.push("/company/gallery");
-    //     break;
-    //   case 9:
-    //     history.push("/company/auth/login");
-    //     break;
-    // }
+      case 5:
+        history.push("/company/contact");
+        dispatch(setDropDownShow(false));
+        break;
+      case 6:
+        dispatch(setDropDownShow(false));
+        let path1;
+        let clickDetails1;
+        if (location.pathname === "/") {
+          path1 = "home";
+          clickDetails1 = {
+            from: path1,
+            link: "connectSocially",
+          };
+          footerUsSectionRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+          sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails1));
+        } else {
+          path1 = "notHome";
+          clickDetails1 = {
+            from: path1,
+            link: "connectSocially",
+          };
+          history.push("/");
+        }
+        sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails1));
+        break;
+      case 7:
+        dispatch(setDropDownShow(false));
+        let path2;
+        let clickDetails2;
+        if (location.pathname === "/") {
+          path2 = "home";
+          clickDetails2 = {
+            from: path2,
+            link: "aboutUs",
+          };
+          aboutUsSectionRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
+          sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails2));
+        } else {
+          path2 = "notHome";
+          clickDetails2 = {
+            from: path2,
+            link: "aboutUs",
+          };
+          history.push("/");
+        }
+        sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails2));
+        break;
+      case 8:
+        dispatch(setDropDownShow(false));
+        history.push("/company/gallery");
+        break;
+      case 9:
+        history.push("/company/auth/login");
+        break;
+    }
 
     
   };
