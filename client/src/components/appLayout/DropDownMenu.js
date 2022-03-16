@@ -43,17 +43,17 @@ const DropDownMenu = ({ footerUsSectionRef, aboutUsSectionRef }) => {
   const history = useHistory();
   const location = useLocation();
 
-  // const toggleMenuItem = (val, height) => {
-  //   if (val === currActiveMenu) {
-  //     setCurrActiveMenu(null);
-  //   } else {
-  //     document.documentElement.style.setProperty(
-  //       "--listItemWrapperHeight",
-  //       `${height}px`
-  //     );
-  //     setCurrActiveMenu(val);
-  //   }
-  // };
+  const toggleMenuItem = (val, height) => {
+    if (val === currActiveMenu) {
+      setCurrActiveMenu(null);
+    } else {
+      document.documentElement.style.setProperty(
+        "--listItemWrapperHeight",
+        `${height}px`
+      );
+      setCurrActiveMenu(val);
+    }
+  };
 
   const subItemClicked = (value) => {
 
