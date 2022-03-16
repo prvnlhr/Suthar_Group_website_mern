@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { CircleSpinner } from "react-spinners-kit";
 import { logout } from "../../actions/authActions";
 import { setDropDownShow } from "../../actions/auxillaryActions/auxillaryActions";
-
 const dropDownVariants = {
   hidden: {
     y: "-100vh",
@@ -32,8 +31,9 @@ const dropDownVariants = {
     },
   },
 };
-
 const DropDownMenu = ({ footerUsSectionRef, aboutUsSectionRef }) => {
+  //   const [productLinkClicked, setProductLinkClicked] = useState(false);
+  //   const [dropDownShow, setDropDownShow] = useState(false);
   const [currActiveMenu, setCurrActiveMenu] = useState(null);
   const loadState = useSelector((state) => state.loadingReducer);
   const { place, isLoading } = loadState;
@@ -56,7 +56,6 @@ const DropDownMenu = ({ footerUsSectionRef, aboutUsSectionRef }) => {
   };
 
   const subItemClicked = (value) => {
-
     switch (value) {
       case 1:
         history.push("/company/vishwakarma");
@@ -137,8 +136,6 @@ const DropDownMenu = ({ footerUsSectionRef, aboutUsSectionRef }) => {
         history.push("/company/auth/login");
         break;
     }
-
-    
   };
 
   const logoutHandler = (e) => {
@@ -318,4 +315,78 @@ const DropDownMenu = ({ footerUsSectionRef, aboutUsSectionRef }) => {
 };
 
 export default DropDownMenu;
+// className={styles.subItemDivLine}
+// if (value === 1) {
+//   // history.push("/productList/vishvakarma");
+//   history.push("/company/vishwakarma");
+//   dispatch(setDropDownShow(false));
+// }
 
+// // ________________________________
+// else if (value === 2) {
+//   history.push("/company/KR");
+//   dispatch(setDropDownShow(false));
+// }
+// // ________________________________
+// else if (value === 3) {
+//   history.push("/company/contact");
+//   dispatch(setDropDownShow(false));
+// }
+
+// // ________________________________
+// else if (value === 4) {
+//   dispatch(setDropDownShow(false));
+//   let path;
+//   let clickDetails;
+//   if (location.pathname === "/") {
+//     path = "home";
+//     clickDetails = {
+//       from: path,
+//       link: "connectSocially",
+//     };
+//     footerUsSectionRef.current.scrollIntoView({
+//       behavior: "smooth",
+//       block: "center",
+//     });
+//     sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
+//   } else {
+//     path = "notHome";
+//     clickDetails = {
+//       from: path,
+//       link: "connectSocially",
+//     };
+//     history.push("/");
+//   }
+//   sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
+// }
+// // _________________________________
+// else if (value === 5) {
+//   dispatch(setDropDownShow(false));
+//   let path;
+//   let clickDetails;
+//   if (location.pathname === "/") {
+//     path = "home";
+//     clickDetails = {
+//       from: path,
+//       link: "aboutUs",
+//     };
+//     aboutUsSectionRef.current.scrollIntoView({
+//       behavior: "smooth",
+//       block: "center",
+//     });
+//     sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
+//   } else {
+//     path = "notHome";
+//     clickDetails = {
+//       from: path,
+//       link: "aboutUs",
+//     };
+//     history.push("/");
+//   }
+//   sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
+// } else if (value === 6) {
+//   dispatch(setDropDownShow(false));
+//   history.push("/company/gallery");
+// } else if (value === 7) {
+//   history.push("/company/auth/login");
+// }
