@@ -166,7 +166,6 @@ const Navbar = ({
           </p>
         </div>
 
-        {/* <DropDownToggleBtn /> */}
       </div>
     </div>
   );
