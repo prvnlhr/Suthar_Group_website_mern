@@ -11,30 +11,30 @@ import DropDownToggleBtn from "./DropDownToggleBtn";
 import { setDropDownShow } from "../../actions/auxillaryActions/auxillaryActions";
 import { motion, AnimatePresence } from "framer-motion";
 
-// const hamIconVariants = {
-//   hidden: {
-//     rotate: 0,
-//     opacity: 0,
-//     duration: 0.5,
-//   },
-//   visible: {
-//     opacity: 1,
-//     rotate: 0,
-//     transition: {
-//       staggerChildren: 0.5,
-//       duration: 0.5,
-//       ease: [0.83, 0, 0.17, 1],
-//     },
-//   },
-//   exit: {
-//     opacity: 0,
-//     rotate: 0,
-//     transition: {
-//       duration: 0.5,
-//       ease: [0.83, 0, 0.17, 1],
-//     },
-//   },
-// };
+const hamIconVariants = {
+  hidden: {
+    rotate: 0,
+    opacity: 0,
+    duration: 0.5,
+  },
+  visible: {
+    opacity: 1,
+    rotate: 0,
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  },
+  exit: {
+    opacity: 0,
+    rotate: 0,
+    transition: {
+      duration: 0.5,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  },
+};
 // const dropDownVariants = {
 //   hidden: {
 //     y: "-100vh",
