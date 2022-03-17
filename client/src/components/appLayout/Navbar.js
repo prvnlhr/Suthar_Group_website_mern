@@ -35,29 +35,29 @@ const hamIconVariants = {
     },
   },
 };
-// const dropDownVariants = {
-//   hidden: {
-//     y: "-100vh",
-//     opacity: 0,
-//     duration: 0.5,
-//   },
-//   visible: {
-//     opacity: 1,
-//     y: 0,
-//     transition: {
-//       staggerChildren: 0.5,
-//       duration: 0.5,
-//       ease: [0.83, 0, 0.17, 1],
-//     },
-//   },
-//   exit: {
-//     opacity: 0,
-//     y: "-100vh",
-//     transition: {
-//       duration: 0.5,
-//       ease: [0.83, 0, 0.17, 1],
-//     },
-//   },
+const dropDownVariants = {
+  hidden: {
+    y: "-100vh",
+    opacity: 0,
+    duration: 0.5,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      staggerChildren: 0.5,
+      duration: 0.5,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  },
+  exit: {
+    opacity: 0,
+    y: "-100vh",
+    transition: {
+      duration: 0.5,
+      ease: [0.83, 0, 0.17, 1],
+    },
+  },
 };
 const Navbar = ({
   node,
