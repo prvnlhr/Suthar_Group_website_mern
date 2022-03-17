@@ -87,24 +87,24 @@ const Navbar = ({
     }
   };
 
-  // const linkedClicked = (val) => {
-  //   if (val === 1) {
-  //     ourCompaniesSectionRef.current.scrollIntoView({
-  //       behavior: "smooth",
-  //       block: "center",
-  //     });
-  //   } else if (val === 2) {
-  //     contactUsSectionRef.current.scrollIntoView({
-  //       behavior: "smooth",
-  //       block: "center",
-  //     });
-  //   } else if (val === 3) {
-  //     aboutUsSectionRef.current.scrollIntoView({
-  //       behavior: "smooth",
-  //       block: "center",
-  //     });
-  //   }
-  // };
+  const linkedClicked = (val) => {
+    if (val === 1) {
+      ourCompaniesSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    } else if (val === 2) {
+      contactUsSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    } else if (val === 3) {
+      aboutUsSectionRef.current.scrollIntoView({
+        behavior: "smooth",
+        block: "center",
+      });
+    }
+  };
 
   const logoutHandler = (e) => {
     e.preventDefault();
