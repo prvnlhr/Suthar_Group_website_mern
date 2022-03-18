@@ -124,11 +124,11 @@ const CompanyPage = () => {
       </div>
 
       <div className={pageStyles.contentContainer}>
-        {/* <BannerSection />
+        <BannerSection />
         <ExploreProductsSection />
         <ContactUsSection />
         <ClientsSection />
-        <FooterSection /> */}
+        <FooterSection />
       </div>
     </div>
   );
