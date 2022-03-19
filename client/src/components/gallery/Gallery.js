@@ -9,18 +9,18 @@ import DropDownToggleBtn from "../appLayout/DropDownToggleBtn";
 import Navbar from "../appLayout/Navbar";
 import { Route, NavLink, useHistory, Switch } from "react-router-dom";
 
-// const imgVariants = {
-//   hidden: { scale: 1.2, opacity: 0 },
-//   visible: {
-//     scale: 1,
-//     opacity: [0, 1],
-//     transition: {
-//       delay: 0.3,
-//       duration: 0.8,
-//       ease: [0.3, 0.1, 0.3, 1],
-//     },
-//   },
-// };
+const imgVariants = {
+  hidden: { scale: 1.2, opacity: 0 },
+  visible: {
+    scale: 1,
+    opacity: [0, 1],
+    transition: {
+      delay: 0.3,
+      duration: 0.8,
+      ease: [0.3, 0.1, 0.3, 1],
+    },
+  },
+};
 const arrowVariants = {
   hidden: { translateX: 20, opacity: 0 },
   visible: {
