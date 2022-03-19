@@ -132,7 +132,6 @@ const Gallery = () => {
 
       {/* <div className={galleryStyles.contentContainer}> */}
       <div className={galleryStyles.imagesWrapper}>
-        {/* <div className={galleryStyles.imageDiv}></div>
         <div className={galleryStyles.imageDiv}></div>
         <div className={galleryStyles.imageDiv}></div>
         <div className={galleryStyles.imageDiv}></div>
@@ -155,7 +154,8 @@ const Gallery = () => {
         <div className={galleryStyles.imageDiv}></div>
         <div className={galleryStyles.imageDiv}></div>
         <div className={galleryStyles.imageDiv}></div>
-        <div className={galleryStyles.imageDiv}></div> */}
+        <div className={galleryStyles.imageDiv}></div>
+        <div className={galleryStyles.imageDiv}></div>
       </div>
       {/* </div> */}
       <div className={galleryStyles.footerWrapper}></div>
