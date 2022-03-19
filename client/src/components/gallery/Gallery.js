@@ -68,9 +68,9 @@ const Gallery = () => {
 
   return (
     <div className={galleryStyles.galleryComponent}>
-      {/* <AnimatePresence>
+      <AnimatePresence>
         {dropDownShow === true && <DropDownMenu />}
-      </AnimatePresence> */}
+      </AnimatePresence>
 
       <div className={galleryStyles.headerWrapper}>
         <div className={galleryStyles.companyLogoWrapper}>
@@ -97,7 +97,7 @@ const Gallery = () => {
           </div>
         </div>
 
-        {/* <DropDownToggleBtn /> */}
+        <DropDownToggleBtn />
       </div>
 
       <div className={galleryStyles.backBtnWrapper}>
@@ -112,9 +112,9 @@ const Gallery = () => {
       <div className={galleryStyles.galleryHeadingWrapper}>
         <div className={galleryStyles.headingLineContainer}>
           <motion.div
-            // variants={lineVariants}
-            // initial="hidden"
-            // animate="visible"
+            variants={lineVariants}
+            initial="hidden"
+            animate="visible"
             className={galleryStyles.headingLineDiv}
           ></motion.div>
         </div>
