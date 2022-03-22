@@ -19,9 +19,9 @@ const DeleteModal = ({ showModal, setShowModal, confirmDelete }) => {
       <div className={styles.cancelBtnWrapper}>
         <button
           className={styles.cancelBtn}
-          // onClick={() => {
-          //   setShowModal(false);
-          // }}
+          onClick={() => {
+            setShowModal(false);
+          }}
         >
           <p className={styles.cancelText}>Cancel</p>
         </button>
