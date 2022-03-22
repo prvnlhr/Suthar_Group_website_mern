@@ -5,7 +5,7 @@ const DeleteModal = ({ showModal, setShowModal, confirmDelete }) => {
   return (
     <div className={styles.deleteModalWrapper}>
       <div className={styles.warningIconWrapper}>
-        {/* <WarningIcon /> */}
+        <WarningIcon />
       </div>
       <div className={styles.deleteTittleWrapper}>
         <p className={styles.deleteTitle}>Delete item permanently ?</p>
