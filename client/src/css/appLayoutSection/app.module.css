@@ -31,6 +31,6 @@ html {
   align-items: center;
 }
 
-/* .app::-webkit-scrollbar {
+.app::-webkit-scrollbar {
   display: none;
-} */
+}
