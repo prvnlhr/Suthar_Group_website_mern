@@ -23,7 +23,7 @@ html {
 
 .app {
   position: fixed;
-  /* background-color: #f6f7fb; */
+  background-color: #f6f7fb;
   height: 100%;
   width: 100%;
   display: flex;
