@@ -12,7 +12,7 @@
   flex-direction: column;
   overflow-y: scroll;
   /* border: 1px solid blue; */
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   z-index: 1;
   box-sizing: border-box;
   /* overflow: hidden; */
@@ -29,13 +29,13 @@
   align-items: center;
   position: fixed;
   z-index: 10;
-  /* -webkit-tap-highlight-color: transparent;
+  -webkit-tap-highlight-color: transparent;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
-  user-select: none; */
+  user-select: none;
   padding: 0px;
   padding: 0px;
   box-sizing: border-box;
