@@ -3,7 +3,7 @@
   width: 100% !important;
   min-width: 100% !important;
   height: 100% !important;
-  /* background-color: #f8f9fb; */
+  background-color: #f8f9fb;
   scrollbar-width: none; /* firefox hide scrollbar  */
   -ms-overflow-style: none; /* firefox hide scrollbar  */
   display: flex;
