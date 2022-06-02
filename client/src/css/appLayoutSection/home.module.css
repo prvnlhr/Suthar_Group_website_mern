@@ -1,0 +1,19 @@
+.homeWrapper {
+  position: relative;
+  width: 100% !important;
+  min-width: 100% !important;
+  height: 100% !important;
+  background-color: #f8f9fb;
+  scrollbar-width: none; /* firefox hide scrollbar  */
+  -ms-overflow-style: none; /* firefox hide scrollbar  */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  overflow-y: scroll;
+  /* border: 1px solid blue; */
+  /* overflow-x: hidden; */
+  z-index: 1;
+  box-sizing: border-box;
+  /* overflow: hidden; */
+}
