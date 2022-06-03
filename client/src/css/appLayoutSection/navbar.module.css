@@ -82,3 +82,13 @@
 .hamIcon {
   font-size: 20px;
 }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .linkDiv {
+    display: none;
+  }
+
+  .hamIcon {
+    font-size: 25px;
+  }
+}
