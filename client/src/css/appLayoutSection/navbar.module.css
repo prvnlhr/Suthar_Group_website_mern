@@ -26,9 +26,17 @@
   justify-content: center;
   align-items: center;
   padding: 0px 8px 0px 20px;
+  /* border: 1px solid black; */
   white-space: nowrap;
 }
-
+.companyNameText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: black;
+  font-weight: 550;
+  letter-spacing: 0.3px;
+  margin: 0px 0px 0px 0px;
+}
 .linkContainer {
   width: 100%;
   height: 100%;
@@ -48,6 +56,7 @@
   padding: 0px 10px 0px 10px;
   /* border: 1px solid black; */
 }
+
 .linkText {
   font-family: "Montserrat", sans-serif;
   font-size: 0.6rem;
@@ -66,6 +75,14 @@
   margin: 0px 0px 0px 0px;
   cursor: pointer;
 }
+.productsLinksPopUpContainer {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  background-color: white;
+  top: 65px;
+}
+
 .hamDiv {
   position: relative;
   width: auto;
