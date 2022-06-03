@@ -48,3 +48,21 @@
   padding: 0px 10px 0px 10px;
   /* border: 1px solid black; */
 }
+.linkText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6rem;
+  color: #d8d8d9;
+  font-weight: 550;
+  letter-spacing: 0.2em;
+  margin: 0px 0px 0px 0px;
+  cursor: pointer;
+}
+.linkTextActive {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6rem;
+  color: #352b5f;
+  font-weight: 800;
+  letter-spacing: 0.2em;
+  margin: 0px 0px 0px 0px;
+  cursor: pointer;
+}
