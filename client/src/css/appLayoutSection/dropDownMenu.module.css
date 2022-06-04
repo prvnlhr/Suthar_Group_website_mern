@@ -1,3 +1,7 @@
+:root {
+  --listItemWrapperHeight: 50px;
+}
+
 .dropDownWrapper {
   position: fixed;
   width: 100%;
