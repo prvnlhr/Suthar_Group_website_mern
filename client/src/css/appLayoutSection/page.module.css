@@ -13,3 +13,6 @@
   overflow-y: scroll;
   border: 1px solid red;
 }
+.page::-webkit-scrollbar {
+  /* display: none; */
+}
