@@ -151,3 +151,24 @@
   line-height: 18px;
   letter-spacing: 0.03rem;
   color: #342a5e;
+}
+
+.spinnerDiv {
+  /* position: absolute; */
+  /* right: 0px; */
+  width: 50px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid yellowgreen; */
+}
+.loginLink {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.03rem;
+  color: #342a5e;
+}
