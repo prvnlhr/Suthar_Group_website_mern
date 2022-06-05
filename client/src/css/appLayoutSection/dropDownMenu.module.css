@@ -39,7 +39,6 @@
   box-sizing: border-box;
   background-color: #f6f7fb;
 }
-
 .menuHeaderText {
   font-family: "Montserrat", sans-serif;
   font-weight: 600;
@@ -48,6 +47,7 @@
   letter-spacing: 0.12em;
   color: #342a5e;
 }
+
 .dropDownListWrapper {
   grid-row-start: 2;
   grid-row-end: 3;
@@ -81,7 +81,6 @@
   /* border: 1px solid blue; */
 }
 
-
 .subItemDiv {
   position: relative;
   width: 100%;
@@ -95,6 +94,22 @@
   margin: 0px 0px 0px 0px;
   box-sizing: border-box;
   /* border: 1px solid red; */
+}
+.subItemDivLineDiv {
+  width: 20px;
+  height: 100%;
+  margin: 0px 2% 0px 2%;
+  /* border: 1px solid yellowgreen; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.subItemDivLine {
+  width: 80%;
+  height: 2px;
+  background-color: #342a5e;
+  border-radius: 20px;
 }
 
 .listItemWrapperCollapse {
@@ -171,4 +186,25 @@
   line-height: 18px;
   letter-spacing: 0.03rem;
   color: #342a5e;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .mainItemDivText {
+    letter-spacing: 3px;
+    /* font-size: 1.1rem; */
+    font-size: 1.25rem;
+    /* font-size: 1.35rem; */
+
+    font-size: clamp(1.1rem, 0.6000000000000001rem + 2.5vw, 1.35rem) !important;
+  }
+  .subItemDivText {
+    letter-spacing: 0.03rem;
+    font-size: 0.75rem;
+    /* font-size: 0.9rem; */
+
+    font-size: clamp(
+      0.75rem,
+      0.44999999999999996rem + 1.5000000000000002vw,
+      0.9rem
+    ) !important;
+  }
 }
