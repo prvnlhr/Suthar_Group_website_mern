@@ -143,3 +143,11 @@
   -webkit-text-stroke: 1px black;
   text-stroke: 1px black;
 }
+.subItemDivText {
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  letter-spacing: 0.03rem;
+  color: #342a5e;
