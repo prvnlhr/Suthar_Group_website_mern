@@ -39,3 +39,12 @@
   box-sizing: border-box;
   background-color: #f6f7fb;
 }
+
+.menuHeaderText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  line-height: 30px;
+  letter-spacing: 0.12em;
+  color: #342a5e;
+}
