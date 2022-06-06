@@ -19,3 +19,8 @@
   background-size: cover;
   /* border: 1px solid black; */
 }
+.imgDiv img {
+  /* object-fit: contain; */
+  width: 80%;
+  height: 80%;
+}
