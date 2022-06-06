@@ -35,3 +35,15 @@
   align-items: center;
   /* border: 1px solid black; */
 }
+button {
+  width: 100px;
+  height: 32px;
+  background-color: #6c63fe;
+  border: none;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
