@@ -47,3 +47,16 @@ button {
   align-items: center;
   cursor: pointer;
 }
+
+.text1 {
+  /* width: 90%; */
+  font-family: "Quicksand", sans-serif;
+  /* text-transform: uppercase; */
+  font-size: 40px;
+  /* font-size: 2em; */
+
+  color: #57b993;
+  font-weight: bold;
+  margin: 0px 0px 0px 2px;
+  /* letter-spacing: 0.3px; */
+}
