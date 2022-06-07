@@ -164,3 +164,73 @@
   text-rendering: optimizeLegibility;
   text-stroke: 1px white;
 }
+
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .textDiv {
+    position: relative;
+    width: 100%;
+    height: 100% !important;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+    padding: 5% 0% 10% 0%;
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    /* flex-wrap: wrap; */
+    /* line-break: auto; */
+    /* word-break: normal; */
+  }
+  .bannerText {
+    font-family: "Montserrat", sans-serif;
+    /* font-size: 8.5rem; */
+    font-size: 2.2rem;
+    font-size: 3rem;
+    color: white;
+    font-weight: 900;
+    letter-spacing: 1px;
+    /* white-space: nowrap; */
+    width: 88%;
+    /* border: 1px solid red; */
+    height: auto !important;
+    /* margin: auto auto auto auto; */
+
+    /* line-height: 3rem; */
+    font-size: clamp(
+      2.2rem,
+      0.6000000000000005rem + 7.999999999999999vw,
+      3rem
+    ) !important;
+    /* line-height: clamp(3rem, 1rem + 10vw, 4rem) !important; */
+    line-height: 1.2 !important;
+  }
+  .spanText {
+    font-size: clamp(
+      2.2rem,
+      0.6000000000000005rem + 7.999999999999999vw,
+      3rem
+    ) !important;
+    line-height: 1.2 !important;
+  }
+  .scrollDownTextDiv {
+    position: relative;
+    width: 88%;
+    height: auto !important;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    margin: 20px 0% 0% 0%;
+    z-index: 4;
+  }
+}
