@@ -39,7 +39,6 @@
   align-items: center;
 }
 
-
 .bannerImage {
   position: absolute;
   width: 100%;
@@ -61,14 +60,11 @@
     rgba(26, 28, 34, 0.685) 21.21%,
     rgba(26, 28, 34, 0.363) 62.23%
   );
-
   z-index: 3;
   top: 0px;
 }
 
 
-  
-  
 .textDiv {
   position: relative;
   width: 100%;
@@ -97,7 +93,6 @@
   z-index: 4;
 }
 
-
 .bannerText {
   font-family: "Montserrat", sans-serif;
   /* font-size: 8.5rem; */
@@ -120,8 +115,6 @@
   ) !important;
 }
 
-
-
 .scrollDownText {
   font-family: "Montserrat", sans-serif;
   /* font-size: 8.5rem; */
@@ -138,8 +131,6 @@
   font-size: 1.5rem;
   margin: 0px 0px 0% 0%;
 }
-
-
 
 .spanText {
   font-family: "Montserrat", sans-serif;
@@ -164,7 +155,6 @@
   text-rendering: optimizeLegibility;
   text-stroke: 1px white;
 }
-
 
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
