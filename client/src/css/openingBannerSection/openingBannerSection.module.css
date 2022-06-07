@@ -138,3 +138,29 @@
   font-size: 1.5rem;
   margin: 0px 0px 0% 0%;
 }
+
+
+
+.spanText {
+  font-family: "Montserrat", sans-serif;
+  font-family: 'Poppins', sans-serif;
+  /* font-family: 'Roboto', sans-serif; */
+  color: transparent;
+  font-weight: 900;
+  letter-spacing: 2px;
+  font-size: clamp(
+    3.5rem,
+    1.1666666666666665rem + 3.6458333333333335vw,
+    7rem
+  ) !important;
+  line-height: clamp(
+    4.5rem,
+    1.8333333333333335rem + 4.166666666666666vw,
+    8.5rem
+  ) !important;
+  -webkit-text-stroke: 1px white;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  text-stroke: 1px white;
+}
