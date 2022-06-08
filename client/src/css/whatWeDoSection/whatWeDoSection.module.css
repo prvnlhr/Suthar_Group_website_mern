@@ -47,3 +47,77 @@
   transition: transform 0.5s cubic-bezier(0, 0, 0.3, 1);
   will-change: transform;
 }
+
+
+
+.verticalText2 {
+  position: absolute;
+  top: 65vh;
+  /* left: 10px; */
+
+  right: 100px;
+  /* bottom: 50%; */
+  /* margin: auto; */
+  font-family: "Montserrat", sans-serif;
+  font-family: "Poppins", sans-serif;
+
+  font-size: 2.5rem;
+
+  color: rgb(0, 0, 0);
+  font-weight: 800;
+  letter-spacing: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  z-index: 1;
+  width: 1px;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  /* mix-blend-mode: color; */
+  line-height: 1.5;
+  /* border: 1px solid black; */
+  /* -webkit-text-stroke: 1px white; */
+  /* text-stroke: 1px white; */
+  transition: transform 0.5s cubic-bezier(0, 0, 0.3, 1);
+  will-change: transform;
+}
+
+.cardWrapper {
+  position: relative;
+  width: 50%;
+  height: 78% !important;
+  /* left: 20px; */
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  margin: 0px 0px 0px 50px;
+  background-color: white;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px 0px 0px 0px;
+  box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.048);
+}
+
+.titleLine {
+  position: relative;
+  width: 50px;
+  height: 2px;
+  background-color: #352b5f;
+  margin: 0px 10px 0px 10%;
+  border-radius: 20px;
+}
+
+.titleDivPrimary {
+  /* border: 1px solid black; */
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  box-sizing: border-box;
+  margin: 50px 0px 50px 0px;
+  /* background-color: white; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 0px 0px 0px;
+}
