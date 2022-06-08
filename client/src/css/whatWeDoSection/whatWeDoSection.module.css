@@ -155,3 +155,50 @@
   letter-spacing: 1px;
   line-height: 1.5;
 }
+
+
+
+.contextDiv {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: auto !important;
+  box-sizing: border-box;
+  margin: 0px 0px 0px 0px;
+  background-color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 0px 8% 0px 8%;
+}
+.contextText {
+  /* border: 1px solid black; */
+  font-family: "Montserrat", sans-serif;
+  /* font-family: "Gilroy"; */
+  -webkit-font-smoothing: antialiased;
+  font-size: 0.85rem;
+  /* font-size: 0.9rem; */
+  color: #4a4a4a;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 10px 0px 20px 0px;
+  line-height: 1.6;
+}
+.imgWrapper {
+  position: absolute;
+  right: 40px;
+  width: 50%;
+  /* top: 20px; */
+  height: 100% !important;
+  /* aspect-ratio: 1/1; */
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  margin: 5px 0px 5px 0px;
+  /* background-color: rgba(218, 17, 17, 0.466); */
+  z-index: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  overflow: hidden;
+}
