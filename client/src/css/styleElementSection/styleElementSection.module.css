@@ -13,6 +13,8 @@
   background-color: rgb(216, 216, 216);
   scroll-snap-align: center;
 }
+
+
 .statisticsImgWrapper {
   position: relative;
   width: 100%;
@@ -36,7 +38,6 @@
 }
 
 
-
 .overlayDiv {
   position: absolute;
   width: 100%;
@@ -49,7 +50,6 @@
   z-index: 2;
   top: 0px;
 }
-
 
 
 .titleLine {
@@ -84,7 +84,17 @@
   letter-spacing: 0.8em;
   margin: 0px 0px 0px 10px;
 }
-
+/* .titleDivPrimary::before {
+  content: "";
+  position: absolute;
+  width: 30px;
+  height: 2px;
+  background-color: white;
+  margin: auto 0px auto 0px;
+  bottom: 0px;
+  left: 30px;
+  top: 0px;
+} */
 
 
 .titleDivSecondary {
@@ -197,7 +207,28 @@
   letter-spacing: 0.8px;
   line-height: 1.5;
 }
-
+.statsABoutDiv {
+  position: relative;
+  width: 100%;
+  height: auto !important;
+  /* border: 1px solid greenyellow; */
+  box-sizing: border-box;
+  margin: 0px 0px 0px 0px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  z-index: 3;
+  padding: 20px 10px 0px 10%;
+  /* overflow: hidden; */
+}
+.statsAboutText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: white;
+  font-weight: 450;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .statisticsWrapper {
