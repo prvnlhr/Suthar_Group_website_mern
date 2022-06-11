@@ -13,6 +13,8 @@
   background-color: rgb(216, 216, 216);
   scroll-snap-align: center;
 }
+
+
 .statisticsImgWrapper {
   position: relative;
   width: 100%;
@@ -34,6 +36,8 @@
   height: 100%;
   z-index: 1;
 }
+
+
 .overlayDiv {
   position: absolute;
   width: 100%;
@@ -46,6 +50,8 @@
   z-index: 2;
   top: 0px;
 }
+
+
 .titleLine {
   position: relative;
   width: 50px;
@@ -89,6 +95,8 @@
   left: 30px;
   top: 0px;
 } */
+
+
 .titleDivSecondary {
   /* border: 1px solid white; */
   width: 80%;
@@ -127,6 +135,8 @@
 
   /* background-color: rgb(201, 183, 23); */
 }
+
+
 .contextDiv {
   position: relative;
   width: 30%;
@@ -219,6 +229,7 @@
   letter-spacing: 0.5px;
   line-height: 1.6;
 }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .statisticsWrapper {
     position: relative;
