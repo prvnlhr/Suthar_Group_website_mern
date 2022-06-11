@@ -197,3 +197,200 @@
   letter-spacing: 0.8px;
   line-height: 1.5;
 }
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .statisticsWrapper {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    /* min-height: 120vh; */
+    min-height: auto;
+
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    margin: 40px 0px 40px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 1;
+    background-color: rgb(216, 216, 216);
+    scroll-snap-align: center;
+    /* padding: 5% 0px 5% 0px; */
+  }
+  .titleLine {
+    width: 30px;
+    /* height: 2px; */
+    margin: 0px 10px 0px 3%;
+  }
+  .titleDivPrimary {
+    /* border: 1px solid black; */
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    box-sizing: border-box;
+    margin: 15% 0px 5% 0px;
+    /* background-color: white; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+    z-index: 3;
+  }
+  .primaryTitleText {
+    font-size: clamp(
+      0.55rem,
+      -0.04999999999999982rem + 2.999999999999999vw,
+      0.85rem
+    ) !important;
+    color: white;
+    /* font-weight: 500; */
+    letter-spacing: 0.5em;
+    margin: 0px 0px 0px 1%;
+    white-space: nowrap;
+  }
+
+  .titleDivSecondary {
+    /* border: 1px solid white; */
+    width: 100%;
+    height: auto !important;
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    /* background-color: white; */
+    z-index: 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 5% 8% 5% 8%;
+    z-index: 3;
+  }
+
+  .secondaryTitleText {
+    font-size: clamp(
+      1.2rem,
+      -0.4999999999999998rem + 8.5vw,
+      2.05rem
+    ) !important;
+    font-size: 1.2rem;
+    /* font-size: 2.05rem; */
+
+    color: white;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    letter-spacing: 2px;
+    line-height: 1.5;
+  }
+  .contextWrapper {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 3;
+    flex-direction: column;
+    padding: 0px 0px 10% 0px;
+
+    /* background-color: rgb(201, 183, 23); */
+  }
+  .contextDiv {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    /* border: 1px solid orange; */
+    box-sizing: border-box;
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    z-index: 3;
+    flex-direction: column;
+    /* background-color: rgb(216, 216, 216); */
+  }
+  .statsDiv {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 3;
+    padding: 0px 0px 0px 10%;
+  }
+  .lineBreak {
+    position: relative;
+    width: 50px;
+    height: 2px !important;
+    /* border: 1px solid white; */
+    box-sizing: border-box;
+    margin: 2% 0px 1% 10%;
+    margin: 0% 0px 1% 10%;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 3;
+    background-color: white;
+  }
+  .statsText {
+    /* font-size: 2rem; */
+    /* font-size:3rem; */
+    /* font-size: clamp(2rem, 0rem + 10vw, 3rem) !important; */
+    color: white;
+    font-weight: 300;
+    letter-spacing: 1px;
+  }
+  .statsTypeDiv {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    /* border: 1px solid blueviolet; */
+    box-sizing: border-box;
+    margin: 0px 0px 10px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 3;
+    padding: 2% 10% 2% 10%;
+  }
+  .statsTypeText {
+    font-size: 1rem;
+    color: white;
+    font-weight: 550;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+  }
+  .statsABoutDiv {
+    position: relative;
+    width: 100%;
+    height: auto !important;
+    /* border: 1px solid greenyellow; */
+    box-sizing: border-box;
+    margin: 10px 0px 0px 0px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 3;
+    padding: 0px 10% 5% 10%;
+  }
+  .statsAboutText {
+    /* font-size: 0.8rem; */
+    /* font-size: 1.1rem; */
+    font-size: clamp(
+      0.8rem,
+      0.19999999999999996rem + 3.0000000000000004vw,
+      1.1rem
+    ) !important;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 450;
+    letter-spacing: 0.3px;
+    line-height: 1.6;
+  }
+}
