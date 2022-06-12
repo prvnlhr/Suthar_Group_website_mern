@@ -91,3 +91,40 @@
   cursor: pointer;
   /* border: 1px solid red; */
 }
+
+
+
+
+.backBtnWrapper {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 0%;
+  /* background-color: #f6f7fb; */
+}
+.backBtnDiv {
+  width: auto;
+  height: 55%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  padding: 0px 15px 0px 20px;
+  cursor: pointer;
+}
+.backBtnText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: black;
+  font-weight: 550;
+  letter-spacing: 0.5px;
+  margin: 0px 10px 0px 10px;
+}
