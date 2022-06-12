@@ -128,3 +128,23 @@
   letter-spacing: 0.5px;
   margin: 0px 10px 0px 10px;
 }
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .contactPageWrapper {
+    width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    /* border: 1px solid blue; */
+    display: grid;
+    grid-template-rows: 50px 50px 50px minmax(0, 1fr);
+    /* grid-template-rows: 50px 50px 50px 450px; */
+    box-sizing: border-box;
+    /* background-color: #f8f9fb; */
+    background-color: #f6f7fb;
+  }
+
+  .contactPageWrapper::-webkit-scrollbar {
+    display: none;
+  }
+}
