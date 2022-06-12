@@ -13,3 +13,17 @@
   background: linear-gradient(180deg, #e2eef7 20.53%, #f6f7fb 75.75%);
   overflow-y: scroll;
 }
+.headerWrapper {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 5%;
+  background-color: white;
+}
