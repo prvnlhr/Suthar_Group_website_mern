@@ -70,3 +70,24 @@
   margin: 0px 0px 0px 0px;
   align-self: flex-end;
 }
+
+
+.linkText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.72rem;
+  color: black;
+  font-weight: 550;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 0px 0px;
+}
+.linksDiv {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px 0px 10px;
+  padding: 0px 10px 0px 10px;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
