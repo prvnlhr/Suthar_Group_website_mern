@@ -33,7 +33,6 @@
   box-sizing: border-box;
 }
 
-
 .addBtnWrapperHidden {
   position: absolute;
   right: 1%;
@@ -62,7 +61,6 @@
   /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
   /* <div className={btnStyles.addBtnWrapper}> </div> */
 }
-
 
 .addBtnIconDiv {
   position: relative;
@@ -159,8 +157,6 @@
 }
 
 
-
-
 .cancelBtnDiv {
   position: absolute;
   top: 10px;
@@ -239,8 +235,6 @@
     margin: 0px;
   } */
 
-
-  
   
 .submitBtn {
   margin: 10px 0px 0px 0px;
