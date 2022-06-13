@@ -105,3 +105,55 @@
   /* border: 1px solid black; */
   box-sizing: border-box;
 }
+
+
+.addBtnTextDiv p {
+  margin: 0px 0px 0px 5px;
+  padding: 0px;
+  font-family: "Quicksand", sans-serif;
+  /* font-weight: bold; */
+  /* border-radius: 20px; */
+  color: white;
+  -webkit-text-stroke: 0.01em;
+}
+
+.save_cancel_Div {
+  width: 90%;
+  height: 90%;
+  display: flex;
+  flex-direction: row !important;
+  justify-content: space-evenly !important;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.saveBtnDiv {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); */
+  width: 40px;
+  height: 40px;
+  border: 1px solid rgb(187, 187, 187);
+  /* transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); */
+  font-weight: 650;
+  border-radius: 50%;
+  font-family: "Nunito", sans-serif;
+  font-size: 10px;
+  color: #34c759;
+  cursor: pointer;
+  letter-spacing: 0.2px !important;
+  box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.05),
+    -6px -6px 6px rgba(255, 255, 255, 0.6),
+    inset 2px 2px 5px rgba(0, 0, 0, 0.03),
+    inset -2px -2px 5px rgba(255, 255, 255, 0.4);
+}
+.saveBtnDiv:hover {
+  /* box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); */
+
+  background-color: #1bb55c;
+  /* border: 1px solid #34c759; */
+  color: white;
+}
+.saveBtnDiv span {
+  margin: 0px 0px 0px 2px;
+}
