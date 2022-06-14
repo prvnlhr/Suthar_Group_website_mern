@@ -30,6 +30,22 @@
   /* align-content: space-between; */
 }
 
+.lineOne {
+  position: relative;
+
+  margin: 0px 0px 2.5px 0px;
+  width: 50%;
+  height: 0.1em;
+  min-height: 0.1em;
+  /* background-color: red; */
+  background-color: #352b5f;
+  /* border-radius: 50px; */
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
 
 
 .lineTwo {
