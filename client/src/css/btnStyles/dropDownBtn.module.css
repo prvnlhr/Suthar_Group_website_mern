@@ -29,3 +29,50 @@
   right: 0px;
   /* align-content: space-between; */
 }
+
+
+
+.lineTwo {
+  position: relative;
+  margin: 2.4px 0px 0px 0px;
+  width: 50%;
+  height: 0.1em;
+  min-height: 0.1em;
+
+  /* background-color: blue; */
+  background-color: #352b5f;
+  /* border-radius: 50px; */
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+.xLineOne {
+  position: absolute;
+  width: 40%;
+  height: 0.1em;
+  min-height: 0.1em;
+  background-color: #352b5f;
+  transform: rotate(-45deg);
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
+.xLineTwo {
+  position: absolute;
+  width: 40%;
+  height: 0.1em;
+  min-height: 0.1em;
+  background-color: #352b5f;
+  transform: rotate(45deg);
+  border-radius: 50px;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  box-sizing: border-box;
+}
