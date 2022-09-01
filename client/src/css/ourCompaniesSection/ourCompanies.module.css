@@ -69,3 +69,43 @@
   letter-spacing: 0.8em;
   color: #ffffff;
 }
+
+.titleLine {
+  position: relative;
+  /* width: 30px; */
+  /* height: 2px; */
+  width: 50px;
+  height: 2px;
+  background-color: white;
+  margin: 0px 10px 0px 10px;
+}
+.vishvakarmaTextWrapper {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  /* min-height: 30%; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  /* border: 1px solid blue; */
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: white;
+  padding: 0px 0% 0px 8%;
+}
+.krTextWrapper {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  /* min-height: 30%; */
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-direction: column;
+  /* border: 1px solid red; */
+  box-sizing: border-box;
+  overflow: hidden;
+  background-color: #303030;
+  padding: 0px 8% 0px 0px;
+}
