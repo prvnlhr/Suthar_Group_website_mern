@@ -185,3 +185,37 @@
   -ms-user-select: none;
   user-select: none;
 }
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .primaryTitleText {
+    font-size: clamp(
+      0.55rem,
+      -0.04999999999999982rem + 2.999999999999999vw,
+      0.85rem
+    ) !important;
+    margin: 0px 5px 0px 5px;
+  }
+  .secondaryTitleText1 {
+    font-size: clamp(0.9rem, -0.29999999999999993rem + 6vw, 1.5rem) !important;
+  }
+  .secondaryTitleText2 {
+    font-size: clamp(0.9rem, -0.29999999999999993rem + 6vw, 1.5rem) !important;
+  }
+
+  .linkText1 {
+    font-size: clamp(
+      0.5rem,
+      -0.10000000000000009rem + 3.0000000000000004vw,
+      0.8rem
+    ) !important;
+  }
+  .linkText2 {
+    font-size: clamp(
+      0.5rem,
+      -0.10000000000000009rem + 3.0000000000000004vw,
+      0.8rem
+    ) !important;
+  }
+
+}
