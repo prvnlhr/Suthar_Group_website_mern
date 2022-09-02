@@ -33,7 +33,9 @@
   overflow-x: scroll;
   margin: 0px 0px 20px 0px;
 }
-
+.imageWrapper::-webkit-scrollbar {
+  display: none;
+}
 .imageContainer {
   position: relative;
   width: 250px;
@@ -65,7 +67,6 @@
   overflow: hidden;
   transition: transform 0.5s cubic-bezier(0, 0, 0.3, 1);
 }
-
 
 .imageELement {
   position: relative;
@@ -115,7 +116,6 @@
   background: rgba(61, 46, 232, 0.38);
 }
 
-
 .serviceText {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
@@ -131,7 +131,6 @@
   background-color: #352b5f;
   margin: 0px 10px 0px 0px;
 }
-
 
 
 .titleDivPrimary {
@@ -159,8 +158,6 @@
   margin: 0px 0px 0px 10px;
 }
 
-
-
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .ourServicesSectionWrapper {
     position: relative;
@@ -174,7 +171,7 @@
     margin: 50px 0px 100px 0px;
     /* overflow: hidden; */
   }
-  
+
   .styleDiv {
     position: absolute;
     top: 0px;
@@ -274,7 +271,6 @@
     color: white;
     font-weight: 700;
     letter-spacing: 0.3em;
-    /* margin: 0px 0px 0px 10px; */
+    margin: 0px 0px 0px 10px;
   }
-
 }
