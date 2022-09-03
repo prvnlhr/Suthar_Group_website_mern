@@ -1,0 +1,15 @@
+.galleryWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid orange; */
+  display: grid;
+  grid-template-rows: 50px minmax(0, 1fr);
+  /* align-items: center; */
+  /* justify-content: center; */
+  background-color: #f6f7fb;
+  /* background-color: #f8f9fb; */
+  box-sizing: border-box;
+  scrollbar-width: none; /* firefox hide scrollbar  */
+  -ms-overflow-style: none; /* firefox hide scrollbar  */
+}
