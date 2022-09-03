@@ -27,3 +27,60 @@
 
   padding: 0px 0px 0px 2%;
 }
+
+
+.contentContainer {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  /* border: 1px solid green; */
+  background-color: #f6f7fb;
+
+  /* display: flex; */
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
+  /* align-content: flex-start; */
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  padding-top: 10px;
+  padding-left: 30px;
+  /* padding-right: auto; */
+  padding-bottom: 20px;
+  scrollbar-width: none; /* firefox hide scrollbar  */
+  -ms-overflow-style: none; /* firefox hide scrollbar  */
+  /* background-color: white; */
+  margin: 0px auto 0px auto;
+}
+.contentContainer::-webkit-scrollbar {
+  display: none;
+}
+.photo {
+  margin: 5px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .contentContainer {
+    grid-row-start: 2;
+    grid-row-end: 3;
+    position: relative;
+    height: 100%;
+    width: 100%;
+    border: 1px solid green;
+    background-color: #f6f7fb;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    padding-top: 10px;
+    padding-left: 4%;
+    /* padding-right: 5%; */
+    padding-bottom: 20px;
+    scrollbar-width: none; /* firefox hide scrollbar  */
+    -ms-overflow-style: none; /* firefox hide scrollbar  */
+    /* background-color: white; */
+    margin: 0px auto 0px auto;
+  }
+}
