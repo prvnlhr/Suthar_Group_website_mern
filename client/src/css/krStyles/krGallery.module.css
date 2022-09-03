@@ -13,7 +13,6 @@
   scrollbar-width: none; /* firefox hide scrollbar  */
   -ms-overflow-style: none; /* firefox hide scrollbar  */
 }
-
 .headerWrapper {
   grid-row-start: 1;
   grid-row-end: 2;
@@ -27,7 +26,6 @@
 
   padding: 0px 0px 0px 2%;
 }
-
 
 .contentContainer {
   grid-row-start: 2;
