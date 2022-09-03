@@ -1,0 +1,39 @@
+.productCardWrapper {
+  position: relative;
+  width: 180px;
+  aspect-ratio: 2/3;
+  align-items: center;
+  display: grid;
+  grid-template-rows: 85% 15%;
+  align-items: center;
+  /* padding: 0px 0px 15px 0px; */
+  margin: 15px 15px 15px 15px;
+
+  /* overflow: hidden; */
+  border-radius: 5px;
+  z-index: 1;
+  box-sizing: border-box;
+  /* backdrop-filter: blur(10px); */
+  -webkit-backdrop-filter: blur(40px);
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-font-smoothing: subpixel-antialiased;
+  transform: perspective(1px) translateZ(0);
+  backface-visibility: hidden;
+  /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
+  /* backdrop-filter: blur(4px); */
+  /* -webkit-backdrop-filter: blur(4px); */
+  /* border: 1px solid rgba(0, 0, 0, 0.055); */
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.075), 0 5px 5px rgba(0, 0, 0, 0.048);
+  -webkit-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.075),
+    0 5px 5px rgba(0, 0, 0, 0.048);
+  -moz-box-shadow: 0 14px 28px rgba(0, 0, 0, 0.075),
+    0 5px 5px rgba(0, 0, 0, 0.048);
+  background-color: white;
+  grid-gap: 2%;
+}
