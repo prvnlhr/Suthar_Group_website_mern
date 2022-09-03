@@ -13,3 +13,17 @@
   scrollbar-width: none; /* firefox hide scrollbar  */
   -ms-overflow-style: none; /* firefox hide scrollbar  */
 }
+
+.headerWrapper {
+  grid-row-start: 1;
+  grid-row-end: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  /* border: 1px solid black; */
+  background-color: white;
+
+  padding: 0px 0px 0px 2%;
+}
