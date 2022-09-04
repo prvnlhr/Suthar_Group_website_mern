@@ -377,3 +377,33 @@ label {
   color: #1072f1;
   margin: 0px 0px 0px 0px;
 }
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .formComponent {
+    width: 70%;
+    aspect-ratio: 4/7;
+    top: 2%;
+  }
+
+  .heading1 {
+    /* text-transform: uppercase; */
+    font-size: clamp(
+      1rem,
+      0.3999999999999999rem + 3.0000000000000004vw,
+      1.3rem
+    ) !important;
+    margin: 5px 0px 0px 0px;
+    letter-spacing: 0.3px;
+  }
+  .heading2 {
+    /* text-transform: uppercase; */
+
+    font-size: clamp(
+      0.6rem,
+      0.19999999999999984rem + 2.000000000000001vw,
+      0.8rem
+    ) !important;
+    margin: 2px 0px 5px 0px;
+    letter-spacing: 0.3px;
+  }}
