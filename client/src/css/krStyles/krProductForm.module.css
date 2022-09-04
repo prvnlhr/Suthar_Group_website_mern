@@ -324,3 +324,56 @@ label {
   /* border: 1px solid #1072f1; */
   box-sizing: border-box;
 }
+
+
+.uploadContainer {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /* border: 1px dashed #1072f1; */
+  /* margin: 0px 0px 5px 0px; */
+  /* border: 1px dotted #010a16; */
+  border: 1px dashed #1072f1;
+  background-color: #3b87eb10;
+  border-radius: 10px;
+}
+
+.uploadContainer p {
+  margin: 0px 0px 0px 0px;
+  font-family: "Montserrat", sans-serif;
+  color: #1072f1;
+  font-weight: 550;
+  font-size: 13px;
+  letter-spacing: 0.2px;
+}
+.imgPreviewContainer {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  /* border: 1px solid #1072f1; */
+  /* background-size: cover; */
+}
+.imgPreviewContainer img {
+  position: relative;
+  object-fit: contain;
+  width: 95%;
+  height: 95%;
+}
+.folderIcon {
+  /* border: 1px solid #1072f1; */
+  /* font-size: 100px; */
+  width: 65px;
+  height: 65px;
+  color: #1072f1;
+  margin: 0px 0px 0px 0px;
+}
