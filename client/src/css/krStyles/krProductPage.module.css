@@ -293,3 +293,53 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 0px;
 }
+
+.nameEditInput {
+  width: 100%;
+  height: 100%;
+  outline: none;
+  box-sizing: border-box;
+  border-radius: 0px;
+  padding: 0px 10px 0px 10px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #00b7fd;
+  background: transparent;
+  color: #00b7fd;
+  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 2rem;
+  font-weight: 450;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 0px 0px;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .KRProductPageWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid orange; */
+    /* display: flex; */
+    /* flex-direction: row; */
+    /* flex-wrap: wrap; */
+    /* align-items: center; */
+    /* align-content: flex-start; */
+    /* background-color: #f8f9fb; */
+    box-sizing: border-box;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    scrollbar-width: none; /* firefox hide scrollbar  */
+    -ms-overflow-style: none; /* firefox hide scrollbar  */
+    display: grid;
+    grid-template-rows: 60px minmax(0, 0.6fr) minmax(0, 0.4fr);
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "headerWrapper"
+      "imageWrapper"
+      "descriptionWrapper";
+    /* background: linear-gradient(180deg, #EAF5F9 29.48%, #F1F2F6 67.62%) */
+  }
+
+}
