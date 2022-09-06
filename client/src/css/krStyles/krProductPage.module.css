@@ -121,3 +121,60 @@
   justify-content: flex-start;
   align-items: center;
 }
+
+
+.attributeDiv {
+  position: relative;
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid green; */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+}
+.labelText {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: #708090;
+  color: black;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 0px 2%;
+}
+.attributeText {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: black;
+  color: #708090;
+  font-weight: 550;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 0px 2%;
+}
+.attributeEditInput {
+  width: 100%;
+  height: 80%;
+  outline: none;
+
+  box-sizing: border-box;
+  /* border-radius: 5px; */
+  padding: 0px 0px 0px 0px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid #00b7fd;
+  background: #00b5fd11;
+  background: transparent;
+
+  color: #00b7fd;
+  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
+
+  font-size: 0.9rem;
+  font-weight: 450;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 0px 2%;
+}
