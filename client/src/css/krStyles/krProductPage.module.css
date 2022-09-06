@@ -49,3 +49,40 @@
   align-items: center;
   margin: 0px 0px 0px 0px;
 }
+
+.descriptionWrapper {
+  grid-area: descriptionWrapper;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 0px;
+  /* border: 1px solid black; */
+  margin: 0px 0px 0px 0px;
+  background-color: white;
+  flex-direction: column;
+  z-index: 1;
+  display: grid;
+  grid-template-rows: 80px 100px minmax(0, 1fr);
+  grid-template-columns: 100%;
+  grid-template-areas:
+    "descriptionHeaderWrapper"
+    "nameWrapper"
+    "specsWrapper";
+  background: linear-gradient(180deg, #eaf5f9 25.79%, #ffff 59.7%);
+  background: linear-gradient(180deg, #eaf5f9 10.79%, #ffff 90.7%);
+  background: linear-gradient(180deg, #eaf5f9 16.52%, #ffffff 54.83%);
+  background: linear-gradient(180deg, #eaf5f9 16.52%, #ffffff 32.77%);
+  /* border: 1px solid rgba(0, 0, 0, 0.048); */
+}
+.descriptionHeaderWrapper {
+  grid-area: descriptionHeaderWrapper;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid orange; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-sizing: border-box;
+}
