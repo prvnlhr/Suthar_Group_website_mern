@@ -22,3 +22,30 @@
   user-select: none;
   background: linear-gradient(180deg, #eaf5f9 25.79%, #f8f9fb 59.7%);
 }
+
+
+.imageWrapper {
+  grid-area: imageWrapper;
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  /* padding: 0px 15px 0px 15px; */
+  /* border: 1px solid red; */
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  box-sizing: border-box;
+}
+.imageContainer {
+  position: relative;
+  display: flex;
+  width: 70%;
+  height: 70%;
+  box-sizing: border-box;
+  /* padding: 0px 15px 0px 15px; */
+  /* border: 1px solid blue; */
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+}
