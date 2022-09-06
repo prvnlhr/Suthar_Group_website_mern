@@ -86,3 +86,38 @@
   align-items: center;
   box-sizing: border-box;
 }
+
+
+.specsWrapper {
+  grid-area: specsWrapper;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid blue; */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.specsContainer {
+  position: relative;
+  width: 80%;
+  height: 80%;
+  /* border: 1px solid blue; */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin: 0px 0px 0px 10%;
+}
+.specsDiv {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
