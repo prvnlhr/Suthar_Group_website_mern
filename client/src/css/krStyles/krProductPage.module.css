@@ -178,3 +178,118 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 2%;
 }
+
+
+/* ______________________________________________ */
+.editBtnsWrapper {
+  position: relative;
+  display: flex;
+  width: 100px;
+  height: auto;
+  padding: 0px 2% 0px 2%;
+  padding: 0px 20px 0px 0px;
+  justify-content: flex-end;
+  align-items: center;
+  /* border: 1px solid black; */
+}
+.editBtnDiv {
+  position: relative;
+  display: flex;
+  width: auto;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 0px;
+  /* border: 1px solid black; */
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px 0px 10px;
+  /* background-color: #f3f3f3; */
+  /* display: none; */
+  z-index: 3;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.editIcons {
+  font-size: 1.2rem;
+  color: #9baece;
+}
+.editBtnText {
+  position: relative;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.9rem;
+  color: black;
+  font-weight: 450;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 0px 0px;
+}
+/* ________________________________________________ */
+.backBtnDesktopContainer {
+  position: relative;
+  display: flex;
+  width: auto;
+  height: 35%;
+  box-sizing: border-box;
+  padding: 0px 15px 0px 20px;
+  /* border: 1px solid black; */
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  /* background-color: white; */
+  cursor: pointer;
+}
+
+.backBtnMobContainer {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: flex;
+  display: none;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+  padding: 0px 15px 0px 20px;
+  /* border: 1px solid black; */
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  background-color: transparent;
+  /* display: none; */
+}
+.iconDiv {
+  /* border: 1px solid red; */
+  position: relative;
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+}
+.arrowIcon {
+  /* font-size: 1.1rem; */
+  margin: 0px 0px 0px 5px;
+  color: black;
+  font-size: 1rem;
+  transform: rotate(-45deg);
+}
+.backBtnTextDiv {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid blue; */
+  margin: 0px 0px 0px 10px;
+}
+.backBtnText {
+  position: relative;
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 450;
+  font-size: 0.9rem;
+  color: black;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 0px 0px;
+}
