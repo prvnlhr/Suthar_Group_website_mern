@@ -74,3 +74,61 @@
   height: 75%;
   /* border: 1px solid black; */
 }
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .deleteModalWrapper {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    left: 0px;
+    right: 0px;
+    top: 10%;
+    /* bottom: 0px; */
+    width: 70%;
+    /* height: 150px; */
+    aspect-ratio: 3/2;
+  }
+  .deleteText {
+    font-size: 0.6rem;
+    font-size: 0.9rem;
+    font-size: clamp(
+      0.6rem,
+      -1.1102230246251565e-16rem + 3.0000000000000004vw,
+      0.9rem
+    ) !important;
+  }
+  .cancelText {
+    font-size: clamp(
+      0.6rem,
+      -1.1102230246251565e-16rem + 3.0000000000000004vw,
+      0.9rem
+    ) !important;
+  }
+  .deleteMessage {
+    width: 80%;
+    font-size: 0.6rem;
+    /* font-size: 0.9rem; */
+    font-size: clamp(
+      0.6rem,
+      -1.1102230246251565e-16rem + 3.0000000000000004vw,
+      0.9rem
+    ) !important;
+
+    /* border: 1px solid blue; */
+    text-align: center;
+    line-height: 1.3;
+  }
+  .deleteTitle {
+    font-size: 0.7rem;
+    font-size: 0.8rem;
+    font-size: 1.2rem;
+    font-size: clamp(
+      0.8rem,
+      2.220446049250313e-16rem + 3.9999999999999996vw,
+      1.2rem
+    ) !important;
+  }
+}
