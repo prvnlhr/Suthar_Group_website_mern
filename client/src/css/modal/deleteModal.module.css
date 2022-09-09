@@ -37,7 +37,37 @@
   -ms-user-select: none;
   user-select: none;
 }
-
+.warningIconWrapper {
+  grid-area: warningIconWrapper;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+.warningIcon {
+  position: relative;
+  /* width: 70%; */
+  height: 75%;
+  /* border: 1px solid black; */
+}
+.deleteTittleWrapper {
+  grid-area: deleteTittleWrapper;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deleteTitle {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+  color: black;
+  font-size: 0.95rem;
+  letter-spacing: 0.5px;
+}
 .deleteMessageWrapper {
   grid-area: deleteMessageWrapper;
   width: 100%;
@@ -58,23 +88,61 @@
   letter-spacing: 0.02em;
   line-height: 1.5;
 }
-
-.warningIconWrapper {
-  grid-area: warningIconWrapper;
+.cancelBtnWrapper {
+  grid-area: cancelBtnWrapper;
   width: 100%;
   height: 100%;
-  /* border: 1px solid black; */
+  /* border: 1px solid orange; */
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
 }
-.warningIcon {
-  position: relative;
-  /* width: 70%; */
-  height: 75%;
-  /* border: 1px solid black; */
+.cancelBtn {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border-radius: 5px;
+  background: transparent;
+  cursor: pointer;
 }
+.cancelText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+  color: black;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
+}
+.deleteBtnWrapper {
+  grid-area: deleteBtnWrapper;
+  width: 100%;
+  height: 100%;
+  /* border: 1px solid greenyellow; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.deleteBtn {
+  width: 60%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border-radius: 5px;
+  background: #fc4156;
+  cursor: pointer;
+}
+.deleteText {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 550;
+  color: white;
+  font-size: 0.8rem;
+  letter-spacing: 0.02em;
 
+}
 
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .deleteModalWrapper {
