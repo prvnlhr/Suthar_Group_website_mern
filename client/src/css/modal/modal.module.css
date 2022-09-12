@@ -58,3 +58,57 @@
   color: black;
   font-size: 13px;
 }
+
+.modalBtnDiv {
+  grid-row-start: 2;
+  grid-row-end: 3;
+  /* border: 1px solid red; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.modalCancelBtn {
+  width: 40%;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background-color: #edf4fa;
+  cursor: pointer;
+
+}
+.modalCancelBtn p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: gray;
+  font-size: 14px;
+  letter-spacing: 0.3px;
+}
+.modalCancelBtn:hover {
+  background-color: #d1dbe4;
+}
+.modalConfirmBtn {
+  width: 100px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: none;
+  border-radius: 5px;
+  background-color: #eb5757;
+  cursor: pointer;
+
+}
+.modalConfirmBtn p {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+  color: white;
+  font-size: 14px;
+  /* width: 100%; */
+  margin: 0px 0px 0px 0px;
+  letter-spacing: 0.3px;
+}
