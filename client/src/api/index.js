@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import { store } from "../store/index";
 import { logout, updateToken } from "../actions/authActions";
@@ -10,6 +9,7 @@ const API = axios.create({
   // baseURL: "http://192.168.158.208:9000/",
 });
 
+// const API = axios.create({ baseURL: "http://localhost:9000" });
 
 const reqHandler = (request) => {
   // console.log("request", request);
@@ -71,6 +71,13 @@ API.interceptors.response.use(
   (error) => errorHandler(error)
 );
 
+const cloudinaryAPI = axios.create({
+  baseURL: "https://api.cloudinary.com/v1_1/ecryptimgdb",
+});
+
+
+
+//register new user
 export const registerNewUser = (formData) =>
   API.post("/company/auth/register", formData);
 
@@ -102,3 +109,109 @@ export const getUser = (token) =>
   API.get("/company/auth/info", {
     headers: { Authorization: `${token}` },
   });
+//PROFILE SETTINGS__________________________________________________________________________________________
+export const editProfile = (token, profileData) =>
+  API.post(
+    "/company/auth/updateProfile",
+    { profileData },
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+//forgot password____
+export const forgotPass = (email) =>
+  API.post("/company/auth/forgotPassword", { email });
+
+//reset password_____
+export const resetPass = (token, password) =>
+  API.post(
+    "/company/auth/resetPassword",
+    { password },
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+//change password____
+export const changePass = (oldPassword, newPassword, token) =>
+  API.post(
+    "/company/auth/changePassword",
+    { oldPassword, newPassword },
+    {
+      headers: { Authorization: `Bearer ${token}` },
+    }
+  );
+//delete account_____
+export const deleteAccount = (password, token) =>
+  API.delete("/company/auth/deleteAccount", {
+    data: {
+      oldPassword: password,
+    },
+
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+//SIGN IN SIGNUP____________________________________________________________________
+export const signIn = (formData) => API.post("/company/auth/signin", formData);
+
+export const signUp = (formData) => API.post("/company/auth/signup", formData);
+
+//USER FETCH____________________________________________________________________
+
+export const fetchUser = (token) =>
+  API.get("/company/auth/info", {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+//SHREE KR ENGINEERING API___________________________________________________________________________
+//fetch Products___
+export const fetchProductsKR = (token) =>
+  API.get("/company/kr/product/getProducts", {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+//add new product___
+export const addNewProductKR = (data, token) =>
+  API.post("/company/kr/product/addProduct", data, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+//edit product___
+export const editProductsKR = (data, token) =>
+  API.patch("/company/kr/product/editProduct", data, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+// delete product____
+export const deleteProductKR = (data, token) =>
+  API.delete("/company/kr/product/deleteProduct", {
+    data,
+
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+//VISHVAKARMA API___________________________________________________________________________
+//fetch Products___
+export const fetchProductsVK = (token) =>
+  API.get("/company/vishvakarma/product/getProducts", {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+//add new product___
+export const addNewProductVK = (data, token) =>
+  API.post("/company/vishvakarma/product/addProduct", data, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+//edit product___
+export const editProductsVK = (data, token) =>
+  API.patch("/company/vishvakarma/product/editProduct", data, {
+    headers: { Authorization: `Bearer ${token}` },
+  });
+// delete product____
+export const deleteProductVK = (data, token) =>
+  API.delete("/company/vishvakarma/product/deleteProduct", {
+    data,
+
+    headers: { Authorization: `Bearer ${token}` },
+  });
+
+export const contactUs = (data) => API.post("/company/contactUs/enquiry", data);
