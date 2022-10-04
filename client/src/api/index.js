@@ -10,8 +10,8 @@ const API = axios.create({
   // baseURL: "http://192.168.158.208:9000/",
 });
 
-// const API = axios.create({ baseURL: "http://localhost:9000" });
-//register new user
+
+
 export const registerNewUser = (formData) =>
   API.post("/company/auth/register", formData);
 
