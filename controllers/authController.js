@@ -66,7 +66,40 @@ const authController = {
       console.log("error in registration", error);
     }
   },
-  
+  activateEmail: async (req, res) => {
+    try {
+      // const { activation_token } = req.body.data;
+      console.log("activation token controller", req.body.data);
+      const user = jwt.verify(
+        req.body.data.activation_token,
+        ACTIVATION_TOKEN_SECRET
+      );
+
+      const { owner, email, password } = user;
+      console.log("activate email controller", user);
+
+      const check = await SiteDatabase.findOne({ email });
+      if (check)
+        return res.status(400).json({ msg: "This email already exists." });
+
+      const newUser = await SiteDatabase.create({
+        owner: owner,
+        email: email,
+        password: password,
+      });
+
+      res.json({ msg: "Account has been activated!" });
+    } catch (err) {
+      if (
+        err.name === "TokenExpiredError" ||
+        err.name === "JsonWebTokenError"
+      ) {
+        return res.status(401).json({ msg: "Link Expired! Register again" });
+      }
+      console.log("error at activateEmail", err.name);
+      return res.status(500).json({ msg: err.message });
+    }
+  },
 };
 
 //_________________________________________________________________________________________________________________-
