@@ -82,3 +82,61 @@
   -webkit-backdrop-filter: blur(10px);
   border-radius: 50%;
 }
+
+.productTitleWrapper {
+  position: relative;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  /* border: 1px solid black; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  height: 100%;
+  backdrop-filter: blur(1px);
+  -webkit-backdrop-filter: blur(1px);
+  justify-content: flex-start;
+  /* text-align: start; */
+  align-items: flex-start;
+  /* overflow-x: auto; */
+  /* margin-left: auto; */
+  /* margin-right: auto; */
+  box-sizing: border-box;
+  padding: 0px 5% 0px 8%;
+
+  backface-visibility: hidden;
+  /* scrollbar-width: none;  */
+  /* -ms-overflow-style: none;  */
+  /* flex-wrap: wrap; */
+  overflow: hidden;
+  /* border-top: 1px solid rgba(0, 0, 0, 0.055); */
+}
+.productTitleWrapper p {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  /* border: 1px solid black; */
+  height: 100%;
+  width: 100%;
+  /* font-family: "Poppins", sans-serif; */
+  font-weight: 550;
+  color: black;
+  font-size: 0.7rem;
+  /* white-space: nowrap; */
+  letter-spacing: 0.5px;
+  margin: 0px 0px 0px 0px;
+  backface-visibility: hidden;
+  line-height: 1.5;
+  max-height: 2rem;
+  /* max-width: 190px; */
+  box-orient: vertical;
+  -moz-box-orient: vertical; /* Mozilla */
+  -webkit-box-orient: vertical; /* WebKit */
+  display: box;
+  display: -moz-box; /* Mozilla */
+  display: -webkit-box; /* WebKit */
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 2;
+  overflow: hidden !important;
+}
+.productTitleWrapper::-webkit-scrollbar {
+  display: none;
+}
