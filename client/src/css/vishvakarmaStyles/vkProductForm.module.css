@@ -54,8 +54,6 @@
   will-change: transform;
 }
 
-
-
 .formComponentClose {
   position: absolute;
   /* position: relative; */
@@ -116,7 +114,6 @@
   border-bottom: 1px solid #1072f1;
   background-color: transparent;
 }
-
 .heading1 {
   font-family: "Montserrat", sans-serif;
   /* text-transform: uppercase; */
@@ -127,7 +124,6 @@
   margin: 5px 0px 0px 0px;
   letter-spacing: 0.3px;
 }
-
 .heading2 {
   font-family: "Montserrat", sans-serif;
   /* text-transform: uppercase; */
@@ -153,6 +149,17 @@
   /* border: 1px solid #1072f1; */
 }
 
+.ComponentNameInputWrapper {
+  position: relative;
+  grid-area: ComponentNameInputWrapper;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* border: 1px solid green; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
 
 .labelDiv {
   height: 40%;
@@ -166,7 +173,6 @@
   box-sizing: border-box;
   /* padding-left: 5%; */
 }
-
 .labelText {
   font-family: "Montserrat", sans-serif;
   text-transform: capitalize;
@@ -176,7 +182,6 @@
   margin: 0px 0px 0px 2px;
   letter-spacing: 0.3px;
 }
-
 .inputDiv {
   width: 100%;
   height: 60%;
@@ -188,7 +193,6 @@
   box-sizing: border-box;
   /* padding-left: 5%; */
 }
-
 .inputField {
   display: flex;
   /* flex-direction: row; */
@@ -211,12 +215,10 @@
   outline: none;
   background: transparent;
 }
-
 .inputField:focus {
   /* outline: 1px solid red; */
   border: 2px solid #1072f1;
 }
-
 .buttonWrapper {
   grid-area: buttonWrapper;
   width: 100%;
@@ -228,7 +230,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .buttonWrapper button {
   width: 60%;
   height: 32px;
@@ -242,13 +243,11 @@
   cursor: pointer;
   /* outline: 2px double slategray; */
 }
-
 .btnIcon {
   font-size: 20px;
   margin: 0px 5px 0px 0px;
 }
-
-.buttonWrapper button>p {
+.buttonWrapper button > p {
   font-family: "Montserrat", sans-serif;
   /* text-transform: uppercase; */
   font-size: 13px;
@@ -257,6 +256,7 @@
   margin: 0px 0px 0px 0px;
   letter-spacing: 0.3px;
 }
+
 
 
 /*___for file input_____ */
@@ -272,7 +272,6 @@
   box-sizing: border-box;
   /* border: 1px solid black; */
 }
-
 label {
   position: relative;
   width: 100%;
@@ -285,7 +284,6 @@ label {
   /* border: 1px solid #1072f1; */
   box-sizing: border-box;
 }
-
 .uploadContainer {
   position: relative;
   width: 80%;
@@ -311,7 +309,6 @@ label {
   font-size: 13px;
   letter-spacing: 0.2px;
 }
-
 .imgPreviewContainer {
   position: relative;
   width: 100%;
@@ -324,14 +321,12 @@ label {
   /* border: 1px solid #1072f1; */
   /* background-size: cover; */
 }
-
 .imgPreviewContainer img {
   position: relative;
   object-fit: contain;
   width: 95%;
   height: 95%;
 }
-
 .folderIcon {
   /* border: 1px solid #1072f1; */
   /* font-size: 100px; */
@@ -340,7 +335,6 @@ label {
   color: #1072f1;
   margin: 0px 0px 0px 0px;
 }
-
 .imgFileInput {
   border: none;
   outline: none;
@@ -362,12 +356,10 @@ label {
   letter-spacing: 0.2px;
   cursor: pointer;
 }
-
 .inputField::placeholder {
   font-family: "Montserrat", sans-serif;
   color: rgba(36, 36, 36, 0.308);
 }
-
 .imgFileInput::-webkit-file-upload-button {
   visibility: hidden;
   width: 0px;
@@ -378,7 +370,6 @@ label {
   border-radius: 5px;
   background-color: #dae5eb;
 }
-
 .cancelBtnDiv {
   position: absolute;
   top: 10px;
@@ -419,21 +410,44 @@ label {
     /* height: 400px; */
     aspect-ratio: 4/5;
   }
-
   .heading1 {
     /* text-transform: uppercase; */
-    font-size: clamp(1rem,
-        0.3999999999999999rem + 3.0000000000000004vw,
-        1.3rem) !important;
+    font-size: clamp(
+      1rem,
+      0.3999999999999999rem + 3.0000000000000004vw,
+      1.3rem
+    ) !important;
     margin: 5px 0px 0px 0px;
     letter-spacing: 0.3px;
   }
-
   .heading2 {
-    font-size: clamp(0.6rem,
-        0.19999999999999984rem + 2.000000000000001vw,
-        0.8rem) !important;
+    font-size: clamp(
+      0.6rem,
+      0.19999999999999984rem + 2.000000000000001vw,
+      0.8rem
+    ) !important;
     margin: 2px 0px 5px 0px;
+    letter-spacing: 0.3px;
+  }
+  .buttonWrapper button {
+    width: 60%;
+    height: 65%;
+    background-color: #0075ff;
+    border: none;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    /* outline: 2px double slategray; */
+  }
+  
+  .labelText {
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-size: clamp(0.6rem, -0.20000000000000007rem + 4vw, 1rem);
+    margin: 0px 0px 0px 2px;
     letter-spacing: 0.3px;
   }
   .inputField::placeholder {
