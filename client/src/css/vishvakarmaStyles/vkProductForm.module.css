@@ -436,4 +436,10 @@ label {
     margin: 2px 0px 5px 0px;
     letter-spacing: 0.3px;
   }
+  .inputField::placeholder {
+    font-size: clamp(0.6rem, -0.20000000000000007rem + 4vw, 1rem);
+  }
+  .inputField {
+    font-size: clamp(0.6rem, -0.20000000000000007rem + 4vw, 1rem);
+  }
 }
