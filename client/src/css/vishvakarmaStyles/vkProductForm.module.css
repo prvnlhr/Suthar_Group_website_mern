@@ -210,3 +210,41 @@
   /* outline: 1px solid red; */
   border: 2px solid #1072f1;
 }
+
+.buttonWrapper {
+  grid-area: buttonWrapper;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.buttonWrapper button {
+  width: 60%;
+  height: 32px;
+  background-color: #0075ff;
+  border: none;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  /* outline: 2px double slategray; */
+}
+.btnIcon {
+  font-size: 20px;
+  margin: 0px 5px 0px 0px;
+}
+.buttonWrapper button > p {
+  font-family: "Montserrat", sans-serif;
+  /* text-transform: uppercase; */
+  font-size: 13px;
+  color: white;
+  font-weight: 450;
+  margin: 0px 0px 0px 0px;
+  letter-spacing: 0.3px;
+}
