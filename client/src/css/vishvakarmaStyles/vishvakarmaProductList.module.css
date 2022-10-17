@@ -26,3 +26,45 @@
   /* border: 1px solid black; */
   padding: 0px 0px 0px 2%;
 }
+.pathDiv {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pathText {
+  margin: 0px 5px 0px 5px;
+  font-family: "Montserrat", sans-serif;
+  color: #c4c4c4;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+
+  font-size: 0.8rem;
+  text-transform: capitalize;
+}
+.pathTextCurrent {
+  margin: 0px 5px 0px 5px;
+  /* height:100%; */
+  font-family: "Montserrat", sans-serif;
+  color: #363659;
+  color: #352b5f;
+  font-weight: 500;
+  letter-spacing: 0.3px;
+  font-size: 0.8rem;
+  /* border-bottom: 1px solid blue; */
+  /* padding: 0px 0px 5px 0px; */
+  text-transform: capitalize;
+}
+.chevronDiv {
+  width: auto;
+  height: 100%;
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pathChevron {
+  font-size: 0.9rem;
+  color: #b8bbcc;
+}
