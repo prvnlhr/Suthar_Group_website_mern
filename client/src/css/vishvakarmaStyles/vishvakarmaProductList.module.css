@@ -168,3 +168,109 @@
   letter-spacing: 0.2px;
   font-size: 13px;
 }
+
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .contentContainer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .viswakarmaProductListWrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid orange; */
+    display: grid;
+    grid-template-rows: 50px minmax(0, 1fr);
+  }
+  .headerWrapper {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    /* border: 1px solid black; */
+    padding: 1% 0px 0px 3%;
+    overflow-x: scroll;
+    scrollbar-width: none; /* firefox hide scrollbar  */
+    -ms-overflow-style: none; /* firefox hide scrollbar  */
+  }
+  .headerWrapper::-webkit-scrollbar {
+    display: none;
+  }
+  .pathDiv {
+    width: auto;
+    height: auto;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid black; */
+    margin: 0px 0% 0px 0%;
+  }
+  .pathText {
+    width: auto;
+    margin: 0px 0px 0px 0px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    /* font-size: 0.7rem; */
+    font-size: 1rem;
+
+    font-size: clamp(
+      0.7rem,
+      0.09999999999999987rem + 3.0000000000000004vw,
+      1rem
+    ) !important;
+
+    white-space: nowrap;
+    /* border: 1px solid blue; */
+    text-transform: capitalize;
+  }
+  .pathTextCurrent {
+    margin: 0px 0px 0px 0px;
+    /* height:100%; */
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    font-size: 0.8rem;
+    /* font-size: 0.7rem; */
+    font-size: 1rem;
+
+    /* font-size: 0.9rem; */
+    font-size: clamp(
+      0.7rem,
+      0.09999999999999987rem + 3.0000000000000004vw,
+      1rem
+    ) !important;
+
+    /* border: 1px solid blue; */
+    /* padding: 0px 0px 5px 0px; */
+    white-space: nowrap;
+    text-transform: capitalize;
+  }
+  .chevronDiv {
+    width: auto;
+    height: 80%;
+    height: 40%;
+    /* border: 1px solid red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0.8% 0px 0.8%;
+    box-sizing: border-box;
+  }
+  .pathChevron {
+    width: auto;
+    font-size: 0.7rem !important;
+    /* font-size: 1rem !important; */
+    font-size: clamp(
+      0.7rem,
+      0.09999999999999987rem + 3.0000000000000004vw,
+      1rem
+    ) !important;
+    color: #b8bbcc;
+  }
+}
