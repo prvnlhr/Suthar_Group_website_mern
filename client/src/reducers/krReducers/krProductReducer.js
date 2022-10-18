@@ -10,9 +10,8 @@ import {
   };
   
   export default function cards(state = initialState, action) {
-
     switch (action.type) {
-        case FETCH_PRODUCTS_KR:
+      case FETCH_PRODUCTS_KR:
         return {
           ...state,
           kr_productList: action.payload,
@@ -33,10 +32,10 @@ import {
           kr_productList: newArray,
         };
   
-    //   case DELETE_PRODUCT_KR:
-    //     return {
-    //       kr_productList: action.payload,
-    //     };
+      case DELETE_PRODUCT_KR:
+        return {
+          kr_productList: action.payload,
+        };
   
       default:
         return state;
