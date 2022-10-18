@@ -26,3 +26,24 @@ export const fetchKRProducts = (token) => async (dispatch) => {
     console.log(error);
   }
 };
+
+export const deleteKRProduct = (data, token) => async (dispatch) => {
+  console.log("delete kr product action", data, token);
+  dispatch(loadingSetter(true, "krProduct", data.productId, "delete", ""));
+  try {
+    const response = await api.deleteProductKR(data, token);
+    console.log("delete kr product response", response);
+    const productsArray = response.data.data;
+    dispatch({
+      type: DELETE_PRODUCT_KR,
+      payload: productsArray,
+    });
+    dispatch(loadingSetter(false, "krProduct", data.productId, "delete", true));
+  } catch (error) {
+    dispatch(
+      loadingSetter(false, "krProduct", data.productId, "delete", false)
+    );
+
+    console.log(error);
+  }
+};
