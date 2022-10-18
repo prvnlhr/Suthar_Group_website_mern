@@ -47,3 +47,28 @@ export const deleteKRProduct = (data, token) => async (dispatch) => {
     console.log(error);
   }
 };
+
+
+export const editKRProduct = (data, token) => async (dispatch) => {
+  dispatch(loadingSetter(true, "krProduct", "", "edit", ""));
+  console.log("at edit Product KR Action", data, token);
+  try {
+    const response = await api.editProductsKR(data, token);
+    console.log("kr edit product action response", response);
+    dispatch({
+      type: EDIT_PRODUCT_KR,
+      payload: data,
+    });
+    sessionStorage.setItem("currKrProductView", JSON.stringify(data));
+    const productJSON = JSON.parse(sessionStorage.getItem("currKrProductView"));
+    dispatch({
+      type: SET_CURR_KR_PRODUCT_VIEW,
+      payload: productJSON,
+    });
+
+    dispatch(loadingSetter(false, "krProduct", "", "edit", true));
+  } catch (error) {
+    dispatch(loadingSetter(false, "krProduct", "", "edit", false));
+    console.log(error);
+  }
+};
