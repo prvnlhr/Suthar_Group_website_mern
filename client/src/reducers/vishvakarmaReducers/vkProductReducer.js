@@ -16,11 +16,11 @@ export default function cards(state = initialState, action) {
         ...state,
         vk_productList: action.payload,
       };
-    // case ADD_NEW_PRODUCT_VK:
-    //   return {
-    //     ...state,
-    //     vk_productList: [action.payload, ...state.vk_productList],
-    //   };
+    case ADD_NEW_PRODUCT_VK:
+      return {
+        ...state,
+        vk_productList: [action.payload, ...state.vk_productList],
+      };
 
     // case EDIT_PRODUCT_VK:
     //   const index = state.vk_productList.findIndex(
