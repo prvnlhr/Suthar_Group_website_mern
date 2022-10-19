@@ -22,15 +22,15 @@ export default function cards(state = initialState, action) {
         vk_productList: [action.payload, ...state.vk_productList],
       };
 
-    // case EDIT_PRODUCT_VK:
-    //   const index = state.vk_productList.findIndex(
-    //     (product) => product._id === action.payload._id
-    //   );
-    //   const newArray = [...state.vk_productList];
-    //   newArray[index] = action.payload;
-    //   return {
-    //     vk_productList: newArray,
-    //   };
+    case EDIT_PRODUCT_VK:
+      const index = state.vk_productList.findIndex(
+        (product) => product._id === action.payload._id
+      );
+      const newArray = [...state.vk_productList];
+      newArray[index] = action.payload;
+      return {
+        vk_productList: newArray,
+      };
 
     case DELETE_PRODUCT_VK:
       return {
