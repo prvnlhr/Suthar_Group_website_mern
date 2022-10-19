@@ -76,3 +76,28 @@ export const deleteVKProduct = (data, token) => async (dispatch) => {
   }
 };
 
+
+
+export const editVKProduct = (data, token) => async (dispatch) => {
+  dispatch(loadingSetter(true, "vkProduct", "", "edit", ""));
+  console.log("at edit Product VK Action", data, token);
+  try {
+    const response = await api.editProductsVK(data, token);
+    console.log("VK edit product action response", response);
+    dispatch({
+      type: EDIT_PRODUCT_VK,
+      payload: data,
+    });
+    sessionStorage.setItem("currVkProductView", JSON.stringify(data));
+    const productJSON = JSON.parse(sessionStorage.getItem("currVkProductView"));
+    dispatch({
+      type: SET_CURR_VK_PRODUCT_VIEW,
+      payload: productJSON,
+    });
+
+    dispatch(loadingSetter(false, "vkProduct", "", "edit", true));
+  } catch (error) {
+    dispatch(loadingSetter(false, "vkProduct", "", "edit", false));
+    console.log(error);
+  }
+};
