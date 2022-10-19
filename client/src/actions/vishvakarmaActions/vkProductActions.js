@@ -53,8 +53,6 @@ export const addNewVKProduct = (data, token) => async (dispatch) => {
     console.log(error);
   }
 };
-
-
 export const deleteVKProduct = (data, token) => async (dispatch) => {
   console.log("delete VK product action", data, token);
   dispatch(loadingSetter(true, "vkProduct", data.productId, "delete", ""));
@@ -76,8 +74,6 @@ export const deleteVKProduct = (data, token) => async (dispatch) => {
   }
 };
 
-
-
 export const editVKProduct = (data, token) => async (dispatch) => {
   dispatch(loadingSetter(true, "vkProduct", "", "edit", ""));
   console.log("at edit Product VK Action", data, token);
@@ -98,6 +94,6 @@ export const editVKProduct = (data, token) => async (dispatch) => {
     dispatch(loadingSetter(false, "vkProduct", "", "edit", true));
   } catch (error) {
     dispatch(loadingSetter(false, "vkProduct", "", "edit", false));
-    console.log(error);
+    // console.log(error);
   }
 };
