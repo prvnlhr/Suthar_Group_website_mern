@@ -32,10 +32,10 @@ export default function cards(state = initialState, action) {
     //     vk_productList: newArray,
     //   };
 
-    // case DELETE_PRODUCT_VK:
-    //   return {
-    //     vk_productList: action.payload,
-    //   };
+    case DELETE_PRODUCT_VK:
+      return {
+        vk_productList: action.payload,
+      };
 
     default:
       return state;
