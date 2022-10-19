@@ -55,3 +55,24 @@ export const addNewVKProduct = (data, token) => async (dispatch) => {
 };
 
 
+export const deleteVKProduct = (data, token) => async (dispatch) => {
+  console.log("delete VK product action", data, token);
+  dispatch(loadingSetter(true, "vkProduct", data.productId, "delete", ""));
+  try {
+    const response = await api.deleteProductVK(data, token);
+    console.log("delete VK product response", response);
+    const productsArray = response.data.data;
+    dispatch({
+      type: DELETE_PRODUCT_VK,
+      payload: productsArray,
+    });
+    dispatch(loadingSetter(false, "vkProduct", data.productId, "delete", true));
+  } catch (error) {
+    dispatch(
+      loadingSetter(false, "vkProduct", data.productId, "delete", false)
+    );
+
+    console.log(error);
+  }
+};
+
