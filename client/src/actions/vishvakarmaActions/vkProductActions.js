@@ -30,4 +30,28 @@ export const fetchVKProducts = (token) => async (dispatch) => {
   }
 };
 
+//ADD NEW
+export const addNewVKProduct = (data, token) => async (dispatch) => {
+  dispatch(loadingSetter(true, "vkProduct", "", "add", ""));
+
+  for (var value of data.values()) {
+    console.log(value);
+  }
+  try {
+    // console.log("add vk product action", token, data);
+    const backendResponse = await api.addNewProductVK(data, token);
+    const productsList = backendResponse.data.vishvakarmaProductList;
+    console.log("add_Vk_product_list response", productsList);
+    const newAddedProduct = productsList[0];
+    dispatch({
+      type: ADD_NEW_PRODUCT_VK,
+      payload: newAddedProduct,
+    });
+    dispatch(loadingSetter(false, "vkProduct", "", "add", true));
+  } catch (error) {
+    dispatch(loadingSetter(false, "vkProduct", "", "add", false));
+    console.log(error);
+  }
+};
+
 
