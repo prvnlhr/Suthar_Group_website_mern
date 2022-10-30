@@ -56,7 +56,7 @@ const siteSchema = new mongoose.Schema({
       },
       cloudinary_id: {
         type: String,
-        // required: true,
+        required: true,
       },
     },
   ],
