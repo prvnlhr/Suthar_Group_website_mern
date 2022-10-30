@@ -8,6 +8,6 @@ router.use(
   "/company/vishvakarma/product",
   require("./vishvakarma/productsRoutes")
 );
-// router.use("/company/contactUs", require("./contactUsRoute"));
+router.use("/company/contactUs", require("./contactUsRoute"));
 
 module.exports = router;
