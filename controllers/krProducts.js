@@ -100,7 +100,33 @@ const krProductController = {
       res.status(404).json({ message: error.message });
     }
   },
-
+  editProduct: async (req, res) => {
+    console.log("edit Product KR controller ", req.user.id, req.body);
+    const {
+      productName,
+      productOrderQuantity,
+      productDiameter,
+      productPrice,
+      _id,
+    } = req.body;
+    try {
+      const response = await SiteDatabase.findOneAndUpdate(
+        { "krProductList._id": _id },
+        {
+          $set: {
+            "krProductList.$.productName": productName,
+            "krProductList.$.productOrderQuantity": productOrderQuantity,
+            "krProductList.$.productDiameter": productDiameter,
+            "krProductList.$.productPrice": productPrice,
+          },
+        },
+        { returnOriginal: false }
+      );
+      res.status(201).json(response.krProductList);
+    } catch (error) {
+      res.status(404).json({ message: error.message });
+    }
+  },
 };
 
 module.exports = krProductController;
