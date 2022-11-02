@@ -13,14 +13,12 @@ const krProductController = {
       const response = await SiteDatabase.findOne({
         _id: "61682efa71f33a6aa6eb866e",
       }).select("-password");
-      // console.log("get products KR response");
+      console.log("get products KR response");
       res.status(200).send(response);
     } catch (error) {
       res.status(404).json({ message: error.message });
     }
   },
-
-
   addProduct: async (req, res) => {
     // console.log(
     //   "add product controller KR request",
@@ -100,6 +98,7 @@ const krProductController = {
       res.status(404).json({ message: error.message });
     }
   },
+
   editProduct: async (req, res) => {
     console.log("edit Product KR controller ", req.user.id, req.body);
     const {
