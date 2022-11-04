@@ -19,4 +19,44 @@ const VVProductController = {
       res.status(404).json({ message: error.message });
     }
   },
+
+
+
+  addProduct: async (req, res) => {
+    const filePath = req.file.path;
+    const userId = req.user.id;
+    console.log(
+      "add product controller VK request",
+      req.user.id,
+      req.body.componentName,
+      filePath
+    );
+
+    try {
+      const cloudinaryResponse = await cloudinary.v2.uploader.upload(filePath, {
+        folder: "vishvakarma",
+      });
+      // console.log("cloudinary response_vv", cloudinaryResponse);
+      const productData = {
+        componentName: req.body.componentName,
+        imageUrl: cloudinaryResponse.secure_url,
+        cloudinary_id: cloudinaryResponse.public_id,
+      };
+      console.log(productData);
+      const addProductResponse = await SiteDatabase.findOneAndUpdate(
+        { _id: userId },
+        {
+          $push: {
+            vishvakarmaProductList: { $each: [productData], $position: 0 },
+          },
+        },
+        { returnOriginal: false }
+      );
+      console.log("mongodb VV product add Response ", addProductResponse);
+      res.status(200).json(addProductResponse);
+    } catch (error) {
+      console.log(error);
+      res.status(404).json({ message: error.message });
+    }
+  },
 }
