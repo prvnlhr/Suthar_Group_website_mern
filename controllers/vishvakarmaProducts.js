@@ -95,4 +95,22 @@ const VVProductController = {
     }
   },
 
+  editProduct: async (req, res) => {
+    console.log("edit Product VV controller ", req.user.id, req.body);
+    const { componentName, _id } = req.body;
+    try {
+      const response = await SiteDatabase.findOneAndUpdate(
+        { "vishvakarmaProductList._id": _id },
+        {
+          $set: {
+            "vishvakarmaProductList.$.componentName": componentName,
+          },
+        },
+        { returnOriginal: false }
+      );
+      res.status(201).json(response.vishvakarmaProductList);
+    } catch (error) {
+      res.status(404).json({ message: error.message });
+    }
+  },
 }
