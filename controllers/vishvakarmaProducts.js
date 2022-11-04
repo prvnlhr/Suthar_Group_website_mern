@@ -59,4 +59,40 @@ const VVProductController = {
       res.status(404).json({ message: error.message });
     }
   },
+
+  deleteProduct: async (req, res) => {
+    const cloudId = req.body.cloudId;
+    const productId = req.body.productId;
+    const userId = req.user.id;
+    console.log(
+      "delete product VV controller request",
+      productId,
+      userId,
+      cloudId
+    );
+
+    try {
+      const result = await cloudinary.v2.uploader.destroy(cloudId);
+      console.log(result);
+      const response = await SiteDatabase.findOneAndUpdate(
+        { _id: userId },
+        {
+          $pull: {
+            vishvakarmaProductList: {
+              _id: productId,
+            },
+          },
+        },
+        { returnOriginal: false }
+      );
+      console.log(response);
+      res.status(200).send({
+        data: response.vishvakarmaProductList,
+        msg: "VV_productDeleted",
+      });
+    } catch (error) {
+      res.status(404).json({ message: error.message });
+    }
+  },
+
 }
