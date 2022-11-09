@@ -10,7 +10,7 @@ const auth = async (req, res, next) => {
       return res.status(401).json({ msg: "Access denied , token missing" });
     jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, (err, user) => {
       if (err) {
-        console.log("error at auth middleware 1", err);
+        // console.log("error at auth middleware 1", err);
         if (err.name === "TokenExpiredError") {
           return res.status(401).json({ msg: "TokenExpiredError!" });
         } else if (err.name === "JsonWebTokenError") {
