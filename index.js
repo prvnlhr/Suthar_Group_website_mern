@@ -27,7 +27,6 @@ https: app.use(
   })
 );
 
-// app.use("/", require("./routes/index"));
 
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -39,6 +38,6 @@ app.listen(PORT, (err) => {
   if (err) {
     console.log(err.message);
   } else {
-    // console.log(`Server running on PORT :: ${PORT}`);
+    console.log(`Server running on PORT :: ${PORT}`);
   }
 });
