@@ -1,6 +1,5 @@
 const SiteDatabase = require("../models/siteData");
 const mongoose = require("mongoose");
-var objectId = mongoose.Types.ObjectId();
 
 const cloudinary = require("../utils/cloudinaryConfig");
 const { response } = require("express");

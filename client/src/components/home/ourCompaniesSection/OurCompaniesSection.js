@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, NavLink, useHistory, Switch } from "react-router-dom";
+import { Route, NavLink, useNavigate, Switch } from "react-router-dom";
 
 import styles from "../../../css/ourCompaniesSection/ourCompanies.module.css";
 import { useInView } from "react-intersection-observer";
@@ -19,7 +19,7 @@ const OurCompaniesSection = ({ ourCompaniesSectionRef }) => {
         delayChildren: 0.5,
         duration: 1,
         delay: 0.1,
-        // ease: [0.6, 0.05, -0.01, 0.9],
+        //  ease: [0.17, 0.67, 0.83, 0.67],
       },
     },
   };

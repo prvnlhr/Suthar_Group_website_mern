@@ -1,10 +1,10 @@
 import React from "react";
 import { Icon } from "@iconify/react";
 import moment from "moment";
-import { useHistory, useLocation } from "react-router-dom";
+import { useNavigate, useLocation } from "react-router-dom";
 import styles from "../../../css/footerSection/footerSection.module.css";
 const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
   var year = moment().format("YYYY");
 
@@ -15,7 +15,7 @@ const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
           from: "footerSection",
         };
         sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails1));
-        history.push("/company/contact");
+        navigate("/company/contact");
         break;
 
       case 2:
@@ -32,12 +32,12 @@ const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
 
         if (location.pathname === "/") {
           sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails2));
-          history.push("/company/vishwakarma");
+          navigate("/company/vishwakarma");
         } else if (
           location.pathname === "/company/KR" ||
           location.pathname === "/company/vishwakarma"
         ) {
-          history.push("/productList/vishwakarma");
+          navigate("/productList/vishwakarma");
         }
         break;
 
@@ -47,12 +47,12 @@ const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
         };
         if (location.pathname === "/") {
           sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails3));
-          history.push("/company/KR");
+          navigate("/company/KR");
         } else if (
           location.pathname === "/company/KR" ||
           location.pathname === "/company/vishwakarma"
         ) {
-          history.push("/productList/KR");
+          navigate("/productList/KR");
         }
 
         break;
@@ -66,7 +66,7 @@ const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
     //   };
     //   sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
 
-    //   history.push("/company/contact");
+    //    navigate("/company/contact");
     // }
     // // _______________________________________________________
     // else if (val === 2) {
@@ -77,11 +77,11 @@ const FooterSection = ({ aboutUsSectionRef, footerUsSectionRef }) => {
     // }
     // // _______________________________________________________
     // else if (val === 3) {
-    //   history.push("productList/vishwakarma");
+    //    navigate("productList/vishwakarma");
     // }
     // // _______________________________________________________
     // else if (val === 4) {
-    //   history.push("/productList/KR/");
+    //    navigate("/productList/KR/");
     // }
     // _______________________________________________________
   };

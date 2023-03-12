@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import styles from "../../../css/krStyles/krProductPage.module.css";
 import { useDispatch, useSelector } from "react-redux";
-import { Route, NavLink, useHistory, Switch } from "react-router-dom";
+import { Route, NavLink, useNavigate, Switch } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
 import navStyles from "../../../css/appLayoutSection/navbar.module.css";
@@ -72,7 +72,7 @@ const lineVariants = {
   },
 };
 const KRProductPage = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
   const { isLogged } = auth;
@@ -98,14 +98,14 @@ const KRProductPage = () => {
 
   useEffect(() => {
     if (product === null) {
-      history.push("/productList/KR");
+      navigate("/productList/KR");
     } else {
       setNewProductData(product);
     }
   }, [product]);
 
   const backBtnClicked = () => {
-    history.goBack();
+    navigate(-1);
   };
   const saveBtnClicked = () => {
     setEditMode(false);
@@ -178,8 +178,8 @@ const KRProductPage = () => {
               ) : (
                 <div className={styles.editBtnDiv} onClick={toggleEditMode}>
                   {isLoading === true &&
-                  place === "krProduct" &&
-                  process === "edit" ? (
+                    place === "krProduct" &&
+                    process === "edit" ? (
                     <CircleSpinner size={12} color="#0075ff" loading={true} />
                   ) : (
                     <Icon icon="akar-icons:edit" className={styles.editIcons} />

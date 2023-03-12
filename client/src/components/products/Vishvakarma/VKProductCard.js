@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Route, Switch, Redirect, useHistory } from "react-router-dom";
+import { Route, Switch, Redirect, useNavigate } from "react-router-dom";
 import { CircleSpinner } from "react-spinners-kit";
 import { Icon } from "@iconify/react";
 import { deleteVKProduct } from "../../../actions/vishvakarmaActions/vkProductActions";
@@ -45,7 +45,7 @@ const VKProductCard = ({
     }
   }, [controls, inView]);
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   // const [modalShow, setModalShow] = useState(false);
 
@@ -63,7 +63,7 @@ const VKProductCard = ({
         sessionStorage.getItem("currVkProductView")
       );
       dispatch(setVKCurrProductView(productJSON));
-      history.push("/productList/vishwakarma/productView");
+      navigate("/productList/vishwakarma/productView");
     }
   };
 
@@ -102,9 +102,9 @@ const VKProductCard = ({
             }}
           >
             {isLoading === true &&
-            place === "vkProduct" &&
-            itemId === product._id &&
-            process === "delete" ? (
+              place === "vkProduct" &&
+              itemId === product._id &&
+              process === "delete" ? (
               <CircleSpinner size={12} color="#0075ff" loading={true} />
             ) : (
               <Icon icon="ci:trash-empty" className={styles.trashIcon} />

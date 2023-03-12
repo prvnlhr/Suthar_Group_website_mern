@@ -6,8 +6,10 @@
   background-color: #f6f6f6 !important;
   box-sizing: border-box;
   padding: 0px 0px 0px 0px;
-  scrollbar-width: none; /* firefox hide scrollbar  */
-  -ms-overflow-style: none; /* firefox hide scrollbar  */
+  scrollbar-width: none;
+  /* firefox hide scrollbar  */
+  -ms-overflow-style: none;
+  /* firefox hide scrollbar  */
   display: grid;
   grid-template-rows: 50px 50px 80px minmax(0, 1fr);
   grid-template-columns: 50% 50%;
@@ -37,6 +39,7 @@
   /* border: 1px solid green; */
   box-sizing: border-box;
 }
+
 .backBtnWrapper {
   grid-area: backBtnWrapper;
   display: flex;
@@ -47,6 +50,7 @@
   /* border: 1px solid orange; */
   box-sizing: border-box;
 }
+
 .backBtnContainer {
   position: relative;
   display: flex;
@@ -73,12 +77,14 @@
   align-items: center;
   margin: 0px 0px 0px 0px;
 }
+
 .arrowIcon {
   margin: 0px 0px 0px 0px;
   color: black;
   font-size: 1rem;
   transform: rotate(-45deg);
 }
+
 .backBtnTextDiv {
   width: auto;
   height: 100%;
@@ -88,6 +94,7 @@
   /* border: 1px solid blue; */
   margin: 0px 0px 0px 10px;
 }
+
 .backBtnText {
   position: relative;
   text-decoration: none;
@@ -98,6 +105,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 0px;
 }
+
 /* ______________________________________________ */
 .editBtnsWrapper {
   position: relative;
@@ -110,6 +118,7 @@
   align-items: center;
   /* border: 1px solid black; */
 }
+
 .editBtnDiv {
   position: relative;
   display: flex;
@@ -127,10 +136,12 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
 .editIcons {
   font-size: 1.2rem;
   color: #9baece;
 }
+
 .editBtnText {
   position: relative;
   text-decoration: none;
@@ -148,6 +159,7 @@
   -ms-user-select: none;
   user-select: none;
 }
+
 /* ________________________________________________ */
 .productNameWrapper {
   grid-area: productNameWrapper;
@@ -159,6 +171,7 @@
   /* border: 1px solid blue; */
   box-sizing: border-box;
 }
+
 .nameLineContainer {
   position: relative;
   display: flex;
@@ -172,12 +185,16 @@
   margin: 0px 10px 0px 20px;
   overflow-x: hidden;
 
-  scrollbar-width: none; /* firefox hide scrollbar  */
-  -ms-overflow-style: none; /* firefox hide scrollbar  */
+  scrollbar-width: none;
+  /* firefox hide scrollbar  */
+  -ms-overflow-style: none;
+  /* firefox hide scrollbar  */
 }
+
 .nameLineContainer::-webkit-scrollbar {
   display: none;
 }
+
 .nameLineDiv {
   position: relative;
   display: flex;
@@ -188,6 +205,7 @@
   background-color: black;
   border-radius: 80px;
 }
+
 .productNameContainer {
   position: relative;
   display: flex;
@@ -199,6 +217,7 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .productNameText {
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
@@ -206,6 +225,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 5px;
 }
+
 .nameEditInput {
   width: 100%;
   height: 100%;
@@ -216,9 +236,9 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 1px solid #00b7fd;
+  border-bottom: 1px solid #002A9A;
   background: transparent;
-  color: #00b7fd;
+  color: #002A9A;
   font-family: "Montserrat", sans-serif;
 
   font-size: 2rem;
@@ -227,6 +247,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 0px;
 }
+
 .imageWrapper {
   grid-area: imageWrapper;
   position: relative;
@@ -240,6 +261,7 @@
   margin: 0px 0px 0px 0px;
   box-sizing: border-box;
 }
+
 .imageContainer {
   position: relative;
   display: flex;
@@ -251,6 +273,7 @@
   margin: 0px 0px 0px 0px;
   /* border: 1px solid black; */
 }
+
 .imageContainer img {
   width: 100%;
   height: 100%;
@@ -265,6 +288,7 @@
     background: linear-gradient(180deg, #eaf5f9 31.9%, #f1f2f6 70.15%);
     /* background: linear-gradient(180deg, #eaf5f9 25.79%, #f8f9fb 59.7%); */
   }
+
   .backBtnContainer {
     position: relative;
     display: flex;
@@ -280,6 +304,7 @@
     background-color: transparent;
     cursor: pointer;
   }
+
   .productNameWrapper {
     grid-area: productNameWrapper;
     display: flex;
@@ -291,6 +316,7 @@
     box-sizing: border-box;
     word-break: normal;
   }
+
   .nameLineContainer {
     position: relative;
     display: flex;
@@ -303,6 +329,7 @@
     /* border: 1px solid black; */
     margin: 0px 10px 0px 20px;
   }
+
   .productNameText {
     font-size: 1.2rem;
     font-weight: 450;
@@ -310,6 +337,7 @@
     letter-spacing: 0.3px;
     margin: 0px 0px 0px 5px;
   }
+
   .nameEditInput {
     width: 100%;
     height: 100%;
@@ -320,9 +348,9 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid #00b7fd;
+    border-bottom: 1px solid #002A9A;
     background: transparent;
-    color: #00b7fd;
+    color: #002A9A;
     font-family: "Montserrat", sans-serif;
     font-size: 1.2rem;
     font-weight: 450;

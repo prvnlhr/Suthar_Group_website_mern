@@ -13,6 +13,7 @@
   background: linear-gradient(180deg, #e2eef7 20.53%, #f6f7fb 75.75%);
   overflow-y: scroll;
 }
+
 .headerWrapper {
   grid-row-start: 1;
   grid-row-end: 2;
@@ -53,6 +54,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 10px;
 }
+
 .quickLinksWrapper {
   position: relative;
   display: flex;
@@ -77,6 +79,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 0px;
 }
+
 .linksDiv {
   width: auto;
   height: 100%;
@@ -105,6 +108,7 @@
   padding: 0px 0px 0px 0%;
   /* background-color: #f6f7fb; */
 }
+
 .backBtnDiv {
   width: auto;
   height: 55%;
@@ -116,6 +120,7 @@
   padding: 0px 15px 0px 20px;
   cursor: pointer;
 }
+
 .backBtnText {
   font-family: "Montserrat", sans-serif;
   font-size: 0.9rem;
@@ -145,6 +150,7 @@
   padding: 0px 0px 0px 5%;
   /* background-color: #f6f7fb; */
 }
+
 .headerText {
   font-family: "Montserrat", sans-serif;
   font-size: 2rem;
@@ -167,6 +173,7 @@
   align-items: flex-start;
   padding: 0px 0% 0px 5%;
 }
+
 .formContainer {
   position: relative;
   width: 100%;
@@ -180,6 +187,7 @@
 
   padding: 0px 0% 0px 0%;
 }
+
 .demoDiv {
   position: relative;
   /* bottom: 0px; */
@@ -196,8 +204,7 @@
   box-sizing: border-box;
   display: grid;
   grid-template-rows:
-    auto minmax(0, 0.5fr) minmax(0, 0.5fr) minmax(0, 1fr)
-    minmax(0, 0.5fr);
+    auto minmax(0, 0.5fr) minmax(0, 0.5fr) minmax(0, 1fr) minmax(0, 0.5fr);
   grid-template-columns: 50% 50%;
   grid-template-areas:
     "messageWrapper messageWrapper"
@@ -219,6 +226,7 @@
   box-sizing: border-box;
   /* border: 1px solid rgba(0, 0, 0, 0.055); */
 }
+
 .messageText {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
@@ -228,6 +236,7 @@
   margin: 0px 0px 0px 0px;
   line-height: 1.5;
 }
+
 .firstNameWrapper {
   grid-area: firstNameWrapper;
   width: 100%;
@@ -254,6 +263,7 @@
   flex-direction: column;
   /* border: 1px solid rgba(0, 0, 0, 0.055); */
 }
+
 .emailWrapper {
   grid-area: emailWrapper;
   width: 100%;
@@ -263,6 +273,7 @@
 
   /* border: 1px solid rgba(0, 0, 0, 0.055); */
 }
+
 .enquiryWrapper {
   grid-area: enquiryWrapper;
   width: 100%;
@@ -273,6 +284,7 @@
   align-items: flex-start;
   /* border: 1px solid rgba(0, 0, 0, 0.055); */
 }
+
 .buttonWrapper {
   grid-area: buttonWrapper;
   width: 100%;
@@ -297,6 +309,7 @@
   outline: none;
   border-radius: 0px;
 }
+
 .submitBtnText {
   font-family: "Montserrat", sans-serif;
   font-size: 0.8rem;
@@ -305,6 +318,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 0px;
 }
+
 .labelDiv {
   width: 100%;
   height: 50%;
@@ -323,6 +337,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 0%;
 }
+
 .inputDiv {
   width: 50%;
   height: 50%;
@@ -331,6 +346,7 @@
   padding: 0px 0px 0px 0%;
   box-sizing: border-box;
 }
+
 .inputField {
   width: 100%;
   height: 70%;
@@ -346,6 +362,7 @@
   font-weight: 450;
   letter-spacing: 0.5px;
 }
+
 .enquiryLabelDiv {
   width: 100%;
   height: 30%;
@@ -356,6 +373,7 @@
   /* border: 1px solid red; */
   padding: 0px 0px 0px 0%;
 }
+
 .enquiryInputDiv {
   width: 50%;
   height: 70%;
@@ -364,6 +382,7 @@
   padding: 0px 0px 0px 0%;
   box-sizing: border-box;
 }
+
 .enquiryInputField {
   width: 100%;
   max-height: 100%;
@@ -397,13 +416,14 @@
 }
 
 .enquiryInputField::-webkit-scrollbar-thumb {
-  background-color: #2f89fc;
+  background-color: #002A9A;
   border-radius: 4px;
 }
 
 .inputField:focus {
   border-bottom: 2px solid #2882ff;
 }
+
 .enquiryInputField:focus {
   border: 2px solid #2882ff;
 }

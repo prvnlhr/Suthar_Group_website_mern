@@ -12,7 +12,7 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   Route,
   NavLink,
-  useHistory,
+  useNavigate,
   Switch,
   useLocation,
 } from "react-router-dom";
@@ -24,7 +24,7 @@ import ExploreProductsSection from "./ExploreProductsSection";
 import FooterSection from "../home/footerSection/FooterSection";
 
 const CompanyPage = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
   var year = moment().format("YYYY");
 
@@ -34,27 +34,27 @@ const CompanyPage = () => {
   const linkClicked = (val) => {
     switch (val) {
       case 1:
-        history.push("/");
+        navigate("/");
         break;
       case 2:
-        history.push("/productList/vishwakarma");
+        navigate("/productList/vishwakarma");
         break;
       case 3:
-        history.push("/productList/KR");
+        navigate("/productList/KR");
         break;
       case 4:
-        history.push("/company/contact");
+        navigate("/company/contact");
         break;
     }
 
     // if (val === 1) {
-    //   history.push("/", window.scrollY);
+    //    navigate("/", window.scrollY);
     // } else if (val === 2) {
-    //   history.push("/productList/KR");
+    //    navigate("/productList/KR");
     // } else if (val === 3) {
-    //   history.push("/productList/vishvakarma");
+    //    navigate("/productList/vishvakarma");
     // } else if (val === 4) {
-    //   history.push("/company/contactUs");
+    //    navigate("/company/contactUs");
     // }
   };
   const setSession = () => {
@@ -71,7 +71,7 @@ const CompanyPage = () => {
   //     };
   //     sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
   //   }
-  //   history.push("/");
+  //    navigate("/");
   // };
   return (
     <div className={pageStyles.companyPageWrapper} onClick={setSession}>

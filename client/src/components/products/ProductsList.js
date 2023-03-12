@@ -3,9 +3,9 @@ import React, { useState, useEffect } from "react";
 import {
   Route,
   NavLink,
-  useHistory,
-  Switch,
+  useNavigate,
   useLocation,
+  Routes,
 } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { motion, AnimatePresence } from "framer-motion";
@@ -60,7 +60,7 @@ const ProductsList = ({
     (state) => state.auxillaryReducer.dropDownShow
   );
   const [currActiveMenu, setCurrActiveMenu] = useState(null);
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
   const dispatch = useDispatch();
   var year = moment().format("YYYY");
@@ -77,23 +77,23 @@ const ProductsList = ({
 
   const logoutHandler = (e) => {
     e.preventDefault();
-    dispatch(logout(history));
+    dispatch(logout(navigate));
   };
 
   const linkClicked = (val) => {
     if (val === 1) {
-      history.push("/", window.scrollY);
+      navigate("/", window.scrollY);
     } else if (val === 2) {
-      history.push("/productList/KR");
+      navigate("/productList/KR");
     } else if (val === 3) {
-      history.push("/productList/vishwakarma");
+      navigate("/productList/vishwakarma");
     } else if (val === 4) {
-      history.push("/company/contact");
+      navigate("/company/contact");
     }
   };
 
   const backBtnClick = () => {
-    history.goBack();
+    navigate(-1)
     // const clickedDetailsJSON = JSON.parse(
     //   sessionStorage.getItem("clickDetails")
     // );
@@ -104,7 +104,7 @@ const ProductsList = ({
     //   };
     //   sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
     // }
-    // history.push("/");
+    //  navigate("/");
   };
 
   return (
@@ -153,45 +153,42 @@ const ProductsList = ({
       <div className={styles.backBtnWrapper}>
         <div className={styles.backBtnContainer} onClick={backBtnClick}>
           <BackBtn />
-          {/* <div className={styles.iconDiv}>
-            <Icon
-              icon="bi:arrow-down-left"
-              rotate={1}
-              className={styles.arrowIcon}
-            />
-          </div>
-          <div className={styles.backLinkDiv}>
-            <p className={`${styles.backText}`}>Back</p>
-          </div> */}
+
         </div>
       </div>
 
       <div className={styles.productListContainer}>
-        <Switch>
+        {/* <KRProductList
+          krProductList={krProductList}
+          currViewProduct={currViewProduct}
+          setCurrProductView={setCurrProductView}
+        /> */}
+
+        <Routes>
+
           <Route
             exact
-            path="/productList/vishwakarma"
-            render={(props) => (
+            path="/vishwakarma/"
+            element={
               <VishvakarmaProductList
-                {...props}
                 vkProductList={vkProductList}
               />
-            )}
+            }
           />
 
           <Route
             exact
-            path="/productList/KR"
-            render={(props) => (
+            path="/KR"
+            element={
               <KRProductList
-                {...props}
                 krProductList={krProductList}
                 currViewProduct={currViewProduct}
                 setCurrProductView={setCurrProductView}
               />
-            )}
+            }
           />
-        </Switch>
+
+        </Routes>
       </div>
       <div className={styles.footerWrapper}>
         <p className={styles.footerText}>

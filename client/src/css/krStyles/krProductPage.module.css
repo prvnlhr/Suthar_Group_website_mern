@@ -5,8 +5,10 @@
   background-color: #f6f6f6 !important;
   box-sizing: border-box;
   padding: 0px 0px 0px 0px;
-  scrollbar-width: none; /* firefox hide scrollbar  */
-  -ms-overflow-style: none; /* firefox hide scrollbar  */
+  scrollbar-width: none;
+  /* firefox hide scrollbar  */
+  -ms-overflow-style: none;
+  /* firefox hide scrollbar  */
   display: grid;
   grid-template-rows: 50px minmax(0, 1fr);
   grid-template-columns: 50% 50%;
@@ -48,6 +50,7 @@
   margin: 0px 0px 0px 0px;
   box-sizing: border-box;
 }
+
 .imageContainer {
   position: relative;
   display: flex;
@@ -60,6 +63,7 @@
   align-items: center;
   margin: 0px 0px 0px 0px;
 }
+
 .productImage {
   width: 100%;
   height: 100%;
@@ -92,6 +96,7 @@
   background: linear-gradient(180deg, #eaf5f9 16.52%, #ffffff 32.77%);
   /* border: 1px solid rgba(0, 0, 0, 0.048); */
 }
+
 .descriptionHeaderWrapper {
   grid-area: descriptionHeaderWrapper;
   position: relative;
@@ -103,6 +108,7 @@
   align-items: center;
   box-sizing: border-box;
 }
+
 .nameWrapper {
   grid-area: nameWrapper;
   position: relative;
@@ -115,6 +121,7 @@
   align-items: center;
   box-sizing: border-box;
 }
+
 .nameLineContainer {
   position: relative;
   display: flex;
@@ -127,12 +134,16 @@
   /* border: 1px solid black; */
   margin: 0px 0px 0px 0px;
   overflow-x: hidden;
-  scrollbar-width: none; /* firefox hide scrollbar  */
-  -ms-overflow-style: none; /* firefox hide scrollbar  */
+  scrollbar-width: none;
+  /* firefox hide scrollbar  */
+  -ms-overflow-style: none;
+  /* firefox hide scrollbar  */
 }
+
 .nameLineContainer::-webkit-scrollbar {
   display: none;
 }
+
 .nameLineDiv {
   position: relative;
   display: flex;
@@ -143,6 +154,7 @@
   background-color: black;
   border-radius: 50px;
 }
+
 .nameContainer {
   width: 90%;
   height: 100%;
@@ -152,6 +164,7 @@
   align-items: center;
   box-sizing: border-box;
 }
+
 .productNameText {
   position: relative;
   font-family: "Poppins", sans-serif;
@@ -174,6 +187,7 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .specsContainer {
   position: relative;
   width: 80%;
@@ -186,6 +200,7 @@
   align-items: center;
   margin: 0px 0px 0px 10%;
 }
+
 .specsDiv {
   position: relative;
   width: 100%;
@@ -196,6 +211,7 @@
   justify-content: flex-start;
   align-items: center;
 }
+
 .labelDiv {
   position: relative;
   width: 50%;
@@ -220,6 +236,7 @@
   align-items: center;
   margin: 0px 0px 0px 0px;
 }
+
 .labelText {
   position: relative;
   font-family: "Montserrat", sans-serif;
@@ -230,6 +247,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 2%;
 }
+
 .attributeText {
   position: relative;
   font-family: "Montserrat", sans-serif;
@@ -240,6 +258,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 2%;
 }
+
 .attributeEditInput {
   width: 100%;
   height: 80%;
@@ -251,11 +270,11 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 1px solid #00b7fd;
+  border-bottom: 1px solid #002A9A;
   background: #00b5fd11;
   background: transparent;
 
-  color: #00b7fd;
+  color: #002A9A;
   font-family: "Poppins", sans-serif;
   font-family: "Montserrat", sans-serif;
 
@@ -278,6 +297,7 @@
   align-items: center;
   /* border: 1px solid black; */
 }
+
 .editBtnDiv {
   position: relative;
   display: flex;
@@ -295,10 +315,12 @@
   border-radius: 5px;
   cursor: pointer;
 }
+
 .editIcons {
   font-size: 1.2rem;
   color: #9baece;
 }
+
 .editBtnText {
   position: relative;
   text-decoration: none;
@@ -310,6 +332,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 0px;
 }
+
 /* ________________________________________________ */
 .backBtnDesktopContainer {
   position: relative;
@@ -343,6 +366,7 @@
   background-color: transparent;
   /* display: none; */
 }
+
 .iconDiv {
   /* border: 1px solid red; */
   position: relative;
@@ -353,6 +377,7 @@
   align-items: center;
   margin: 0px 0px 0px 0px;
 }
+
 .arrowIcon {
   /* font-size: 1.1rem; */
   margin: 0px 0px 0px 5px;
@@ -360,6 +385,7 @@
   font-size: 1rem;
   transform: rotate(-45deg);
 }
+
 .backBtnTextDiv {
   width: auto;
   height: 100%;
@@ -369,6 +395,7 @@
   /* border: 1px solid blue; */
   margin: 0px 0px 0px 10px;
 }
+
 .backBtnText {
   position: relative;
   text-decoration: none;
@@ -379,6 +406,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 0px;
 }
+
 /* ________________________________________________ */
 
 .nameEditInput {
@@ -391,9 +419,9 @@
   border-top: none;
   border-left: none;
   border-right: none;
-  border-bottom: 1px solid #00b7fd;
+  border-bottom: 1px solid #002A9A;
   background: transparent;
-  color: #00b7fd;
+  color: #002A9A;
   font-family: "Poppins", sans-serif;
   font-family: "Montserrat", sans-serif;
 
@@ -402,6 +430,7 @@
   letter-spacing: 0.5px;
   margin: 0px 0px 0px 0px;
 }
+
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   .KRProductPageWrapper {
     position: relative;
@@ -417,8 +446,10 @@
     box-sizing: border-box;
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
-    scrollbar-width: none; /* firefox hide scrollbar  */
-    -ms-overflow-style: none; /* firefox hide scrollbar  */
+    scrollbar-width: none;
+    /* firefox hide scrollbar  */
+    -ms-overflow-style: none;
+    /* firefox hide scrollbar  */
     display: grid;
     grid-template-rows: 60px minmax(0, 0.6fr) minmax(0, 0.4fr);
     grid-template-columns: 100%;
@@ -428,6 +459,7 @@
       "descriptionWrapper";
     /* background: linear-gradient(180deg, #EAF5F9 29.48%, #F1F2F6 67.62%) */
   }
+
   .editBtnsWrapper {
     position: relative;
     display: flex;
@@ -439,6 +471,7 @@
     align-items: center;
     /* border: 1px solid black; */
   }
+
   .editBtnDiv {
     position: relative;
     display: flex;
@@ -457,14 +490,13 @@
     border-radius: 5px;
     cursor: pointer;
   }
+
   .editIcons {
     font-size: 1.1rem;
     font-size: 1.7rem;
-    font-size: clamp(
-      1.1rem,
-      -0.09999999999999964rem + 5.999999999999998vw,
-      1.7rem
-    ) !important;
+    font-size: clamp(1.1rem,
+        -0.09999999999999964rem + 5.999999999999998vw,
+        1.7rem) !important;
     color: #9baece;
   }
 
@@ -496,6 +528,7 @@
 
     /* display: none; */
   }
+
   .imageContainer {
     position: relative;
     display: flex;
@@ -509,6 +542,7 @@
     margin: 0px 0px 0px 0px;
     /* display: none; */
   }
+
   .backBtnDesktopContainer {
     position: relative;
     width: 100%;
@@ -522,6 +556,7 @@
     background-color: white;
     display: none;
   }
+
   .backBtnWrapper {
     position: absolute;
     display: flex;
@@ -533,6 +568,7 @@
     /* border: 1px solid orange; */
     box-sizing: border-box;
   }
+
   .backBtnMobContainer {
     position: absolute;
     /* position: re; */
@@ -552,6 +588,7 @@
     background-color: transparent;
     /* display: none; */
   }
+
   .backBtnTextDiv {
     width: auto;
     height: 100%;
@@ -562,6 +599,7 @@
     /* border: 1px solid red; */
     margin: 0px 0px 0px 10px;
   }
+
   .backBtnText {
     position: relative;
     text-decoration: none;
@@ -572,6 +610,7 @@
     letter-spacing: 0.5px;
     margin: 0px 0px 0px 0px;
   }
+
   .iconDiv {
     /* border: 1px solid blue; */
     position: relative;
@@ -583,6 +622,7 @@
     margin: 0px 0px 0px 0px;
     /* display: none; */
   }
+
   .arrowIcon {
     color: black;
     font-size: 1.1rem;
@@ -623,6 +663,7 @@
     align-items: center;
     box-sizing: border-box;
   }
+
   .nameWrapper {
     grid-area: nameWrapper;
     position: relative;
@@ -634,6 +675,7 @@
     align-items: center;
     box-sizing: border-box;
   }
+
   .nameLineContainer {
     position: relative;
     display: flex;
@@ -646,6 +688,7 @@
     /* border: 1px solid black; */
     margin: 0px 0px 0px 0px;
   }
+
   .nameLineDiv {
     display: flex;
     width: 50%;
@@ -655,6 +698,7 @@
     background-color: black;
     border-radius: 50px;
   }
+
   .nameContainer {
     width: 100%;
     height: 100%;
@@ -678,6 +722,7 @@
     align-items: center;
     margin: 0px 0px 0px 0px;
   }
+
   .specsContainer {
     position: relative;
     width: 100%;
@@ -690,6 +735,7 @@
     align-items: flex-start;
     margin: 0px 0px 0px 0px;
   }
+
   .specsDiv {
     position: relative;
     width: 100%;
@@ -701,6 +747,7 @@
     align-items: center;
     padding: 0px 0px 0px 0px;
   }
+
   .labelDiv {
     position: relative;
     width: 50%;
@@ -713,6 +760,7 @@
     margin: 0px 0px 0px 0px;
     padding: 0px 0px 0px 0px;
   }
+
   .attributeDiv {
     position: relative;
     width: 45%;
@@ -733,11 +781,9 @@
     font-size: 0.9rem;
     font-size: 1.2rem;
 
-    font-size: clamp(
-      0.9rem,
-      0.30000000000000016rem + 2.999999999999999vw,
-      1.2rem
-    ) !important;
+    font-size: clamp(0.9rem,
+        0.30000000000000016rem + 2.999999999999999vw,
+        1.2rem) !important;
     color: black;
     font-weight: 600;
     letter-spacing: 0.5px;
@@ -752,34 +798,32 @@
     font-size: 0.75rem;
     font-size: 0.95rem;
 
-    font-size: clamp(
-      0.75rem,
-      0.3500000000000001rem + 1.9999999999999998vw,
-      0.95rem
-    ) !important;
+    font-size: clamp(0.75rem,
+        0.3500000000000001rem + 1.9999999999999998vw,
+        0.95rem) !important;
 
     font-weight: 550;
     letter-spacing: 0.5px;
     margin: 0px 0px 0px 28%;
     /* display: none; */
   }
+
   .attributeText {
     position: relative;
     font-family: "Poppins", sans-serif;
     font-family: "Montserrat", sans-serif;
     font-size: 0.7rem;
     font-size: 0.9rem;
-    font-size: clamp(
-      0.7rem,
-      0.2999999999999998rem + 2.000000000000001vw,
-      0.9rem
-    ) !important;
+    font-size: clamp(0.7rem,
+        0.2999999999999998rem + 2.000000000000001vw,
+        0.9rem) !important;
 
     font-weight: 550;
     letter-spacing: 0.5px;
     margin: 0px 10px 0px 15px;
     /* display: none; */
   }
+
   .attributeEditInput {
     width: 100%;
     height: 80%;
@@ -790,17 +834,15 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid #00b7fd;
+    border-bottom: 1px solid #002A9A;
     background: #00b5fd11;
     background: transparent;
-    color: #00b7fd;
+    color: #002A9A;
     font-family: "Poppins", sans-serif;
     font-family: "Montserrat", sans-serif;
-    font-size: clamp(
-      0.7rem,
-      0.2999999999999998rem + 2.000000000000001vw,
-      0.9rem
-    ) !important;
+    font-size: clamp(0.7rem,
+        0.2999999999999998rem + 2.000000000000001vw,
+        0.9rem) !important;
     font-weight: 550;
     letter-spacing: 0.5px;
     margin: 0px 10px 0px 15px;
@@ -816,16 +858,14 @@
     border-top: none;
     border-left: none;
     border-right: none;
-    border-bottom: 1px solid #00b7fd;
+    border-bottom: 1px solid #002A9A;
     background: transparent;
-    color: #00b7fd;
+    color: #002A9A;
     font-family: "Montserrat", sans-serif;
     margin: 0px 0px 0px 0px;
-    font-size: clamp(
-      0.9rem,
-      0.30000000000000016rem + 2.999999999999999vw,
-      1.2rem
-    ) !important;
+    font-size: clamp(0.9rem,
+        0.30000000000000016rem + 2.999999999999999vw,
+        1.2rem) !important;
     font-weight: 600;
     letter-spacing: 0.5px;
     line-height: 1.5;

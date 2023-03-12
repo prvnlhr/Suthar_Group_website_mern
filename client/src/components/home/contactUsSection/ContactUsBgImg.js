@@ -15,11 +15,12 @@ const imgVariants = {
       delayChildren: 0.5,
       duration: 0.8,
       delay: 0.2,
-      // ease: [0.6, 0.05, -0.01, 0.9],
+      //  ease: [0.17, 0.67, 0.83, 0.67],
     },
   },
 };
 const ContactUsBgImg = () => {
+
   const controls = useAnimation();
   const { ref, inView } = useInView({
     triggerOnce: true,
@@ -33,6 +34,7 @@ const ContactUsBgImg = () => {
       controls.start("hidden");
     }
   }, [controls, inView]);
+
   return (
     <motion.div
       variants={imgVariants}

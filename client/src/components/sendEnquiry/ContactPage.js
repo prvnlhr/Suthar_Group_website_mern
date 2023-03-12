@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import {
   Route,
   NavLink,
-  useHistory,
+  useNavigate,
   Switch,
   useLocation,
   Link,
@@ -40,12 +40,12 @@ const ContactPage = () => {
     email: "",
     password: "",
   };
-  const history = useHistory();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const location = useLocation();
 
   const backBtnClick = () => {
-    history.goBack();
+    navigate(-1)
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -68,7 +68,7 @@ const ContactPage = () => {
   };
   const linkClicked = (val) => {
     // if (val === 1) {
-    //   history.goBack();
+    //   navigate(-1)
     // }
     // // _________________________________________________________________
     // else if (val === 2) {
@@ -98,15 +98,15 @@ const ContactPage = () => {
     //     };
     //     sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
     //   }
-    //   history.push("/");
+    //    navigate("/");
     // }
     // // ____________________________________________________________________
     // else if (val === 3) {
-    //   history.push("/productList/vishvakarma");
+    //    navigate("/productList/vishvakarma");
     // }
     // // ____________________________________________________________________
     // else if (val === 4) {
-    //   history.push("/company/contactUs");
+    //    navigate("/company/contactUs");
     // }
   };
 
@@ -116,7 +116,7 @@ const ContactPage = () => {
       <div className={styles.headerWrapper}>
         <div
           className={styles.backBtnContainer}
-          onClick={() => history.goBack()}
+          onClick={() => navigate(-1)}
         >
           <Icon
             icon="fluent:arrow-sort-up-16-filled"

@@ -16,7 +16,7 @@ const boxVariants = {
       //   staggerChildren: 0.5,
       duration: 1,
       //   delayChildren: 0.5,
-      // ease: [0.6, 0.05, -0.01, 0.9],
+      //  ease: [0.17, 0.67, 0.83, 0.67],
     },
   },
 };
@@ -34,7 +34,7 @@ const textVariants = {
   },
 };
 const lineVariants = {
-  hidden: {opacity: 0, translateX: -200 },
+  hidden: { opacity: 0, translateX: -200 },
   visible: {
     opacity: [0, 0.3, 0.5, 1],
     translateX: 0,

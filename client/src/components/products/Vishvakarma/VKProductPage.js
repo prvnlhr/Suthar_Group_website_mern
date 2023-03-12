@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Route, NavLink, useHistory, Switch } from "react-router-dom";
+import { Route, NavLink, useNavigate, Switch } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 import styles from "../../../css/vishvakarmaStyles/vkProductPage.module.css";
@@ -62,7 +62,7 @@ const lineVariants = {
 
 const VKProductPage = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const loadState = useSelector((state) => state.loadingReducer);
   const { itemId, place, isLoading, process } = loadState;
@@ -84,7 +84,7 @@ const VKProductPage = () => {
 
   useEffect(() => {
     if (product === null) {
-      history.push("/productList/vishwakarma");
+      navigate("/productList/vishwakarma");
     } else {
       setNewProductData(product);
     }
@@ -95,7 +95,7 @@ const VKProductPage = () => {
     dispatch(editVKProduct(newProductData, token));
   };
   const backBtnClicked = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   const toggleEditMode = () => {
@@ -138,7 +138,7 @@ const VKProductPage = () => {
       </div>
       <div className={styles.backBtnWrapper}>
         <div className={styles.backBtnContainer} onClick={backBtnClicked}>
-          <BackBtn/>
+          <BackBtn />
           {/* <motion.div
             variants={arrowVariants}
             initial="hidden"
@@ -167,8 +167,8 @@ const VKProductPage = () => {
             ) : (
               <div className={styles.editBtnDiv} onClick={toggleEditMode}>
                 {isLoading === true &&
-                place === "vkProduct" &&
-                process === "edit" ? (
+                  place === "vkProduct" &&
+                  process === "edit" ? (
                   <CircleSpinner size={12} color="#0075ff" loading={true} />
                 ) : (
                   <Icon icon="akar-icons:edit" className={styles.editIcons} />

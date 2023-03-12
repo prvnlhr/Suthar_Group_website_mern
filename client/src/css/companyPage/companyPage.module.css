@@ -1,0 +1,215 @@
+.companyPageWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 60px minmax(0, 1fr);
+  box-sizing: border-box;
+  background-color: #f6f7fb;
+  background: linear-gradient(180deg, #eaf5f9 25.79%, #f8f9fb 59.7%);
+  /* border: 1px solid black; */
+}
+.contentContainer {
+  /* border: 1px solid blue; */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 0px;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  /* background-color: rgb(88, 80, 80); */
+}
+.contentContainer::-webkit-scrollbar {
+  display: none;
+}
+
+.headerWrapper {
+  display: flex;
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 0px;
+  /* border: 1px solid red; */
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  /* display: none; */
+  background-color: white;
+}
+
+.companyLogoWrapper {
+  position: absolute;
+  display: flex;
+  width: auto;
+  left: 0px;
+  /* min-width: 100%; */
+  height: 60px;
+  box-sizing: border-box;
+  padding: 0px 15px 0px 15px;
+  /* border: 1px solid blue; */
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  align-self: flex-start;
+}
+
+.companyNameText {
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem;
+  color: black;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 0px 10px;
+}
+.quickLinksWrapperDesktop {
+  position: relative;
+  display: flex;
+  width: auto;
+  /* min-width: 100%; */
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 0px;
+  /* border: 1px solid red; */
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  align-self: flex-end;
+}
+.quickLinksWrapperMobile {
+  position: relative;
+  display: flex;
+  width: auto;
+  /* min-width: 100%; */
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0px 0px 0px 0px;
+  /* border: 1px solid red; */
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  display: none;
+}
+.linkText {
+  /* border: 1px solid red; */
+  font-family: "Poppins", sans-serif;
+  font-size: 0.7rem;
+  color: black;
+  font-weight: 450;
+  letter-spacing: 0.5px;
+  margin: 0px 0px 0px 0px;
+}
+.linksDiv {
+  width: auto;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 10px 0px 10px;
+  padding: 0px 10px 0px 10px;
+  cursor: pointer;
+  /* border: 1px solid red; */
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .headerWrapper {
+    display: flex;
+    width: 100%;
+    min-width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 0px 0px 0px 0px;
+    /* border: 1px solid red; */
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    /* display: none; */
+  }
+
+  .companyLogoWrapper {
+    position: absolute;
+    display: flex;
+    width: auto;
+    /* min-width: 100%; */
+    /* height: 50px; */
+    box-sizing: border-box;
+    padding: 0px 15px 0px 15px;
+    /* border: 1px solid blue; */
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
+    align-self: flex-start;
+    /* display:none; */
+  }
+  .companyNameText {
+    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    color: black;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    margin: 0px 0px 0px 0px;
+    /* display: none; */
+  }
+  .quickLinksWrapperDesktop {
+    position: relative;
+    display: flex;
+    width: auto;
+    /* min-width: 100%; */
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0px 5px 0px 0px;
+    /* border: 1px solid red; */
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
+    align-self: flex-end;
+    display: none;
+  }
+  .quickLinksWrapperMobile {
+    position: relative;
+    display: flex;
+    width: auto;
+    /* min-width: 100%; */
+    height: 50px;
+    box-sizing: border-box;
+    padding: 0px 5px 0px 0px;
+    /* border: 1px solid red; */
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
+    /* display: none; */
+  }
+  .linksDiv {
+    width: auto;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
+    padding: 0px 0px 0px 0px;
+    cursor: pointer;
+    /* border: 1px solid red; */
+  }
+  .linkText {
+    font-family: "Poppins", sans-serif;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.7rem;
+    color: black;
+    color: #c4c4c4;
+    font-weight: 550;
+    letter-spacing: 0.05em;
+    margin: 0px 0px 0px 0px;
+    /* display:none; */
+  }
+}

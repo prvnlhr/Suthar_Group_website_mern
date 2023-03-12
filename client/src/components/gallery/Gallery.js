@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import DropDownMenu from "../appLayout/DropDownMenu";
 import DropDownToggleBtn from "../appLayout/DropDownToggleBtn";
 import Navbar from "../appLayout/Navbar";
-import { Route, NavLink, useHistory, Switch } from "react-router-dom";
+import { Route, NavLink, useNavigate, Switch } from "react-router-dom";
 
 const imgVariants = {
   hidden: { scale: 1.2, opacity: 0 },
@@ -57,13 +57,13 @@ const lineVariants = {
   },
 };
 const Gallery = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const dropDownShow = useSelector(
     (state) => state.auxillaryReducer.dropDownShow
   );
 
   const backBtnClicked = () => {
-    history.goBack();
+    navigate(-1);
   };
 
   return (

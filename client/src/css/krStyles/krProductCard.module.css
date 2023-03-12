@@ -36,6 +36,8 @@
     0 5px 5px rgba(0, 0, 0, 0.048);
   background-color: white;
   grid-gap: 2%;
+  /* border: 1px solid red; */
+
 }
 
 .productImageWrapper {
@@ -56,6 +58,7 @@
   /* border: 1px solid rgba(0, 0, 0, 0.055); */
   background-color: #f6f7fb;
 }
+
 .productImg {
   position: relative;
   height: 100%;
@@ -114,6 +117,7 @@
   /* flex-wrap: wrap; */
   overflow: hidden;
 }
+
 .productTitleWrapper p {
   position: relative;
   font-family: "Montserrat", sans-serif;
@@ -132,15 +136,20 @@
   max-height: 2rem;
   /* max-width: 190px; */
   box-orient: vertical;
-  -moz-box-orient: vertical; /* Mozilla */
-  -webkit-box-orient: vertical; /* WebKit */
+  -moz-box-orient: vertical;
+  /* Mozilla */
+  -webkit-box-orient: vertical;
+  /* WebKit */
   display: box;
-  display: -moz-box; /* Mozilla */
-  display: -webkit-box; /* WebKit */
+  display: -moz-box;
+  /* Mozilla */
+  display: -webkit-box;
+  /* WebKit */
   text-overflow: ellipsis;
   -webkit-line-clamp: 2;
   overflow: hidden !important;
 }
+
 .productTitleWrapper::-webkit-scrollbar {
   display: none;
 }
@@ -149,15 +158,18 @@
   .productCardWrapper {
     position: relative;
     width: 42%;
-    aspect-ratio: 2/3;
+    aspect-ratio: 2/2.5;
     display: flex;
     margin: 3% auto 3% 3%;
     margin: 3% auto 3% 5%;
-    margin: 3% 4% 3% 4%;
+    margin: 8% 4% 3% 4%;
     display: grid;
     grid-template-rows: 85% 15%;
     /* border: 1px solid rgba(red) !important; */
+    border-radius: 10px;
+
   }
+
   .productTitleWrapper p {
     font-family: "Montserrat", sans-serif;
     /* border: 1px solid black; */
@@ -176,6 +188,7 @@
     margin: 0px 0px 0px 0px;
     font-size: clamp(0.5rem, 0rem + 2.5vw, 0.75rem) !important;
   }
+
   .productTitleWrapper {
     position: relative;
     grid-row-start: 2;
@@ -194,15 +207,14 @@
     backface-visibility: hidden;
     overflow: hidden;
   }
+
   .trashIcon {
     color: #9baece;
     font-size: 1rem;
     font-size: 1.2rem;
-    font-size: clamp(
-      1rem,
-      0.6000000000000001rem + 1.9999999999999998vw,
-      1.2rem
-    ) !important;
+    font-size: clamp(1rem,
+        0.6000000000000001rem + 1.9999999999999998vw,
+        1.2rem) !important;
     cursor: pointer;
   }
 }

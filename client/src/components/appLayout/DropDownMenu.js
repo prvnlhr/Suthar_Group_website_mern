@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import styles from "../../css/appLayoutSection/dropDownMenu.module.css";
 import { Icon } from "@iconify/react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Route, Link, useHistory, Switch, useLocation } from "react-router-dom";
+import { Route, Link, useNavigate, Switch, useLocation } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { CircleSpinner } from "react-spinners-kit";
 import { logout } from "../../actions/authActions";
@@ -40,7 +40,7 @@ const DropDownMenu = ({ footerUsSectionRef, aboutUsSectionRef }) => {
   const auth = useSelector((state) => state.auth);
   const { isLogged } = auth;
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
 
   const toggleMenuItem = (val, height) => {
@@ -58,24 +58,24 @@ const DropDownMenu = ({ footerUsSectionRef, aboutUsSectionRef }) => {
   const subItemClicked = (value) => {
     switch (value) {
       case 1:
-        history.push("/company/vishwakarma");
+        navigate("/company/vishwakarma");
         dispatch(setDropDownShow(false));
         break;
       case 2:
-        history.push("/company/KR");
+        navigate("/company/KR");
         dispatch(setDropDownShow(false));
         break;
       case 3:
-        history.push("/productList/vishwakarma");
+        navigate("/productList/vishwakarma");
         dispatch(setDropDownShow(false));
         break;
       case 4:
-        history.push("/productList/KR");
+        navigate("/productList/KR");
         dispatch(setDropDownShow(false));
         break;
 
       case 5:
-        history.push("/company/contact");
+        navigate("/company/contact");
         dispatch(setDropDownShow(false));
         break;
       case 6:
@@ -99,7 +99,7 @@ const DropDownMenu = ({ footerUsSectionRef, aboutUsSectionRef }) => {
             from: path1,
             link: "connectSocially",
           };
-          history.push("/");
+          navigate("/");
         }
         sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails1));
         break;
@@ -124,23 +124,23 @@ const DropDownMenu = ({ footerUsSectionRef, aboutUsSectionRef }) => {
             from: path2,
             link: "aboutUs",
           };
-          history.push("/");
+          navigate("/");
         }
         sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails2));
         break;
       case 8:
         dispatch(setDropDownShow(false));
-        history.push("/company/gallery");
+        navigate("/company/gallery");
         break;
       case 9:
-        history.push("/company/auth/login");
+        navigate("/company/auth/login");
         break;
     }
   };
 
   const logoutHandler = (e) => {
     e.preventDefault();
-    dispatch(logout(history));
+    dispatch(logout(navigate));
   };
   return (
     <motion.div
@@ -317,19 +317,19 @@ const DropDownMenu = ({ footerUsSectionRef, aboutUsSectionRef }) => {
 export default DropDownMenu;
 // className={styles.subItemDivLine}
 // if (value === 1) {
-//   // history.push("/productList/vishvakarma");
-//   history.push("/company/vishwakarma");
+//   //navigate("/productList/vishvakarma");
+//  navigate("/company/vishwakarma");
 //   dispatch(setDropDownShow(false));
 // }
 
 // // ________________________________
 // else if (value === 2) {
-//   history.push("/company/KR");
+//  navigate("/company/KR");
 //   dispatch(setDropDownShow(false));
 // }
 // // ________________________________
 // else if (value === 3) {
-//   history.push("/company/contact");
+//  navigate("/company/contact");
 //   dispatch(setDropDownShow(false));
 // }
 
@@ -355,7 +355,7 @@ export default DropDownMenu;
 //       from: path,
 //       link: "connectSocially",
 //     };
-//     history.push("/");
+//    navigate("/");
 //   }
 //   sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
 // }
@@ -381,12 +381,12 @@ export default DropDownMenu;
 //       from: path,
 //       link: "aboutUs",
 //     };
-//     history.push("/");
+//    navigate("/");
 //   }
 //   sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
 // } else if (value === 6) {
 //   dispatch(setDropDownShow(false));
-//   history.push("/company/gallery");
+//  navigate("/company/gallery");
 // } else if (value === 7) {
-//   history.push("/company/auth/login");
+//  navigate("/company/auth/login");
 // }

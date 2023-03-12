@@ -94,6 +94,6 @@ export const editVKProduct = (data, token) => async (dispatch) => {
     dispatch(loadingSetter(false, "vkProduct", "", "edit", true));
   } catch (error) {
     dispatch(loadingSetter(false, "vkProduct", "", "edit", false));
-    // console.log(error);
+    console.log(error);
   }
 };

@@ -1,0 +1,8 @@
+.productCard {
+  min-width: 200px;
+  width: 200px;
+  height: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.068);
+  background-color: white;
+  margin: 0px 15px 0px 15px;
+}

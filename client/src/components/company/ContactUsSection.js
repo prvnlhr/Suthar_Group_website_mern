@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import pageStyles from "../../css/companyPage/contactUsSection.module.css";
-import { Route, Link, useHistory, Switch, useLocation } from "react-router-dom";
+import { Route, Link, useNavigate, Switch, useLocation } from "react-router-dom";
 
 import { useInView } from "react-intersection-observer";
 import { Icon } from "@iconify/react";
@@ -15,7 +15,7 @@ const boxVariants = {
       delayChildren: 0.5,
       duration: 0.6,
       delay: 0.3,
-      ease: [0.6, 0.05, -0.01, 0.9],
+      ease: [0.17, 0.67, 0.83, 0.67],
     },
   },
 };
@@ -53,7 +53,7 @@ const arrowVariants = {
   },
 };
 const ContactUsSection = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const controls = useAnimation();
   const { ref, inView } = useInView({
@@ -70,7 +70,7 @@ const ContactUsSection = () => {
   }, [controls, inView]);
 
   const linkedClicked = () => {
-    history.push("/company/contact");
+    navigate("/company/contact");
   };
   return (
     <div className={pageStyles.contactSection}>

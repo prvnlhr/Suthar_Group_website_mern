@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Route, NavLink, useHistory, Switch } from "react-router-dom";
+import { Route, NavLink, useNavigate, Switch } from "react-router-dom";
 import OpeningBannerSection from "./openingBannerSection/OpeningBannerSection";
 // import ProductsSection from "../productsSection/ProductsSection";
 import StatisticsSection from "./statisticsSection/StatisticsSection";
@@ -35,24 +35,24 @@ const Home = ({
   const contactUsSectionRef = useRef();
   const aboutUsSectionRef = useRef();
   const footerUsSectionRef = useRef();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const onScroll = () => {
     if (
       -aboutUsSectionRef.current.getBoundingClientRect().height + 100 <
-        aboutUsSectionRef.current.getBoundingClientRect().top &&
+      aboutUsSectionRef.current.getBoundingClientRect().top &&
       aboutUsSectionRef.current.getBoundingClientRect().top < 70
     ) {
       setCurrVisible("aboutUsSection");
     } else if (
       -ourCompaniesSectionRef.current.getBoundingClientRect().height + 100 <
-        ourCompaniesSectionRef.current.getBoundingClientRect().top &&
+      ourCompaniesSectionRef.current.getBoundingClientRect().top &&
       ourCompaniesSectionRef.current.getBoundingClientRect().top < 70
     ) {
       setCurrVisible("ourCompaniesSection");
     } else if (
       -contactUsSectionRef.current.getBoundingClientRect().height + 100 <
-        contactUsSectionRef.current.getBoundingClientRect().top &&
+      contactUsSectionRef.current.getBoundingClientRect().top &&
       contactUsSectionRef.current.getBoundingClientRect().top < 70
     ) {
       setCurrVisible("contactUsSection");
@@ -71,7 +71,7 @@ const Home = ({
     };
   }, []);
 
-  
+
   useEffect(() => {
     const clickedDetailsJSON = JSON.parse(
       sessionStorage.getItem("clickDetails")
@@ -104,7 +104,7 @@ const Home = ({
       clickedDetailsJSON &&
       clickedDetailsJSON.from === "footerSection"
     ) {
-      console.log(clickedDetailsJSON);
+      // console.log(clickedDetailsJSON);
       footerUsSectionRef.current.scrollIntoView({
         behavior: "smooth",
         block: "center",

@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import styles from "../../../css/krStyles/krProductCard.module.css";
 import { CircleSpinner } from "react-spinners-kit";
-import { Route, Switch, Redirect, useHistory } from "react-router-dom";
+import { Route, Switch, Redirect, useNavigate } from "react-router-dom";
 import DeleteModal from "../../modal/DeleteModal";
 import { deleteKRProduct } from "../../../actions/krActions/krProductActions";
 import { setKRCurrProductView } from "../../../actions/auxillaryActions/auxillaryActions";
@@ -50,7 +50,7 @@ const KRProductCard = ({
   const { itemId, place, isLoading, process } = loadState;
   const auth = useSelector((state) => state.auth);
   const { isLogged } = auth;
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const imageClicked = () => {
     if (formMode === false) {
@@ -59,7 +59,7 @@ const KRProductCard = ({
         sessionStorage.getItem("currKrProductView")
       );
       dispatch(setKRCurrProductView(productJSON));
-      history.push("/productList/KR/productView");
+      navigate("/productList/KR/productView");
     }
   };
   const handleDeleteClick = () => {
@@ -96,9 +96,9 @@ const KRProductCard = ({
             }}
           >
             {isLoading === true &&
-            place === "krProduct" &&
-            itemId === product._id &&
-            process === "delete" ? (
+              place === "krProduct" &&
+              itemId === product._id &&
+              process === "delete" ? (
               <CircleSpinner size={12} color="#0075ff" loading={true} />
             ) : (
               <Icon icon="ci:trash-empty" className={styles.trashIcon} />

@@ -5,14 +5,14 @@ import { useDispatch, useSelector } from "react-redux";
 import {
   Route,
   NavLink,
-  useHistory,
+   useNavigate,
   Switch,
   useLocation,
 } from "react-router-dom";
 
 const DropDownToggleBtn = () => {
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
 
   const dropDownShow = useSelector(

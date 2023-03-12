@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../css/appLayoutSection/navbar.module.css";
 import { Icon } from "@iconify/react";
-import { Route, Link, useHistory, Switch } from "react-router-dom";
+import { Route, Link, useNavigate, Switch } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { CircleSpinner } from "react-spinners-kit";
 import { logout } from "../../actions/authActions";
@@ -77,7 +77,7 @@ const Navbar = ({
   );
   const { isLogged } = auth;
   const dispatch = useDispatch();
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const toggleMenuItem = (val) => {
     if (val === currActiveMenu) {
@@ -122,7 +122,7 @@ const Navbar = ({
             className={
               currVisible === "home" ? styles.linkTextActive : styles.linkText
             }
-            // onClick={() => setProductLinkClicked(!productLinkClicked)}
+          // onClick={() => setProductLinkClicked(!productLinkClicked)}
           >
             HOME
           </p>
@@ -148,7 +148,7 @@ const Navbar = ({
                 ? styles.linkTextActive
                 : styles.linkText
             }
-            // onClick={() => setProductLinkClicked(!productLinkClicked)}
+          // onClick={() => setProductLinkClicked(!productLinkClicked)}
           >
             OUR COMPANIES
           </p>

@@ -1,0 +1,470 @@
+.contactUsSectionWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  display: flex;
+  /* flex-direction: row; */
+  justify-content: center;
+  align-items: center;
+  /* border: 1px solid red; */
+  margin: 50px 0px 0px 0px;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.styleDiv {
+  position: absolute;
+  top: 0px;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: #e9f4f8;
+  margin: 0px auto 0px auto;
+  left: 0px;
+  right: 0px;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.cardImgWrapper {
+  position: relative;
+  width: 90%;
+  height: 50%;
+  min-height: 50%;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-rows: 100%;
+  grid-template-areas: "contactUsCard imageWrapper";
+  /* background-color: white; */
+  box-sizing: border-box;
+  /* border: 1px solid black; */
+  /* overflow: hidden; */
+  z-index: 3;
+}
+/* .cardImgWrapper {
+  position: relative;
+  width: 100%;
+  height: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  z-index: 3;
+} */
+.contactUsCard {
+  position: relative;
+  grid-area: contactUsCard;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+  /* margin: 0px 0px 0px 10px; */
+  z-index: 3;
+}
+.imageWrapper {
+  position: relative;
+  grid-area: imageWrapper;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  box-sizing: border-box;
+  /* border: 1px solid orange; */
+  overflow: hidden;
+  padding: 0px 0px 0px 0px;
+  background-size: cover;
+  z-index: 3;
+}
+.overlayDiv {
+}
+.bgImage {
+  /* display: none; */
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100% !important;
+  object-fit: cover;
+  /* border: 1px solid orange; */
+}
+
+.titleLine {
+  width: 50px;
+  height: 2px;
+  background-color: #352b5f;
+  margin: 0px 10px 0px 0px;
+}
+.titleDivPrimary {
+  position: relative;
+  /* border: 1px solid black; */
+  width: auto;
+  height: auto !important;
+  box-sizing: border-box;
+  margin: 5% 0px 0px 0px;
+  /* background-color: white; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  z-index: 20;
+  /* overflow: hidden; */
+}
+.primaryTitleText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  color: #352b5f;
+  font-weight: 700;
+  letter-spacing: 0.8em;
+  margin: 0px 0px 0px 10px;
+}
+.contentWrapper {
+  position: relative;
+  /* border: 1px solid black; */
+  width: 80%;
+  height: 80% !important;
+  box-sizing: border-box;
+  margin: 0px 0px 0px 0px;
+  /* background-color: white; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  /* text-align: center; */
+  padding: 0px 0px 0px 0px;
+  z-index: 20;
+}
+.titleDivSecondary {
+  /* border: 1px solid black; */
+  width: auto;
+  height: auto !important;
+  box-sizing: border-box;
+  margin: 2% 0px 2% 0px;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 0px 0px 0px;
+}
+.titleDivTertiary {
+  /* border: 1px solid black; */
+  width: 100%;
+  height: auto !important;
+  box-sizing: border-box;
+  margin: 2% 0px 2% 0px;
+  z-index: 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0px 0px 0px 0px;
+}
+
+.secondaryTitleText {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2rem;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+.tertiaryTitleText {
+  width: 50%;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 450;
+  font-size: 0.85rem;
+  line-height: 1.5;
+  letter-spacing: 0.03em;
+  color: #708090;
+}
+.linkDiv {
+  /* border: 1px solid black; */
+  width: auto;
+  height: auto !important;
+  box-sizing: border-box;
+  margin: 2% 0px 2% 0px;
+
+  z-index: 3;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0px 0px 0px 0px;
+  cursor: pointer;
+}
+
+.linkText {
+  position: relative;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.6rem;
+  color: #040259;
+  font-weight: 550;
+  letter-spacing: 6px;
+  margin: 0px 0px 0px 0px;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.iconDiv {
+  /* border: 1px solid black; */
+  position: relative;
+  width: auto;
+  height: auto;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 0px 0px 0px 10px;
+}
+.arrowIcon {
+  font-size: 1.3rem;
+  margin: 0px 0px 0px 0px;
+  transform: rotate(-45deg);
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
+  .contactUsSectionWrapper {
+    position: relative;
+    width: 100%;
+    height: 90%;
+    min-height: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* border: 1px solid red; */
+    box-sizing: border-box;
+    z-index: 1;
+  }
+  .styleDiv {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background: #e9f4f8;
+    margin: 0px auto 0px auto;
+    left: 0px;
+    right: 0px;
+    box-sizing: border-box;
+    z-index: 2;
+  }
+  .cardImgWrapper {
+    position: relative;
+    width: 90%;
+    height: 80%;
+    min-height: 80%;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-columns: 100%;
+    grid-template-areas:
+      "imageWrapper"
+      "contactUsCard";
+    /* background-color: white; */
+    box-sizing: border-box;
+    /* border: 1px solid black; */
+    margin: 20% 0% 0px 0px;
+
+    z-index: 3;
+  }
+  .contactUsCard {
+    position: relative;
+    grid-area: contactUsCard;
+    width: 100%;
+    height: 80%;
+    /* display: none; */
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+    /* margin: 0px 0px 0px 10px; */
+    z-index: 3;
+  }
+  .imageWrapper {
+    position: relative;
+    grid-area: imageWrapper;
+    width: 100%;
+    height: 80%;
+    /* display: none; */
+    justify-content: flex-end;
+    align-items: flex-end;
+    box-sizing: border-box;
+    /* border: 1px solid orange; */
+    overflow: hidden;
+    padding: 0px 0px 0px 0px;
+    background-size: cover;
+    z-index: 3;
+  }
+  .titleDivPrimary {
+    position: relative;
+    /* border: 1px solid black; */
+    width: auto;
+    height: auto !important;
+    box-sizing: border-box;
+    margin: 5% 5% 0% 0px;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-align: center;
+    padding: 0px 0px 0px 0px;
+    z-index: 20;
+    overflow: hidden;
+  }
+  .primaryTitleText {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(
+      0.55rem,
+      -0.04999999999999982rem + 2.999999999999999vw,
+      0.85rem
+    ) !important;
+    margin: 0px 0px 0px 10px;
+  }
+  .contentWrapper {
+    position: relative;
+    /* border: 1px solid black; */
+    width: 80%;
+    height: 80% !important;
+    box-sizing: border-box;
+    margin: 0px 0px 0px 0px;
+    /* background-color: white; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* text-align: center; */
+    padding: 0px 0px 0px 0px;
+    z-index: 20;
+  }
+  .titleDivSecondary {
+    /* border: 1px solid black; */
+    width: auto;
+    height: auto !important;
+    box-sizing: border-box;
+    margin: 1% 0px 5% 0px;
+    z-index: 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px 0px 0px 0px;
+  }
+  .titleDivTertiary {
+    /* border: 1px solid black; */
+    width: 100%;
+    height: auto !important;
+    box-sizing: border-box;
+    margin: 1% 0px 1% 0px;
+    z-index: 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px 0px 0px 0px;
+  }
+
+  .linkDiv {
+    /* border: 1px solid black; */
+    width: auto;
+    height: auto !important;
+    box-sizing: border-box;
+    margin: 5% 0px 1% 0px;
+    z-index: 3;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px 0px 0px 0px;
+  }
+  .secondaryTitleText {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.7rem;
+    /* font-size: 1.1rem; */
+    font-size: clamp(
+      1.1rem,
+      -0.09999999999999964rem + 5.999999999999998vw,
+      1.7rem
+    ) !important;
+    font-size: clamp(0.9rem, -0.29999999999999993rem + 6vw, 1.5rem) !important;
+    color: black;
+    font-weight: 700;
+    letter-spacing: 2px;
+  }
+  .tertiaryTitleText {
+    width: 100%;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 450;
+    font-size: 0.9rem;
+    /* font-size: 1.2rem; */
+    /* font-size: 0.7rem; */
+    font-size: clamp(
+      0.7rem,
+      0.2999999999999998rem + 2.000000000000001vw,
+      0.9rem
+    ) !important;
+    line-height: 1.7;
+
+    letter-spacing: 0.04em;
+    /* border: 1px solid black; */
+    color: #708090;
+  }
+  .linkText {
+    position: relative;
+    font-family: "Montserrat", sans-serif;
+    font-size: 0.4rem;
+    font-size: 0.65rem;
+    font-size: clamp(
+      0.4rem,
+      -0.09999999999999998rem + 2.5vw,
+      0.65rem
+    ) !important;
+    font-size: clamp(
+      0.5rem,
+      -0.10000000000000009rem + 3.0000000000000004vw,
+      0.8rem
+    ) !important;
+    color: #040259;
+    font-weight: 700;
+    letter-spacing: 0.85;
+    margin: 0px 0px 0px 0px;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  .iconDiv {
+    /* border: 1px solid black; */
+    position: relative;
+    width: auto;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0px 0px 0px 10px;
+  }
+  .arrowIcon {
+    font-size: 0.9rem;
+    font-size: 1.2rem;
+    font-size: clamp(
+      0.9rem,
+      0.30000000000000016rem + 2.999999999999999vw,
+      1.2rem
+    ) !important;
+    margin: 0px 0px 0px 0px;
+    transform: rotate(-45deg);
+  }
+}

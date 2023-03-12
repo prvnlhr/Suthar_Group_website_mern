@@ -48,7 +48,7 @@ const textVariants = {
     transition: {
       // delay: 0.5,
       duration: 0.8,
-      // ease: [0.6, 0.05, -0.01, 0.9],
+      //  ease: [0.17, 0.67, 0.83, 0.67],
     },
   },
 };

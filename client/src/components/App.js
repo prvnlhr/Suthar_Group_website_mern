@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Route, Switch, useHistory } from "react-router-dom";
+import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 import Div100vh from "react-div-100vh";
@@ -108,16 +108,18 @@ const App = () => {
   );
 
   const { isLogged } = auth;
-  const history = useHistory();
+  const navigate = useNavigate();
 
   const [scrollPosition, setScrollPosition] = useState(0);
   const [backBtnClicked, setBackBtnClicked] = useState("no");
   const [currViewProduct, setCurrProductView] = useState(null);
 
   const node = useRef();
+
   const getAuthToken = async () => {
-    await dispatch(getToken(history));
+    await dispatch(getToken(navigate));
   };
+
   useEffect(() => {
     getAuthToken();
   }, []);
@@ -125,103 +127,110 @@ const App = () => {
   useEffect(() => {
     dispatch(fetchKRProducts(token));
     dispatch(fetchVKProducts(token));
+    // dispatch(fetchKRProducts());
+    // dispatch(fetchVKProducts());
   }, []);
 
   return (
     <div className={styles.app} ref={node}>
-      {/* <p>{window.innerHeight}</p> */}
-      {/* <p>{document.documentElement.clientHeight}</p> */}
 
-      {/* <div className={styles.strip}>
-      
-      </div> */}
-      <Switch>
-        <Route
+      <Routes>
+        {/* <Route
           path="/company/auth/reset/:reset_token"
           component={
             isLogged === true
               ? NotFound
               : isLogged === false
-              ? ResetPassword
-              : null
+                ? ResetPassword
+                : null
           }
           exact
-        />
+        /> */}
 
-        <Route exact path="/company/auth/login">
+        {/* <Route exact path="/company/auth/login">
           <SignInPage
             scrollPosition={scrollPosition}
             setScrollPosition={setScrollPosition}
           />
-        </Route>
+        </Route> */}
 
         <Route
-          exact
-          path="/company/auth/register"
-          render={(props) => (
-            <SignUpPage
-              {...props}
+          path="/company/auth/login"
+          element={
+            <SignInPage
               scrollPosition={scrollPosition}
               setScrollPosition={setScrollPosition}
             />
-          )}
+          }
         />
 
-        <UnAuthenticatedRoutes
-          exact
-          path="/company/auth/forgotPassword"
-          component={ForgotPassword}
+
+
+        <Route
+          path="/company/auth/register"
+          element={
+            <SignUpPage
+              scrollPosition={scrollPosition}
+              setScrollPosition={setScrollPosition}
+            />
+          }
         />
+
+
+
+        <Route
+          path="/company/auth/forgotPassword"
+          element={
+            <UnAuthenticatedRoutes>
+              <ForgotPassword />
+            </UnAuthenticatedRoutes>
+          }
+
+        />
+
 
         <Route
           path="/company/auth/activate/:activation_token"
-          component={
-            isLogged === true
-              ? NotFound
-              : isLogged === false
-              ? ActivateAccount
-              : null
+          element={
+            <ActivateAccount />
           }
-          exact
+
         />
 
         <Route
           exact
           path="/"
-          render={(props) => (
+          element={
             <Home
-              {...props}
               backBtnClicked={backBtnClicked}
               setBackBtnClicked={setBackBtnClicked}
               scrollPosition={scrollPosition}
               setScrollPosition={setScrollPosition}
             />
-          )}
+          }
         />
 
         <Route
-          exact
-          path="/productList/KR/productView"
-          render={(props) => (
+          path="/productList/KR/productView/"
+          element={
             <KRProductPage
-              {...props}
               currViewProduct={currViewProduct}
               setCurrProductView={setCurrProductView}
             />
-          )}
+          }
         />
 
         <Route
-          exact
           path="/productList/vishwakarma/productView"
-          render={(props) => <VKProductPage {...props} />}
+          element={
+            <VKProductPage />
+          }
         />
 
         <Route
-          path="/productList"
-          render={(props) => (
+          path="/productList/*"
+          element={
             <ProductsList
-              {...props}
               currViewProduct={currViewProduct}
               setCurrProductView={setCurrProductView}
               backBtnClicked={backBtnClicked}
@@ -229,20 +238,29 @@ const App = () => {
               scrollPosition={scrollPosition}
               setScrollPosition={setScrollPosition}
             />
-          )}
+          }
         />
-        {/* <Route
-          path="/productList/testPage"
-          render={(props) => <TestComponent />}
-        /> */}
+
         <Route
           path="/company/contact"
-          render={(props) => <SendEnquiryPage />}
+          // render={(props) => <SendEnquiryPage />}
+          element={
+            <SendEnquiryPage
+            />
+          }
         />
-
-        <Route path="/company/gallery" render={(props) => <Gallery />} />
-        <Route path="/company" render={(props) => <CompanyPage />} />
-      </Switch>
+        <Route
+          path="/company/gallery"
+          element={
+            <Gallery />
+          }
+        />
+        <Route path="/company/*"
+          element={
+            <CompanyPage />
+          }
+        />
+      </Routes>
     </div>
   );
 };

@@ -1,0 +1,12 @@
+.testWrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px 0px 0px 0px;
+  padding: 0px 0px 0px 0px;
+  border: 1px solid red;
+  background-color: #c5c5c5;
+  /* display:none; */
+}

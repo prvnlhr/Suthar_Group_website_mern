@@ -23,11 +23,11 @@ const sendEmail = (to, url, txt) => {
   `,
   };
   mg.messages().send(emailData, function (error, body) {
-    console.log("sending email");
+    // console.log("sending email");
     if (error) {
       console.log(error);
     }
-    // console.log(body);
+    console.log(body);
   });
 };
 module.exports = sendEmail;

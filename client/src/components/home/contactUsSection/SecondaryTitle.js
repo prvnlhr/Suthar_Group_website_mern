@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, NavLink, useHistory, Switch } from "react-router-dom";
+import { Route, NavLink, useNavigate, Switch } from "react-router-dom";
 import styles from "../../../css/contactUsSection/contactUsSection.module.css";
 
 import { useInView } from "react-intersection-observer";
@@ -16,7 +16,7 @@ const boxVariants = {
       delayChildren: 0.5,
       duration: 0.6,
       delay: 0.3,
-      ease: [0.6, 0.05, -0.01, 0.9],
+      ease: [0.17, 0.67, 0.83, 0.67],
     },
   },
 };
@@ -53,8 +53,8 @@ const arrowVariants = {
     },
   },
 };
-const SecondaryTitle = ({}) => {
-  const history = useHistory();
+const SecondaryTitle = ({ }) => {
+  const navigate = useNavigate();
 
   const controls = useAnimation();
   const { ref, inView } = useInView({
@@ -76,7 +76,7 @@ const SecondaryTitle = ({}) => {
 
     sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
 
-    history.push("/company/contact");
+    navigate("/company/contact");
   };
   return (
     <motion.div

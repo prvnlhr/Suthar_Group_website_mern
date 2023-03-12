@@ -1,12 +1,11 @@
 import React, { useEffect } from "react";
 import styles from "../../../css/openingBannerSection/openingBannerSection.module.css";
 import bannerImg from "../../../img/bannerImg2.jpg";
-import { Link } from "react-router-dom";
 import { Icon } from "@iconify/react";
 import {
   motion,
   useAnimation,
-  useViewportScroll,
+  useScroll,
   useTransform,
 } from "framer-motion";
 import { useInView } from "react-intersection-observer";
@@ -22,7 +21,7 @@ const OpeningBannerSection = () => {
         delayChildren: 0.5,
         duration: 0.6,
         delay: 0.2,
-        // ease: [0.6, 0.05, -0.01, 0.9],
+        //  ease: [0.17, 0.67, 0.83, 0.67],
       },
     },
   };
@@ -34,19 +33,19 @@ const OpeningBannerSection = () => {
       transition: {
         // delay: 0.5,
         duration: 0.8,
-        // ease: [0.6, 0.05, -0.01, 0.9],
+        //  ease: [0.17, 0.67, 0.83, 0.67],
       },
     },
   };
   const imageVariants = {
-    hidden: { y: 0, opacity: 0 },
+    hidden: { y: 0, opacity: 1 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
         duration: 0.6,
         delay: 0.8,
-        ease: [0.6, 0.05, -0.01, 0.9],
+        //  ease: [0.17, 0.67, 0.83, 0.67],
       },
     },
   };
@@ -57,18 +56,18 @@ const OpeningBannerSection = () => {
       transition: {
         duration: 0.6,
         delay: 0.5,
-        ease: [0.6, 0.05, -0.01, 0.9],
+        //  ease: [0.17, 0.67, 0.83, 0.67],
+        ease: [0.17, 0.67, 0.83, 0.67]
       },
     },
   };
   const controls = useAnimation();
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
   const y1 = useTransform(scrollY, [0, 300], [0, 200]);
   const y2 = useTransform(scrollY, [0, 300], [0, -100]);
 
   const { ref, inView } = useInView({
     triggerOnce: true,
-    // rootMargin: "300px",
   });
 
   useEffect(() => {
@@ -93,8 +92,9 @@ const OpeningBannerSection = () => {
           src={bannerImg}
           alt="bannerImg"
           variants={imageVariants}
-          // initial="initial"
-          // animate="animate"
+        // initial="initial"
+        // animate="animate"
+
         />
         <motion.div
           variants={overlayVariants}

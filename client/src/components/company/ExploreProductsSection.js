@@ -6,12 +6,12 @@ import vishwakarmaSampleProdImg from "../../img/vishwakarmaSampleProdImg.png";
 import {
   Route,
   NavLink,
-  useHistory,
+  useNavigate,
   Switch,
   useLocation,
 } from "react-router-dom";
 const ExploreProductsSection = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const location = useLocation();
 
   const exploreLinkedClicked = () => {
@@ -19,10 +19,10 @@ const ExploreProductsSection = () => {
 
     if (location.pathname === "/company/KR") {
       console.log("linked clicked1", location.pathname);
-      history.push("/productList/KR");
+      navigate("/productList/KR");
     } else if (location.pathname === "/company/vishwakarma") {
       console.log("linked clicked2", location.pathname);
-      history.push("/productList/vishwakarma");
+      navigate("/productList/vishwakarma");
     }
   };
   return (

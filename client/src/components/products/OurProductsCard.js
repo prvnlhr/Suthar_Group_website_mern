@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Route, NavLink, useHistory, Switch } from "react-router-dom";
+import { Route, NavLink, useNavigate, Switch } from "react-router-dom";
 import { useInView } from "react-intersection-observer";
 import { Icon } from "@iconify/react";
 import styles from "../../css/productSection/productsSection.module.css";

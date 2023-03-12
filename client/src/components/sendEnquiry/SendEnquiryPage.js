@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import {
   Route,
   NavLink,
-  useHistory,
+  useNavigate,
   Switch,
   useLocation,
   Link,
@@ -48,12 +48,12 @@ const SendEnquiryPage = () => {
     email: "",
     password: "",
   };
-  const history = useHistory();
+  const navigate = useNavigate();
   const dispatch = useDispatch();
   const location = useLocation();
 
   const backBtnClick = () => {
-    history.goBack();
+    navigate(-1)
   };
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -67,9 +67,9 @@ const SendEnquiryPage = () => {
   };
 
   const linkClicked = (val) => {
-    history.push("/");
+    navigate("/");
     // if (val === 1) {
-    //   history.goBack();
+    //   navigate(-1)
     // }
     // // _________________________________________________________________
     // else if (val === 2) {
@@ -99,15 +99,15 @@ const SendEnquiryPage = () => {
     //     };
     //     sessionStorage.setItem("clickDetails", JSON.stringify(clickDetails));
     //   }
-    //   history.push("/");
+    //    navigate("/");
     // }
     // // ____________________________________________________________________
     // else if (val === 3) {
-    //   history.push("/productList/vishvakarma");
+    //    navigate("/productList/vishvakarma");
     // }
     // // ____________________________________________________________________
     // else if (val === 4) {
-    //   history.push("/company/contactUs");
+    //    navigate("/company/contactUs");
     // }
   };
   const { firstName, lastName, company, email, enquiry } = formData;
