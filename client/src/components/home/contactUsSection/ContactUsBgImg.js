@@ -14,7 +14,7 @@ const imgVariants = {
       delayChildren: 0.5,
       duration: 0.8,
       delay: 0.2,
-      //  ease: [0.17, 0.67, 0.83, 0.67],
+      ease: [0.17, 0.67, 0.83, 0.67],
     },
   },
 };
