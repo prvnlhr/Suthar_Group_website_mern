@@ -2,11 +2,12 @@ import axios from "axios";
 import { store } from "../store/index";
 import { logout, updateToken } from "../actions/authActions";
 
-let url = process.env.REACT_APP_BASE_URL;
-console.log(process.env.REACT_APP_BASE_URL);
+let url = process.env.REACT_APP_API_URL;
+// console.log(url);
+// console.log(process.env.REACT_APP_BASE_URL);
+
 const API = axios.create({
   baseURL: url,
-  // baseURL: "http://192.168.158.208:9000/",
 });
 
 // const API = axios.create({ baseURL: "http://localhost:9000" });

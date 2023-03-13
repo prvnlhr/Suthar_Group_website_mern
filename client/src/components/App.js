@@ -1,16 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from "react-redux";
-import styled from "styled-components";
-import Div100vh from "react-div-100vh";
-import {
-  browserName,
-  browserVersion,
-  isSafari,
-  isChrome,
-  isOpera,
-  isFirefox,
-} from "react-device-detect";
+
 
 import { fetchKRProducts } from "../actions/krActions/krProductActions";
 import { fetchVKProducts } from "../actions/vishvakarmaActions/vkProductActions";
@@ -38,18 +29,20 @@ import { motion, AnimatePresence } from "framer-motion";
 import Gallery from "./gallery/Gallery";
 import CompanyPage from "./company/CompanyPage";
 let windowInnerWidth = 0;
-const Container = styled.div`
-  position: relative;
-  background-color: black;
-  margin: 0;
-  min-height: 100vh;
-  width: 100vw;
-`;
 
-const Paper = styled.div`
-  width: 480px !important;
-  background-color: white;
-`;
+// const Container = styled.div`
+//   position: relative;
+//   background-color: black;
+//   margin: 0;
+//   min-height: 100vh;
+//   width: 100vw;
+// `;
+
+// const Paper = styled.div`
+//   width: 480px !important;
+//   background-color: white;
+// `;
+
 const App = () => {
   // ____________________________________________________________________
   // useEffect(() => {

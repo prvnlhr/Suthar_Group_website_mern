@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 import styles from "../../../css/statisticsSection/statisticsSection.module.css";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import CountUp from "react-countup";
-import VisibilitySensor from "react-visibility-sensor";
 
 const boxVariants = {
   hidden: {

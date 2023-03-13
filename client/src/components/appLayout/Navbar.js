@@ -6,7 +6,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { CircleSpinner } from "react-spinners-kit";
 import { logout } from "../../actions/authActions";
 import DropDownMenu from "./DropDownMenu";
-import { Spiral as Hamburger } from "hamburger-react";
 import DropDownToggleBtn from "./DropDownToggleBtn";
 import { setDropDownShow } from "../../actions/auxillaryActions/auxillaryActions";
 import { motion, AnimatePresence } from "framer-motion";
@@ -108,7 +107,7 @@ const Navbar = ({
 
   const logoutHandler = (e) => {
     e.preventDefault();
-    dispatch(logout(history));
+    dispatch(logout(navigate));
   };
 
   return (

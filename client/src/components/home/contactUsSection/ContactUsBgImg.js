@@ -3,7 +3,6 @@ import styles from "../../../css/contactUsSection/contactUsSection.module.css";
 import contactUsBg from "../../../img/contatctUsBg3.jpg";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
-import VisibilitySensor from "react-visibility-sensor";
 
 const imgVariants = {
   hidden: { opacity: 0, scale: 0.7 },
