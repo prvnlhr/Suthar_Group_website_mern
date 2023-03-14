@@ -26,7 +26,7 @@ const errorHandler = (error) => {
   // console.log("/user/auth/refresh_token", error.config.url);
   // console.log("/user/auth/refresh_token" === error.config.url);
   if (
-    error.response.status === 401 &&
+    error.response?.status === 401 &&
     error.config.url !== "/company/auth/refresh_token" &&
     error.config.url !== "/company/auth/activation" &&
     error.config.url !== "/company/auth/resetPassword" &&
@@ -39,7 +39,7 @@ const errorHandler = (error) => {
       })
       .then((res) => {
         // console.log("res", res);
-        if (res.status === 200) {
+        if (res?.status === 200) {
           // console.log("res Hogaya", res.data);
           store.dispatch(updateToken(res.data));
           // console.log("originalRequestPrev", originalRequest);

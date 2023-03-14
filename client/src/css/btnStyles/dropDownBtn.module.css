@@ -74,7 +74,7 @@
   min-height: 0.2rem;
   background-color: #352b5f;
   transform: rotate(-45deg);
-  border-radius: 50px;
+  /* border-radius: 50px; */
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
@@ -89,7 +89,7 @@
   min-height: 0.2rem;
   background-color: #352b5f;
   transform: rotate(45deg);
-  border-radius: 50px;
+  /* border-radius: 50px; */
   -webkit-transition: all 0.3s ease-in-out;
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;

@@ -14,7 +14,7 @@ const boxVariants = {
     transition: {
       staggerChildren: 0.5,
       duration: 1,
-      delayChildren: 0.5,
+      delayChildren: 0.45,
       //  ease: [0.17, 0.67, 0.83, 0.67],
     },
   },
@@ -25,7 +25,8 @@ const textVariants = {
     translateY: 0,
     opacity: 1,
     transition: {
-      duration: 0.8,
+      // duration: 0.8,
+      duration: 0.5,
       ease: [0.3, 0.1, 0.3, 1],
     },
   },

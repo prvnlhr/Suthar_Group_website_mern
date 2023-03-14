@@ -11,8 +11,8 @@ const textVariants = {
     translateX: 0,
     opacity: 1,
     transition: {
-      // delay: 0.5,
-      duration: 0.8,
+      delay: 0.3,
+      duration: 0.5,
       //  ease: [0.17, 0.67, 0.83, 0.67],
     },
   },

@@ -21,6 +21,7 @@ import ForgotPassword from "./auth/ForgotPassword";
 import ResetPassword from "./auth/ResetPassword";
 import NotFound from "./appLayout/NotFound";
 import SendEnquiryPage from "./sendEnquiry/SendEnquiryPage";
+import { SpinnerInfinity } from 'spinners-react';
 
 import Home from "./home/Home";
 import styles from "../css/appLayoutSection/app.module.css";
@@ -30,68 +31,19 @@ import Gallery from "./gallery/Gallery";
 import CompanyPage from "./company/CompanyPage";
 let windowInnerWidth = 0;
 
-// const Container = styled.div`
-//   position: relative;
-//   background-color: black;
-//   margin: 0;
-//   min-height: 100vh;
-//   width: 100vw;
-// `;
 
-// const Paper = styled.div`
-//   width: 480px !important;
-//   background-color: white;
-// `;
 
 const App = () => {
-  // ____________________________________________________________________
-  // useEffect(() => {
-  //   if (isSafari || isFirefox) {
-  //     console.log(`${browserName} ${browserVersion}`);
-  //     document.documentElement.style.setProperty("--appHeight", `${100}vh`);
-  //   } else {
-  //     console.log(`${browserName} ${browserVersion}`);
-  //     document.documentElement.style.setProperty("--appHeight", `${100}%`);
-  //   }
-  // }, []);
-  // const handleResize = () => {
-  //   console.log(`${browserName} ${browserVersion}`);
-  //   const currentWindowInnerWidth = window.innerWidth;
-  //   if (currentWindowInnerWidth !== windowInnerWidth) {
-  //     windowInnerWidth = currentWindowInnerWidth;
-  //     const windowInnerHeight = window.innerHeight;
-  //     document.documentElement.style.setProperty(
-  //       "--vh",
-  //       `${windowInnerHeight}px`
-  //     );
-  //   }
-  // };
-
-  // if (isSafari || isFirefox) {
-  //   handleResize();
-  // }
-  // useEffect(() => {
-  //   if (isSafari || isFirefox) {
-  //     window.addEventListener("resize", handleResize);
-  //   }
-  //   return () => {
-  //     if (isSafari || isFirefox) {
-  //       window.removeEventListener("resize", handleResize);
-  //     }
-  //   };
-  // }, []);
 
   // ________________________________________________________________________________________
-  let vh = window.innerHeight * 0.01;
-  // let vh = window.innerHeight;
+  // let vh = window.innerHeight * 0.01;
 
-  // Then we set the value in the --vh custom property to the root of the document
-  document.documentElement.style.setProperty("--vh", `${vh}px`);
-  window.addEventListener("resize", () => {
-    // We execute the same script as before
-    let vh = window.innerHeight * 0.01;
-    document.documentElement.style.setProperty("--vh", `${vh}px`);
-  });
+  // document.documentElement.style.setProperty("--vh", `${vh}px`);
+  // window.addEventListener("resize", () => {
+  //   let vh = window.innerHeight * 0.01;
+  //   document.documentElement.style.setProperty("--vh", `${vh}px`);
+  // });
+
   // ________________________________________________________________________________________
   const dispatch = useDispatch();
   const auth = useSelector((state) => state.auth);
@@ -106,154 +58,164 @@ const App = () => {
   const [scrollPosition, setScrollPosition] = useState(0);
   const [backBtnClicked, setBackBtnClicked] = useState("no");
   const [currViewProduct, setCurrProductView] = useState(null);
+  const [initialLoading, setInitialLoading] = useState(true);
 
   const node = useRef();
+
+
+  useEffect(() => {
+    getAuthToken();
+    setInitialLoading(true);
+    const timeout = setTimeout(() => {
+      getToken();
+      setInitialLoading(false);
+      // }, 0)
+    }, 5000)
+    return () => clearTimeout(timeout);
+  }, [])
+
 
   const getAuthToken = async () => {
     await dispatch(getToken(navigate));
   };
 
-  useEffect(() => {
-    getAuthToken();
-  }, []);
+
 
   useEffect(() => {
-    dispatch(fetchKRProducts(token));
-    dispatch(fetchVKProducts(token));
-    // dispatch(fetchKRProducts());
-    // dispatch(fetchVKProducts());
+    // dispatch(fetchKRProducts(token));
+    // dispatch(fetchVKProducts(token));
+    dispatch(fetchVKProducts());
+    dispatch(fetchKRProducts());
   }, []);
 
   return (
     <div className={styles.app} ref={node}>
 
-      <Routes>
-        {/* <Route
-          path="/company/auth/reset/:reset_token"
-          component={
-            isLogged === true
-              ? NotFound
-              : isLogged === false
-                ? ResetPassword
-                : null
-          }
-          exact
-        /> */}
 
-        {/* <Route exact path="/company/auth/login">
-          <SignInPage
-            scrollPosition={scrollPosition}
-            setScrollPosition={setScrollPosition}
+      {initialLoading === true ?
+        <div className={styles.spinnerContainer} >
+          <SpinnerInfinity size={86} thickness={160} speed={100} color="#002A9A" secondaryColor="rgba(0, 0, 0, 0.04)" />
+        </div>
+        :
+        <Routes>
+
+          <Route
+            path="/company/auth/reset/:reset_token"
+            element={
+              <UnAuthenticatedRoutes>
+                <ResetPassword />
+              </UnAuthenticatedRoutes>
+            }
+
           />
-        </Route> */}
-
-        <Route
-          path="/company/auth/login"
-          element={
-            <SignInPage
-              scrollPosition={scrollPosition}
-              setScrollPosition={setScrollPosition}
-            />
-          }
-        />
 
 
+          <Route
+            path="/company/auth/login"
+            element={
+              <SignInPage
+                scrollPosition={scrollPosition}
+                setScrollPosition={setScrollPosition}
+              />
+            }
+          />
 
-        <Route
-          path="/company/auth/register"
-          element={
-            <SignUpPage
-              scrollPosition={scrollPosition}
-              setScrollPosition={setScrollPosition}
-            />
-          }
-        />
+          <Route
+            path="/company/auth/register"
+            element={
+              <SignUpPage
+                scrollPosition={scrollPosition}
+                setScrollPosition={setScrollPosition}
+              />
+            }
+          />
 
 
 
-        <Route
-          path="/company/auth/forgotPassword"
-          element={
-            <UnAuthenticatedRoutes>
-              <ForgotPassword />
-            </UnAuthenticatedRoutes>
-          }
+          <Route
+            path="/company/auth/forgotPassword"
+            element={
+              <UnAuthenticatedRoutes>
+                <ForgotPassword />
+              </UnAuthenticatedRoutes>
+            }
 
-        />
+          />
 
 
-        <Route
-          path="/company/auth/activate/:activation_token"
-          element={
-            <ActivateAccount />
-          }
+          <Route
+            path="/company/auth/activate/:activation_token"
+            element={
+              <ActivateAccount />
+            }
 
-        />
+          />
 
-        <Route
-          exact
-          path="/"
-          element={
-            <Home
-              backBtnClicked={backBtnClicked}
-              setBackBtnClicked={setBackBtnClicked}
-              scrollPosition={scrollPosition}
-              setScrollPosition={setScrollPosition}
-            />
-          }
-        />
+          <Route
+            exact
+            path="/"
+            element={
+              <Home
+                backBtnClicked={backBtnClicked}
+                setBackBtnClicked={setBackBtnClicked}
+                scrollPosition={scrollPosition}
+                setScrollPosition={setScrollPosition}
+              />
+            }
+          />
 
-        <Route
-          path="/productList/KR/productView/"
-          element={
-            <KRProductPage
-              currViewProduct={currViewProduct}
-              setCurrProductView={setCurrProductView}
-            />
-          }
-        />
+          <Route
+            path="/productList/KR/productView/"
+            element={
+              <KRProductPage
+                currViewProduct={currViewProduct}
+                setCurrProductView={setCurrProductView}
+              />
+            }
+          />
 
-        <Route
-          path="/productList/vishwakarma/productView"
-          element={
-            <VKProductPage />
-          }
-        />
+          <Route
+            path="/productList/vishwakarma/productView"
+            element={
+              <VKProductPage />
+            }
+          />
 
-        <Route
-          path="/productList/*"
-          element={
-            <ProductsList
-              currViewProduct={currViewProduct}
-              setCurrProductView={setCurrProductView}
-              backBtnClicked={backBtnClicked}
-              setBackBtnClicked={setBackBtnClicked}
-              scrollPosition={scrollPosition}
-              setScrollPosition={setScrollPosition}
-            />
-          }
-        />
+          <Route
+            path="/productList/*"
+            element={
+              <ProductsList
+                currViewProduct={currViewProduct}
+                setCurrProductView={setCurrProductView}
+                backBtnClicked={backBtnClicked}
+                setBackBtnClicked={setBackBtnClicked}
+                scrollPosition={scrollPosition}
+                setScrollPosition={setScrollPosition}
+              />
+            }
+          />
 
-        <Route
-          path="/company/contact"
-          // render={(props) => <SendEnquiryPage />}
-          element={
-            <SendEnquiryPage
-            />
-          }
-        />
-        <Route
-          path="/company/gallery"
-          element={
-            <Gallery />
-          }
-        />
-        <Route path="/company/*"
-          element={
-            <CompanyPage />
-          }
-        />
-      </Routes>
+          <Route
+            path="/company/contact"
+            // render={(props) => <SendEnquiryPage />}
+            element={
+              <SendEnquiryPage
+              />
+            }
+          />
+          <Route
+            path="/company/gallery"
+            element={
+              <Gallery />
+            }
+          />
+          <Route path="/company/*"
+            element={
+              <CompanyPage />
+            }
+          />
+        </Routes>
+      }
     </div>
   );
 };

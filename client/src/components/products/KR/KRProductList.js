@@ -95,7 +95,7 @@ const KRProductList = ({
       </div>
       <div className={styles.contentContainer} ref={listNode}>
         <KRProductForm formMode={formMode} setFormMode={setFormMode} />
-        {krProductList.map((product, index) => (
+        {krProductList?.map((product, index) => (
           <KRProductCard
             key={index}
             setCurrDeletingItem={setCurrDeletingItem}

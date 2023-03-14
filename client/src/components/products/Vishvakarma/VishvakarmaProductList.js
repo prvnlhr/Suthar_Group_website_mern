@@ -95,8 +95,8 @@ const VishvakarmaProductList = ({ vkProductList }) => {
         </div>
       </div>
       <div className={styles.contentContainer} ref={listNode}>
-        <VKProductForm formMode={formMode} setFormMode={setFormMode}  />
-        {vkProductList.map((product, index) => (
+        <VKProductForm formMode={formMode} setFormMode={setFormMode} />
+        {vkProductList?.map((product, index) => (
           <VKProductCard
             key={index}
             setCurrDeletingItem={setCurrDeletingItem}
