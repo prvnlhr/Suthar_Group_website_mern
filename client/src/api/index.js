@@ -3,26 +3,23 @@ import { store } from "../store/index";
 import { logout, updateToken } from "../actions/authActions";
 
 let url = process.env.REACT_APP_API_URL;
-// console.log(url);
-// console.log(process.env.REACT_APP_BASE_URL);
+console.log(url);
 
 const API = axios.create({
   baseURL: url,
 });
 
-// const API = axios.create({ baseURL: "http://localhost:9000" });
 
 const reqHandler = (request) => {
-  // console.log("request", request);
   return request;
 };
 const resHandler = (response) => {
   if (response.status === 401) {
     console.log("401 error");
   }
-  // console.log("response", response);
   return response;
 };
+
 const errorHandler = (error) => {
   const originalRequest = error.config;
   // console.log("401 error", error.response.status, error.config);

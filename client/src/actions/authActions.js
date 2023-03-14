@@ -32,7 +32,7 @@ export const activationEmail = (activation_token) => async (dispatch) => {
   dispatch(loadingSetter(true, "activateAccount", "", "", ""));
 
   try {
-    console.log("action activate account", activation_token);
+    // console.log("action activate account", activation_token);
     const response = await api.activation(activation_token);
 
     dispatch(loadingSetter(false, "activateAccount", "", "", true));
@@ -52,10 +52,10 @@ export const login = (formData, navigate) => async (dispatch) => {
   dispatch(loadingSetter(true, "login", "", "", ""));
   try {
 
-    console.log(formData);
+    // console.log(formData);
     const response = await api.login(formData);
     const token = response.data;
-    console.log("token", token);
+    // console.log("token", token);
     dispatch(authSuccessResponseHandler(response.data.msg, "login"));
     dispatch(tokenSetter(token));
 
@@ -75,11 +75,11 @@ export const login = (formData, navigate) => async (dispatch) => {
 
 export const getToken = (navigate) => async (dispatch) => {
   try {
-    console.log("auth token action");
+    // console.log("auth token action");
     const response = await api.getToken();
     const token = response.data;
     dispatch(tokenSetter(token));
-    console.log("auth get token action", response);
+    // console.log("auth get token action", response);
     dispatch({
       type: USER_LOGIN,
     });
@@ -126,7 +126,7 @@ export const forgotPassword = (email) => async (dispatch) => {
 };
 export const resetPassword = (token, password) => async (dispatch) => {
   dispatch(loadingSetter(true, "resetPassword", "", "", ""));
-  console.log(token);
+  // console.log(token);
   try {
     const res = await api.resetPass(token, password);
     const successMsg = res.data.msg;
@@ -187,7 +187,7 @@ export const deleteAccount = (password, token) => async (dispatch) => {
       type: REMOVE_USER,
     });
 
-    console.log(res);
+    // console.log(res);
   } catch (error) {
     dispatch(loadingSetter(false, "deleteAccount", "", "", false));
     const failureMsg = error.response.data.msg;
@@ -211,7 +211,7 @@ export const updateToken = (token) => {
   };
 };
 export const forceLogout = () => {
-  console.log("force logout");
+  // console.log("force logout");
   return {
     type: USER_LOGOUT,
   };

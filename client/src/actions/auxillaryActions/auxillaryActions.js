@@ -27,7 +27,7 @@ export const setVKCurrProductView = (currProduct) => async (dispatch) => {
   }
 };
 export const setDropDownShow = (val) => async (dispatch) => {
-  console.log("drop down toggle action", val);
+  // console.log("drop down toggle action", val);
   try {
     dispatch({
       type: SET_DROPDOWN_SHOW,

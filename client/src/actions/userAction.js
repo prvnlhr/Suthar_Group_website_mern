@@ -9,7 +9,7 @@ import {
 import { FETCH_USER, ERROR_MESSAGE, SET_ENQUIRY_RESPONSE } from "./types";
 
 export const fetchUser = (token) => async (dispatch) => {
-  console.log("fetch User action", token);
+  // console.log("fetch User action", token);
   try {
     const response = await api.fetchUser(token);
     const userData = response.data.user;
@@ -35,18 +35,18 @@ export const fetchUser = (token) => async (dispatch) => {
 export const sendMail = (mailData) => async (dispatch) => {
   dispatch(loadingSetter(true, "sendEnquiry", "", "", ""));
 
-  console.log("send mail action", mailData);
+  // console.log("send mail action", mailData);
   try {
     const response = await api.contactUs(mailData);
 
     if (response.status === 200) {
-      console.log(response.data.msg);
+      // console.log(response.data.msg);
       dispatch({
         type: SET_ENQUIRY_RESPONSE,
         payload: response.data.msg,
       });
     } else if (response.status !== 200) {
-      console.log(response);
+      // console.log(response);
 
       dispatch({
         type: SET_ENQUIRY_RESPONSE,

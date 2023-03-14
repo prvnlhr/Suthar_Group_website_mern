@@ -12,7 +12,7 @@ import axios from "axios";
 
 export const fetchKRProducts = (token) => async (dispatch) => {
   dispatch(loadingSetter(true, "krProduct", "", "fetching", ""));
-  console.log("fetch Kr Products Action", token);
+  // console.log("fetch Kr Products Action", token);
   try {
     const response = await api.fetchProductsKR(token);
     // http://localhost:9000/company/vishvakarma/product/getProducts
@@ -20,7 +20,7 @@ export const fetchKRProducts = (token) => async (dispatch) => {
     // console.log(rds)
     const productList = response.data.krProductList;
     // const productList = {}
-    console.log("fetch_kr_product_list response", response.data.krProductList);
+    // console.log("fetch_kr_product_list response", response.data.krProductList);
     dispatch({
       type: FETCH_PRODUCTS_KR,
       payload: productList,
@@ -36,14 +36,14 @@ export const fetchKRProducts = (token) => async (dispatch) => {
 export const addNewKRProduct = (data, token) => async (dispatch) => {
   dispatch(loadingSetter(true, "krProduct", "", "add", ""));
 
-  for (var value of data.values()) {
-    console.log(value);
-  }
+  // for (var value of data.values()) {
+  //   console.log(value);
+  // }
   try {
     // console.log("add kr product action", token, data);
     const backendResponse = await api.addNewProductKR(data, token);
     const productsList = backendResponse.data.krProductList;
-    console.log("add_kr_product_list response", productsList);
+    // console.log("add_kr_product_list response", productsList);
     const newAddedProduct = productsList[0];
     dispatch({
       type: ADD_NEW_PRODUCT_KR,
@@ -56,11 +56,11 @@ export const addNewKRProduct = (data, token) => async (dispatch) => {
   }
 };
 export const deleteKRProduct = (data, token) => async (dispatch) => {
-  console.log("delete kr product action", data, token);
+  // console.log("delete kr product action", data, token);
   dispatch(loadingSetter(true, "krProduct", data.productId, "delete", ""));
   try {
     const response = await api.deleteProductKR(data, token);
-    console.log("delete kr product response", response);
+    // console.log("delete kr product response", response);
     const productsArray = response.data.data;
     dispatch({
       type: DELETE_PRODUCT_KR,
@@ -78,7 +78,7 @@ export const deleteKRProduct = (data, token) => async (dispatch) => {
 
 export const editKRProduct = (data, token) => async (dispatch) => {
   dispatch(loadingSetter(true, "krProduct", "", "edit", ""));
-  console.log("at edit Product KR Action", data, token);
+  // console.log("at edit Product KR Action", data, token);
   try {
     const response = await api.editProductsKR(data, token);
     console.log("kr edit product action response", response);

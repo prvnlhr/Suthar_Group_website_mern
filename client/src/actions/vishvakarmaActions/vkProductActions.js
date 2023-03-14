@@ -11,14 +11,14 @@ import { loadingSetter } from "../helperFunctions";
 
 export const fetchVKProducts = (token) => async (dispatch) => {
   dispatch(loadingSetter(true, "vkProduct", "", "fetching", ""));
-  console.log("fetch Vk Products Action", token);
+  // console.log("fetch Vk Products Action", token);
   try {
     const response = await api.fetchProductsVK(token);
     const productList = response.data.vishvakarmaProductList;
-    console.log(
-      "fetch_VK_product_list response",
-      response.data.vishvakarmaProductList
-    );
+    // console.log(
+    //   "fetch_VK_product_list response",
+    //   response.data.vishvakarmaProductList
+    // );
     dispatch({
       type: FETCH_PRODUCTS_VK,
       payload: productList,
@@ -34,14 +34,14 @@ export const fetchVKProducts = (token) => async (dispatch) => {
 export const addNewVKProduct = (data, token) => async (dispatch) => {
   dispatch(loadingSetter(true, "vkProduct", "", "add", ""));
 
-  for (var value of data.values()) {
-    console.log(value);
-  }
+  // for (var value of data.values()) {
+  //   console.log(value);
+  // }
   try {
     // console.log("add vk product action", token, data);
     const backendResponse = await api.addNewProductVK(data, token);
     const productsList = backendResponse.data.vishvakarmaProductList;
-    console.log("add_Vk_product_list response", productsList);
+    // console.log("add_Vk_product_list response", productsList);
     const newAddedProduct = productsList[0];
     dispatch({
       type: ADD_NEW_PRODUCT_VK,
@@ -54,11 +54,11 @@ export const addNewVKProduct = (data, token) => async (dispatch) => {
   }
 };
 export const deleteVKProduct = (data, token) => async (dispatch) => {
-  console.log("delete VK product action", data, token);
+  // console.log("delete VK product action", data, token);
   dispatch(loadingSetter(true, "vkProduct", data.productId, "delete", ""));
   try {
     const response = await api.deleteProductVK(data, token);
-    console.log("delete VK product response", response);
+    // console.log("delete VK product response", response);
     const productsArray = response.data.data;
     dispatch({
       type: DELETE_PRODUCT_VK,
@@ -76,10 +76,10 @@ export const deleteVKProduct = (data, token) => async (dispatch) => {
 
 export const editVKProduct = (data, token) => async (dispatch) => {
   dispatch(loadingSetter(true, "vkProduct", "", "edit", ""));
-  console.log("at edit Product VK Action", data, token);
+  // console.log("at edit Product VK Action", data, token);
   try {
     const response = await api.editProductsVK(data, token);
-    console.log("VK edit product action response", response);
+    // console.log("VK edit product action response", response);
     dispatch({
       type: EDIT_PRODUCT_VK,
       payload: data,
